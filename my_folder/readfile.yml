@@ -1,0 +1,2 @@
+- ansible.builtin.debug:
+    msg: "the value of test.txt is {{lookup('ansible.builtin.file', '/opt/tower/test.txt') }}"
