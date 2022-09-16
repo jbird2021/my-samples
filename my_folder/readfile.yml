@@ -1,2 +1,7 @@
-- ansible.builtin.debug:
+- name: Hello World Sample
+  hosts: localhost
+  gather_facts: False
+  tasks:   
+    - name: Read File
+    - ansible.builtin.debug:
     msg: "the value of test.txt is {{lookup('ansible.builtin.file', '/opt/tower/test.txt') }}"
