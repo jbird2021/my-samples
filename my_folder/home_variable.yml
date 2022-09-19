@@ -1,10 +1,7 @@
-- name: Hello World Sample
+- name: Find Home Variable
   hosts: all
   gather_facts: False
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
     - name: Debug env vars
       debug:
         msg: "'{{ lookup('env', 'HOME') }}' is the HOME environment variable."
