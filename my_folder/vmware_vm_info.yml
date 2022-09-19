@@ -7,16 +7,6 @@
     vcenter_password: "vcenter_password"
 
   tasks:   
-#    - name: Gather all registered virtual machines
-#      community.vmware.vmware_vm_info:
-#        hostname: '{{ vcenter_hostname }}'
-#        username: '{{ vcenter_username }}'
-#        password: '{{ vcenter_password }}'
-#      delegate_to: localhost
-#      register: vminfo
-#    - debug:
-#        var: vminfo.virtual_machines
-
      - name: Gather all registered virtual machines
        community.vmware.vmware_vm_info:
          hostname: '{{ vcenter_hostname }}'
