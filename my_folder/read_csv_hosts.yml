@@ -1,4 +1,4 @@
-- name: Hello World Sample
+- name: Read csv host file
   hosts: localhost
   gather_facts: True 
   tasks:   
