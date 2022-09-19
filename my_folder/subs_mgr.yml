@@ -2,9 +2,6 @@
   hosts: localhost
   gather_facts: False
   tasks:   
-    - name: Say Hello
-      debug:
-        msg: "Hello World!"
     - name: "rhel-registration | Disable All Repos Except Those Required For Patching"
       command: "subscription-manager {{ item }}"
       with_items:
