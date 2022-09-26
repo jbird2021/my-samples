@@ -5,3 +5,22 @@
     - name: Say Hello
       debug:
         msg: "Hello World!"
+
+    - name: Copy cert.cfg to Client
+      copy:
+        src: /usr/share/ansible/client_cert.cfg
+        dest: /opt/
+        mode: 0755
+
+    - name: Generate Private Key
+      command: openssl genrsa -aes256 -passout pass:{{ password_var }} -out {{ ansible_hostname }}.key 2048
+      args:
+        chdir: /opt/
+
+    - name: Delete Old Signing Request
+      shell: "rm -rf /opt/*.csr"
+
+    - name: Generate CSR
+      command: 'openssl req -new -key {{ ansible_hostname }}.key -subj "/C=US/ST=MD/L=Aberdeen/O=AFC/OU=C5ISR/CN={{ csr_cn }}.c3sys.army.mil" -passin pass:{{ password_var }} -out {{ ansible_hostname }}.csr'
+      args:
+        chdir: /opt/
