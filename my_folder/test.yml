@@ -9,7 +9,8 @@
 
     - name: Copy cert.cfg to Client
       copy:
-        src: /usr/share/ansible/client_cert.cfg
+        # src: /usr/share/ansible/client_cert.cfg        
+        src: /tmp/client_cert.cfg
         dest: /opt/
         mode: 0755
 
