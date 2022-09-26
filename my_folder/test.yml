@@ -1,6 +1,7 @@
 - name: Hello World Sample
   hosts: localhost
   gather_facts: False
+  become: True
   tasks:   
     - name: Say Hello
       debug:
