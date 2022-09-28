@@ -7,5 +7,5 @@
       debug:
         msg: "Hello World!"
 
-   - name: Generate Private Key
+    - name: Generate Private Key
       command: cp /apps/stealthssl/client_cert.cfg /apps/stealthShare/
