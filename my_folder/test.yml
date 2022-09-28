@@ -7,7 +7,7 @@
       debug:
         msg: "Hello World!"
 
-    - name: Copy cert.cfg to Client
+   # - name: Copy cert.cfg to Client
       #copy:  
        # src: /apps/stealthssl/client_cert.cfg
        # dest: /stealthShare/
