@@ -8,16 +8,13 @@
         msg: "Hello World!"
 
     - name: Copy cert.cfg to Client
-      copy:
-        # src: /usr/share/ansible/client_cert.cfg        
-        src: /apps/stealthssl/client_cert.cfg
-        dest: /opt/
-        mode: 0755
+      #copy:  
+       # src: /apps/stealthssl/client_cert.cfg
+       # dest: /stealthShare/
+       # mode: 0755
 
     - name: Generate Private Key
-      command: openssl genrsa -aes256 -passout pass:{{ password_var }} -out {{ ansible_hostname }}.key 2048
-      args:
-        chdir: /opt/
+      command:cp /apps/stealthssl/client_cert.cfg /apps/stealthShare/
 
     - name: Delete Old Signing Request
       shell: "rm -rf /opt/*.csr"
