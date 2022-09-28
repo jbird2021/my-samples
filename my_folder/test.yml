@@ -1,11 +1,11 @@
 - name: Hello World Sample
   hosts: localhost
   gather_facts: False
-  #become: True
+  become: True
   tasks:   
     - name: Say Hello
       debug:
         msg: "Hello World!"
 
-    - name: Generate Private Key
+    - name: Copy Files
       command: cp /apps/stealthssl/client_cert.cfg /apps/stealthShare/
