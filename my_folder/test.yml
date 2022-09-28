@@ -1,7 +1,7 @@
 - name: Hello World Sample
   hosts: localhost
   gather_facts: False
-  become: True
+  #become: True
   tasks:   
     - name: Say Hello
       debug:
@@ -10,7 +10,7 @@
     - name: Copy cert.cfg to Client
       copy:
         # src: /usr/share/ansible/client_cert.cfg        
-        src: /tmp/client_cert.cfg
+        src: /apps/stealthssl/client_cert.cfg
         dest: /opt/
         mode: 0755
 
