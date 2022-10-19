@@ -5,6 +5,8 @@
     - name: Say Hello
       debug:
         msg: "Hello World!"
-    - name: Induce an exception to see what happens
-      ansible.builtin.ping:
-        data: crash
+    
+    - name: download file
+      ansible.builtin.get_url:
+        url: https://https://raw.githubusercontent.com/jbird2021/ansible-tower-samples/master/README.md
+        dest: /tmp/
