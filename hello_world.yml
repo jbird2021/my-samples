@@ -9,4 +9,4 @@
     - name: download file
       ansible.builtin.get_url:
         url: https://raw.githubusercontent.com/jbird2021/ansible-tower-samples/master/README.md
-        dest: /tmp/readme.md
+        dest: /tmp
