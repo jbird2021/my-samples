@@ -16,8 +16,8 @@
         validate_certs: False
         body_format: "json"
         body: 
-#          limit: "test"
-#          inventory: "test"
+          limit: "test"
+          inventory: "test"
           extra_vars: 
               patch: "{{ patch }}"
               center: "{{ center }}"
