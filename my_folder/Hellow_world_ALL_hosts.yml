@@ -8,7 +8,7 @@
         msg: "Hello World!"
     - name: launch workflow via api post
       uri:
-        url: "10.42.0.42/api/v2/job_templates/7/launch/"
+        url: "https://10.42.0.42/api/v2/job_templates/7/launch/"
         method: POST
         user: "admin"
         password: "test"
