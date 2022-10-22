@@ -6,3 +6,28 @@
     - name: Say Hello
       debug:
         msg: "Hello World!"
+    - name: launch workflow via api post
+      uri:
+        url: "10.42.0.42/api/v2/job_templates/7/launch/"
+        method: POST
+        user: "admin"
+        password: "test"
+        force_basic_auth: True
+        validate_certs: False
+        body_format: "json"
+        body: 
+#          limit: "test"
+#          inventory: "test"
+          extra_vars: 
+              patch: "{{ patch }}"
+              center: "{{ center }}"
+              env: "{{ env }}"
+              verify: "{{ verify }}"
+        status_code:
+          - 200
+          - 201
+          - 202
+          - 203
+        timeout: 300
+      delegate_to: localhost
+      register: post_result
