@@ -1,0 +1,25 @@
+- name: Create directory and file on local system
+  hosts: localhost
+  gather_facts: False
+  
+  vars:
+    local_report_directory: /tmp/test_directory
+    dev_hostname: test_file
+    json_health_report: this is a test
+    
+  tasks:   
+
+    - name: Create {{ local_report_directory }}
+      ansible.builtin.file:
+        path: "{{ local_report_directory }}/healthcheck"
+        state: directory
+        mode: 0755
+      run_once: true
+      delegate_to: localhost
+
+    - name: Create the json file on the local server
+      ansible.builtin.copy:
+        dest: "{{ local_report_directory }}/healthcheck/{{ dev_hostname }}.json"
+        content: "{{ json_health_report }}"
+        mode: 0755
+      delegate_to: localhost        
