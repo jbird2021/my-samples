@@ -7,6 +7,6 @@
         url: https://3.15.223.215/api/v2/job_template/7/launch
         body_format: json
         headers:
-          authorization: bearer <token>
+          authorization: bearer NVCWd2bhFMJtjxo7xJgOzoBnjwbKUr
         method: "POST"
         status_code: 201
