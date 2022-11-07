@@ -5,9 +5,10 @@
     - name: Say Hello
       uri:
         url: https://18.191.186.72/api/v2/job_template/10/launch
+        follow_redirects: none
         validate_certs: false
         body_format: json
-        headers:
-          authorization: bearer uSvRTwx2uJEyqYpaEivvNpXtG53GXK
+        #headers:
+        #  authorization: bearer uSvRTwx2uJEyqYpaEivvNpXtG53GXK
         method: "POST"
         status_code: 201
