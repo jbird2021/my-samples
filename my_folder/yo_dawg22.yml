@@ -5,7 +5,7 @@
     - name: Say Hello
       ansible.builtin.uri:
         url: https://18.191.186.72/api/v2/job_template/10/launch
-    method: POST
-    body: "{{ lookup('ansible.builtin.file','issue.json') }}"
-    force_basic_auth: yes
-    status_code: 201
+        method: POST
+        body: "{{ lookup('ansible.builtin.file','issue.json') }}"
+        force_basic_auth: yes
+        status_code: 201
