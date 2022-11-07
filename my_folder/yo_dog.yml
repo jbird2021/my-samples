@@ -8,7 +8,7 @@
         follow_redirects: none
         validate_certs: false
         body_format: json
-        headers:
-          authorization: bearer FXLSLcgNT4xOfAd3ZHnyUXIw1cx4NA
+        #headers:
+        #  authorization: bearer FXLSLcgNT4xOfAd3ZHnyUXIw1cx4NA
         method: "POST"
         status_code: 201
