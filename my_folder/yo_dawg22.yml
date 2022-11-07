@@ -7,6 +7,6 @@
         url: https://18.191.186.72/api/v2/job_templates/10/launch/
         validate_certs: false
         headers:
-          authorization: bearer uSvRTwx2uJEyqYpaEivvNpXtG53GXK
+          authorization: bearer uSvRTwx2uJEyqYpaEivvNpXtG53GXK!
         method: POST
         status_code: 201
