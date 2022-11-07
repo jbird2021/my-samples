@@ -4,7 +4,7 @@
   tasks:   
     - name: Say Hello
       uri:
-        url: https://10.42.0.42/api/v2/job_template/10/launch
+        url: https://10.42.0.42/api/v2/job_template/10/launch/
         validate_certs: false
         method: POST
         status_code: 201
