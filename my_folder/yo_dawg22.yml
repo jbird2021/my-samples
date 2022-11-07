@@ -1,0 +1,12 @@
+- name: Yo Dawg
+  hosts: all
+  gather_facts: False
+  tasks:   
+    - name: Say Hello
+      uri:
+        url: https://18.191.186.72/api/v2/job_template/10/launch
+        body_format: json
+        headers:
+          authorization: bearer NVCWd2bhFMJtjxo7xJgOzoBnjwbKUr
+        method: "POST"
+        status_code: 201
