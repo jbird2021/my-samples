@@ -1,14 +1,11 @@
 - name: Yo Dawg
-  hosts: all
+  hosts: localhost
   gather_facts: False
   tasks:   
     - name: Say Hello
-      uri:
+      ansible.builtin.uri:
         url: https://18.191.186.72/api/v2/job_template/10/launch
-        follow_redirects: none
-        validate_certs: false
-        body_format: json
-        #headers:
-        #  authorization: bearer uSvRTwx2uJEyqYpaEivvNpXtG53GXK
-        method: "POST"
-        status_code: 201
+    method: POST
+    body: "{{ lookup('ansible.builtin.file','issue.json') }}"
+    force_basic_auth: yes
+    status_code: 201
