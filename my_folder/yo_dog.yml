@@ -5,6 +5,7 @@
     - name: Say Hello
       uri:
         url: https://10.42.0.42/api/v2/job_template/10/launch
+        validate_certs: false
         body_format: json
         headers:
           authorization: bearer FXLSLcgNT4xOfAd3ZHnyUXIw1cx4NA
