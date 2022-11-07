@@ -5,7 +5,7 @@
     - name: I heard you like api calls
       uri:
         url: https://18.191.186.72/api/v2/job_templates/10/launch/
-        #validate_certs: false
+        validate_certs: false
         body_format: json
         headers:
           authorization: bearer uSvRTwx2uJEyqYpaEivvNpXtG53GXK
