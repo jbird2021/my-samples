@@ -2,7 +2,7 @@
   hosts: all
   gather_facts: False
   tasks:   
-    - name: Say Hello
+    - name: I heard you like api calls
       uri:
         url: https://10.42.0.42/api/v2/job_templates/10/launch/
         validate_certs: false
