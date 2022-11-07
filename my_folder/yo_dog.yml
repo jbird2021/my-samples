@@ -6,5 +6,7 @@
       uri:
         url: https://10.42.0.42/api/v2/job_templates/10/launch/
         validate_certs: false
+        headers:
+          authorization: bearer FXLSLcgNT4xOfAd3ZHnyUXIw1cx4NA
         method: POST
         status_code: 201
