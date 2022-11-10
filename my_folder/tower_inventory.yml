@@ -3,7 +3,7 @@
   gather_facts: False
   tasks:   
     - name: Delete Inventories
-      tower_inventory:
+      awx.awx.tower_inventory:
         name: test_inv_1
         organization: Default
         state: absent
