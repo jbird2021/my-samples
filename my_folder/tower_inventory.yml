@@ -1,1 +1,9 @@
-test
+- name: oauthtoken
+  hosts: localhost
+  gather_facts: False
+  tasks:   
+    - name: Delete Inventories
+      tower_inventory:
+        name: test_inv_1
+        state: absent
+        validate_certs: no
