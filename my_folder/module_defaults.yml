@@ -1,9 +1,12 @@
 ---
 - name: "Testing Login Logout"
   hosts: localhost
+  vars:
+    k8s_host: 18.221.77.153
+  
   module_defaults:
     group/aws:
-      host: 18.221.77.153	
+      host: "{{ k8s_host }}"
       validate_certs: false
   pre_tasks:
   - include_role:
