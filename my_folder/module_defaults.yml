@@ -3,6 +3,9 @@
   hosts: localhost
   vars:
     k8s_host: 18.221.77.153
+    k8s_username: test
+    k8s_password: test
+    
   
   module_defaults:
     group/aws:
