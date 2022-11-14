@@ -1,0 +1,14 @@
+---
+- name: "Testing Login Logout"
+  hosts: localhost
+  module_defaults:
+    group/aws:
+      host: 18.221.77.153	
+      validate_certs: false
+  pre_tasks:
+  - include_role:
+      name: login
+
+  post_tasks:
+  - include_role:
+      name: logout
