@@ -9,6 +9,6 @@
   - include_role:
       name: login
 
-  post_tasks:
-  - include_role:
-      name: logout
+#  post_tasks:
+#  - include_role:
+#      name: logout
