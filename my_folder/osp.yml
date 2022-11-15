@@ -1,0 +1,19 @@
+- name: Get username  
+  shell: "grep username {{ lookup('env','OS_CLIENT_CONFIG_FILE') }} | awk '{ print $2 }'"
+  register: username
+
+
+
+- name: Create compute instance(s) for controller hybrid node(s)
+  openstack.cloud.server:
+    state: present
+    name: "{{ username.stdout }}-{{ vm_name }}-controller-hybrid"
+    image: "{{ image }}"
+    key_name: "{{ key_name }}"
+    flavor: quicklab.amd.memory.small
+    network: provider_net_shared_3
+    timeout: 900
+    volume_size: 20
+  register: hybrid_output
+  when: 
+  - admin_password is defined
