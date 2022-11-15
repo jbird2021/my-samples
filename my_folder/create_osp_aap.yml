@@ -1,0 +1,18 @@
+---
+- hosts: localhost 
+  gather_facts: no
+  roles:
+  - configure_osp
+
+- hosts: controller:controller_control:hub:postgresql:isolated:execution_nodes:execution_nodes_hop:sso
+  vars_files:
+    - vault.yml
+  vars:
+    - env: osp
+  roles:
+  - configure_vms
+  tasks:
+  - include_role: 
+      name: configure_installer
+    when: (groups['controller'] is defined and inventory_hostname == groups['controller'][0]) or (groups['controller'] is not defined and (groups['controller_control'] is defined and inventory_hostname == groups['controller_control'][0])) or (admin_password is undefined and inventory_hostname ==  groups['hub'][0])
+
