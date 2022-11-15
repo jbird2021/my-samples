@@ -1,0 +1,17 @@
+ARG EE_BASE_IMAGE=registry.redhat.io/ansible-automation-platform-22/ee-supported-rhel8
+ARG EE_BUILDER_IMAGE=quay.io/ansible/ansible-builder:latest
+
+FROM $EE_BASE_IMAGE as galaxy
+ARG ANSIBLE_GALAXY_CLI_COLLECTION_OPTS=
+USER root
+
+
+FROM $EE_BUILDER_IMAGE as builder
+
+FROM $EE_BASE_IMAGE
+USER root
+COPY --from=builder /output/ /output/
+RUN /output/install-from-bindep && rm -rf /output/wheels
+COPY oc /usr/local/bin/oc
+RUN microdnf install -y unzip
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" &&  unzip awscliv2.zip && ./aws/install
