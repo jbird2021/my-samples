@@ -2,7 +2,7 @@
 collections:
 # With just the collection name
 - community.general
-- awx.awx
+#- awx.awx
 #- oracle.oci
 #- infoblox.nios_modules
 #- myfirst.test_collection
@@ -14,3 +14,4 @@ collections:
 #- name: community.vmware
 #  version: 2.4.0
 #- ansible.windows
+- openstack.cloud
