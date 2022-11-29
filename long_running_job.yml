@@ -1,4 +1,4 @@
-- name: Long Running Job'
+- name: Long Running Job
   hosts: all
   gather_facts: False
   tasks:
