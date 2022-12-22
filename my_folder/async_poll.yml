@@ -1,0 +1,21 @@
+---
+- name: Reproducing Issue in Case 03190279
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Sleep Task
+      ansible.builtin.shell: sleep 50s
+      async: 60 
+      poll: 0
+      register: verification
+      delegate_to: localhost
+
+    - name: Verify async task
+      ansible.builtin.async_status:
+        jid: "{{ verification.ansible_job_id }}"
+      register: async_poll_results
+      until: async_poll_results.finished
+      retries: 10
+      delay: 10
+      delegate_to: localhost
