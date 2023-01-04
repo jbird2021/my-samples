@@ -5,4 +5,4 @@
 
   tasks:
     - name: Sleep Task
-      ansible.builtin.shell: sleep 500s
+      ansible.builtin.shell: sleep 350s
