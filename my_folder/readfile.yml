@@ -4,4 +4,4 @@
   tasks:   
     - name: Read File
       ansible.builtin.debug:
-        msg: "the value of test.txt is {{lookup('ansible.builtin.file', '/opt/tmp/test.txt') }}"
+        msg: "the value of test.txt is {{lookup('ansible.builtin.file', '/var/tmp/test.txt') }}"
