@@ -1,5 +1,12 @@
-- name: Run NMAP Scan
-  shell: nmap -v -sn 10.0.109.3/22 -oX '/tmp/test.xml'
-  when: automation_host != inventory_hostname
-  async: 3600
-  poll: 10
+- name: Hello World Sample
+  hosts: localhost
+  gather_facts: False
+  tasks:   
+    - name: Say Hello
+      debug:
+        msg: "Hello World!"
+    - name: Run NMAP Scan
+      shell: nmap -v -sn 10.0.109.3/22 -oX '/tmp/test.xml'
+      #when: automation_host != inventory_hostname
+      async: 3600
+      poll: 10
