@@ -1,7 +1,7 @@
 ---
 collections:
 # With just the collection name
-- community.general=6.2.0
+- community.general==6.2.0
 #- awx.awx
 #- oracle.oci
 #- infoblox.nios_modules
