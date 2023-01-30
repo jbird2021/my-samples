@@ -1,6 +1,6 @@
 - name: Testing
   hosts: localhost
-  gather_facts: True
+  gather_facts: False
   vars:
     tower:
       host: '{{ lookup("env", "TOWER_HOST") }}'
@@ -12,5 +12,5 @@
         msg: "Username: {{ ansible_user }}, Password: {{ ansible_password }}"
     - name: print tower stuff
       debug:
-        msg: "host: {{ tower.host }}"
+        msg: "{{ lookup("env", "TOWER_HOST") }}"
         #, username: {{ username }}, password: {{ password }}"
