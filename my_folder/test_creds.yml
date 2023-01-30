@@ -12,5 +12,5 @@
         msg: "Username: {{ ansible_user }}, Password: {{ ansible_password }}"
     - name: print tower stuff
       debug:
-        msg: "{{ lookup("env", "TOWER_HOST") }}"
+        msg: {{ lookup("env", "TOWER_HOST") }}
         #, username: {{ username }}, password: {{ password }}"
