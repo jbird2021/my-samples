@@ -8,4 +8,5 @@
   tasks:   
     - name: Print Creds
       debug:
-        msg: "{{ ansible_user }}{{ ansible_password }}"
+        msg: "{{ ansible_user }}"
+             "{{ ansible_password }}"
