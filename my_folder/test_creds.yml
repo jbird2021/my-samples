@@ -1,10 +1,6 @@
-- name: Hello World Sample
+- name: Testing
   hosts: localhost
   gather_facts: False
-#  vars:
-#    machine:
-#      username: '{{ ansible_user }}'
-#      password: '{{ ansible_password }}'
   tasks:   
     - name: Print Creds
       debug:
