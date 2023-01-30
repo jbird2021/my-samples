@@ -1,6 +1,6 @@
 - name: Testing
   hosts: localhost
-  gather_facts: False
+  gather_facts: True
   vars:
     tower:
       host: '{{ lookup("env", "TOWER_HOST") }}'
