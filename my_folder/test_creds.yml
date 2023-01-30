@@ -1,15 +1,15 @@
 - name: Testing
   hosts: localhost
   gather_facts: False
-  vars:
-    tower:
-      host: '{{ lookup("env", "TOWER_HOST") }}'
-      username: '{{ lookup("env", "TOWER_USERNAME") }}'
-      password: '{{ lookup("env", "TOWER_PASSWORD") }}'
+  #vars:
+  #  tower:
+  #    host: '{{ lookup("env", "TOWER_HOST") }}'
+  #    username: '{{ lookup("env", "TOWER_USERNAME") }}'
+  #    password: '{{ lookup("env", "TOWER_PASSWORD") }}'
   tasks:   
     - name: Print Creds
       debug:
         msg: "Username: {{ ansible_user }}, Password: {{ ansible_password }}"
     - name: print tower stuff
       debug:
-        msg: "host: {{ lookup("env", "TOWER_HOST") }}, username: {{ lookup("env", "TOWER_USERNAME") }}, password: {{ lookup("env", "TOWER_PASSWORD") }}"
+        msg: "host: '{{ lookup("env", "TOWER_HOST") }}', username: '{{ lookup("env", "TOWER_USERNAME") }}', password: '{{ lookup("env", "TOWER_PASSWORD") }}'"
