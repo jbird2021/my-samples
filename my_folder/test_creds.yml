@@ -12,4 +12,5 @@
         msg: "Username: {{ ansible_user }}, Password: {{ ansible_password }}"
     - name: print tower stuff
       debug:
-        msg: "host: {{ host }}, username: {{ username }}, password: {{ password }}"
+        msg: "host: {{ tower.host }}"
+        #, username: {{ username }}, password: {{ password }}"
