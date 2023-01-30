@@ -7,10 +7,9 @@
       username: '{{ lookup("env", "TOWER_USERNAME") }}'
       password: '{{ lookup("env", "TOWER_PASSWORD") }}'
   tasks:   
-    - name: Print Creds
+    - name: Print Machine Creds
       debug:
         msg: "Username: {{ ansible_user }}, Password: {{ ansible_password }}"
-    - name: print tower stuff
+    - name: Print Tower Creds
       debug:
-        msg: '{{ lookup("env", "TOWER_HOST") }}'
-        #, username: {{ username }}, password: {{ password }}"
+        msg: "host: {{ tower.host }}, username: {{ tower.username }}, password: {{ tower.password }}"
