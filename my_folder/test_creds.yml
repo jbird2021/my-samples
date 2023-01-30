@@ -8,6 +8,8 @@
   tasks:   
     - name: Print Creds
       debug:
-        msg: username
-        msg: password
-        
+        msg: '{{ ansible_user }}'
+    - set_fact: 
+        controller_password: '{{ lookup("env", "TOWER_PASSWORD") }}'
+    - debug:
+        msg: "{{ controller_password }}"
