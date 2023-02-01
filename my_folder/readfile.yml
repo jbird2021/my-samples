@@ -1,5 +1,5 @@
 - name: Read File Sample
-  hosts: localhost,all
+  hosts: all
   gather_facts: False
   tasks:   
     - name: Read File
