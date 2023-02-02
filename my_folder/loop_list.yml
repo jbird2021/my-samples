@@ -19,18 +19,7 @@
         echo "{{ item }}"
       loop: "{{ echo_list }}"
       register: shell_echo 
-  
-    - name: print items as json
-      debug:
-        msg: 
-          - "{{ shell_echo  | json_query('results[*].stdout') }}"
-    - name: Echo my_env_var
-      shell: "echo $MY_ENV_VARIABLE"
-      environment:
-        MY_ENV_VARIABLE: whatever_value
 
-    - name: Echo my_env_var again
-      shell: "echo $MY_ENV_VARIABLE"
     - name: Setting booleans using complex argument style
       ansible.builtin.set_fact:
         one_fact: yes
