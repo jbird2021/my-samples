@@ -22,4 +22,4 @@
           - "{{ shell_echo  | json_query('results[*].stdout') }}"
     - meta: end_play
     - name: change launch to orbit
-      launch_to_orbit: False
+        launch_to_orbit: False
