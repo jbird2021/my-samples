@@ -3,7 +3,7 @@ collections:
 # With just the collection name
 - name: community.general
   version: 6.2.0
-#- awx.awx
+- awx.awx
 #- oracle.oci
 #- infoblox.nios_modules
 #- myfirst.test_collection
