@@ -31,3 +31,7 @@
 
     - name: Echo my_env_var again
       shell: "echo $MY_ENV_VARIABLE"
+    - name: Setting booleans using complex argument style
+      ansible.builtin.set_fact:
+        one_fact: yes
+        other_fact: no
