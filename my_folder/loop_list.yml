@@ -8,17 +8,26 @@
       - "two"
       - "three"
   tasks:
-    - debug: 
+    - name: print items
+      debug: 
         msg:
           - "{{ item }}"
       loop: "{{ echo_list }}"
-
-    - shell: | 
+      
+    - name: register echo
+      shell: | 
         echo "{{ item }}"
       loop: "{{ echo_list }}"
       register: shell_echo 
-    - debug:
+  
+    - name: print items as json
+      debug:
         msg: 
           - "{{ shell_echo  | json_query('results[*].stdout') }}"
-    - meta: end_play
-    - launch_to_orbit: False
+  
+    - name: end play
+      meta: end_play
+  
+    - name: set env var
+      environment: 
+        launch_to_orbit: False
