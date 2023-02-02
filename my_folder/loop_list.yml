@@ -24,7 +24,3 @@
       debug:
         msg: 
           - "{{ shell_echo  | json_query('results[*].stdout') }}"
-  
-    - name: set env var
-      environment: 
-        launch_to_orbit: False
