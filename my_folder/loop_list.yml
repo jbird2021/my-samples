@@ -1,7 +1,7 @@
 - hosts: localhost
   collections: 
     - community.general
-    - awx.awx
+    
   gather_facts: no
   vars:
     echo_list:
@@ -25,7 +25,3 @@
       ansible.builtin.set_fact:
         one_fact: yes
         other_fact: no
-    - name: Add label to organization
-      label:
-        name: Custom Label
-        organization: Default
