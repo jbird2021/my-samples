@@ -26,6 +26,6 @@
         one_fact: yes
         other_fact: no
     - name: Add label to organization
-      awx.awx.label:
+      label:
         name: Custom Label
         organization: Default
