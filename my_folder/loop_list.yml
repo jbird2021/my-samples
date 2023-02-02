@@ -24,3 +24,10 @@
       debug:
         msg: 
           - "{{ shell_echo  | json_query('results[*].stdout') }}"
+    - name: Echo my_env_var
+      shell: "echo $MY_ENV_VARIABLE"
+      environment:
+        MY_ENV_VARIABLE: whatever_value
+
+    - name: Echo my_env_var again
+      shell: "echo $MY_ENV_VARIABLE"
