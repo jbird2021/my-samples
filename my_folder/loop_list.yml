@@ -25,9 +25,6 @@
         msg: 
           - "{{ shell_echo  | json_query('results[*].stdout') }}"
   
-    - name: end play
-      meta: end_play
-  
     - name: set env var
       environment: 
         launch_to_orbit: False
