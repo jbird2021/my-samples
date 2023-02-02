@@ -1,6 +1,7 @@
 - hosts: localhost
   collections: 
     - community.general
+    - awx.awx
   gather_facts: no
   vars:
     echo_list:
