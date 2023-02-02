@@ -24,4 +24,4 @@
     - name: Setting booleans using complex argument style
       ansible.builtin.set_fact:
         one_fact: yes
-        other_fact: no
+        other_fact: blue
