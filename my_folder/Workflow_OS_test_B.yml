@@ -6,10 +6,10 @@
     - name: What is OS
       debug:
         msg: "OS is = {{ OS }}"
-    - name: Dont do stuff if OS is A
+    - name: Dont do stuff if OS is NOT B
       debug:
-        msg: "Im not doing stuff because the OS is A"
-      when: OS == "A"       
+        msg: "Im not doing stuff because the OS is {{ OS }}"
+      when: OS != "B"       
     - name: Do stuff if OS is B
       debug:
         msg: "Im doing stuff because the OS is B"
