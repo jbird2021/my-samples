@@ -1,0 +1,8 @@
+- name: Workflow OS Test A
+  hosts: localhost
+  gather_facts: False
+  become: False
+  tasks:   
+    - name: Check if OS = "A"
+      debug:
+        msg: "{{ OS }}"
