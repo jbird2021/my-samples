@@ -3,10 +3,14 @@
   gather_facts: False
   become: False
   tasks:   
-    - name: Check if OS = "B"
+    - name: What is OS
       debug:
-        msg: "{{ OS }}"
-    - name: Do stuff based on OS
+        msg: "OS is = {{ OS }}"
+    - name: Dont do stuff if OS is A
       debug:
-        msg: "Im doing OS B stuff"
+        msg: "Im not doing stuff because the OS is A"
+      when: OS == "A"       
+    - name: Do stuff if OS is B
+      debug:
+        msg: "Im doing stuff because the OS is B"
       when: OS == "B"
