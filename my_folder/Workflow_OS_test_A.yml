@@ -6,3 +6,7 @@
     - name: Check if OS = "A"
       debug:
         msg: "{{ OS }}"
+    - name: Do stuff based on OS
+      debug:
+        msg: "I'm doing OS A stuff"
+       when: "{{ OS }}"=A
