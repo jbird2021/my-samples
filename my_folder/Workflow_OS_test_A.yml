@@ -9,4 +9,4 @@
     - name: Do stuff based on OS
       debug:
         msg: "I'm doing OS A stuff"
-       when: "{{ OS }}" == "A"
+       when: OS == "A"
