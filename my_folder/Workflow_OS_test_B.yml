@@ -1,4 +1,4 @@
- name: Workflow OS Test B
+- name: Workflow OS Test B
   hosts: localhost
   gather_facts: False
   become: False
