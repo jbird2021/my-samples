@@ -1,0 +1,16 @@
+- name: Workflow OS Test C
+  hosts: localhost
+  gather_facts: False
+  become: False
+  tasks:   
+    - name: What is OS
+      debug:
+        msg: "OS is = {{ OS }}"
+    - name: Dont do stuff if OS is A or B
+      debug:
+        msg: "Im not doing stuff because the OS is {{ OS }}"
+      when: OS != "C"       
+    - name: Do stuff if OS is C
+      debug:
+        msg: "Im doing stuff because the OS is C"
+      when: OS == "C"
