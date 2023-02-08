@@ -1,4 +1,4 @@
-- name: Workflow OS Test B
+- name: Workflow OS Test A
   hosts: localhost
   gather_facts: False
   become: False
@@ -6,10 +6,10 @@
     - name: What is OS
       debug:
         msg: "OS is = {{ OS }}"
-    - name: Dont do stuff if OS is B
+    - name: Dont do stuff if OS is NOT A
       debug:
-        msg: "Im not doing stuff because the OS is B"
-      when: OS == "B"       
+        msg: "Im not doing stuff because the OS is {{ OS }}"
+      when: OS != "A"       
     - name: Do stuff if OS is A
       debug:
         msg: "Im doing stuff because the OS is A"
