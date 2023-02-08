@@ -3,7 +3,7 @@
   gather_facts: False
   become: False
   tasks:   
-    - ansible.builtin.assert: { that: "OS == 'A'" }
+    - ansible.builtin.assert: { that: "OS == 'B'" }
     - name: What is OS
       debug:
         msg: "OS is = {{ OS }}"
