@@ -1,5 +1,5 @@
 - name: copy_from_to_tmp.yml
-  hosts: "{{ varHOSTS | lower }}"
+  hosts: all
   become: true
   vars:
     folder_tower: "/tmp/controler/"
