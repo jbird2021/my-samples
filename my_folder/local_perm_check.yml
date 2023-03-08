@@ -1,0 +1,9 @@
+- name: Hello World Sample
+  hosts: all
+  gather_facts: False
+  become: False
+  tasks:   
+    - name: get dir permissions
+      command: ls -ltr /tmp/share/
+      register: paths2
+      delegate_to: localhost
