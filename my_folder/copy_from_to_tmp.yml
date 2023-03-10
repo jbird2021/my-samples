@@ -6,7 +6,6 @@
     folder_node: "/tmp/node/"
 
   tasks:
-
     - name: "1.1 - {{ inventory_hostname }} :: Display folder TOWER:/tmp/controler/"
       shell: |
         echo "--------------------------------------------------------------------------------"
@@ -17,7 +16,7 @@
         echo "---{{ folder_tower }}-----------------------------------------------------------"
         ls -ltr "{{ folder_tower }}"  2>&1
         echo "--------------------------------------------------------------------------------"
-      delegate_to: "{{ varTOWER | lower}}"    
+      # delegate_to: "{{ varTOWER | lower}}"    
 
 
     - name: "1.2 - {{ inventory_hostname }} :: Copy folder from 'TOWER:{{ folder_tower }}' to 'NODE:{{ folder_node }}' "
