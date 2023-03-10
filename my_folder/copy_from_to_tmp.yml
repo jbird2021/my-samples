@@ -10,7 +10,7 @@
       shell: |
         echo "--------------------------------------------------------------------------------"
         echo " HOSTNAME     : $(hostname)"
-        echo " varHOSTS     : {{ varHOSTS }}"
+        #echo " varHOSTS     : {{ varHOSTS }}"
         echo " folder_tower : {{ folder_tower }}"
         echo " folder_node  : {{ folder_node }}"
         echo "---{{ folder_tower }}-----------------------------------------------------------"
