@@ -1,5 +1,5 @@
 - name: copy_from_to_tmp.yml
-  hosts: all
+  hosts: localhost
   become: true
   vars:
     folder_tower: "/tmp/controler/"
