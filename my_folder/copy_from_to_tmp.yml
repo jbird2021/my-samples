@@ -1,6 +1,6 @@
 - name: copy_from_to_tmp.yml
   hosts: localhost
-  become: true
+  #become: true
   vars:
     folder_tower: "/tmp/controler/"
     folder_node: "/tmp/node/"
