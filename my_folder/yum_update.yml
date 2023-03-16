@@ -1,0 +1,31 @@
+- hosts: all
+  become: yes
+  become_method: sudo
+  gather_facts: no
+  tasks:
+    - name: "update all packages to latest"
+      yum:
+         name: "*"
+         state: latest
+      register: yumupdate_status
+
+    - debug:
+        msg: "{{ yumupdate_status }}"
+
+    - name: "list all packages"
+      tags: 
+       - check_only
+      yum: list=updates update_cache=true enablerepo=*
+      ignore_errors: yes
+      register: yumoutput
+      failed_when: yumoutput.results | length > 0
+
+    - name: "list vim package after patching"
+      yum: list=vim 
+      tags: 
+       - check_only
+    
+    - debug: msg="{{ yumoutput.results | map(attribute='name') | list }}"
+      tags: 
+       - debug
+       - check_only
