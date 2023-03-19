@@ -1,0 +1,9 @@
+- name: create_local_directory.yml
+  hosts: localhost
+
+  tasks:
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+        path: /etc/some_directory
+        state: directory
+        mode: '0755'
