@@ -1,5 +1,5 @@
-- name: Long Running Job
-  hosts: all
+- name: win_powershell.yml
+  hosts: localhost
   gather_facts: False
   tasks:
     - name: Run basic PowerShell script
