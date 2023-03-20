@@ -1,5 +1,5 @@
 - name: win_powershell.yml
-  hosts: localhost
+  hosts: all
   gather_facts: False
   tasks:
     - name: Run basic PowerShell script
