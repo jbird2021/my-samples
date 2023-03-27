@@ -26,7 +26,7 @@
     - name: Write TADDM to a file
       ansible.builtin.copy:
         content: "Just some test content"
-        dest: /tmp/node/test.txt
+        dest: /opt/tmp/test.txt
       delegate_to: localhost 
 
     - name: Copy using inline content
