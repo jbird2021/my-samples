@@ -27,3 +27,4 @@
       ansible.builtin.copy:
         content: "Just some test content"
         dest: /tmp/node/test.txt
+      delegate_to: localhost 
