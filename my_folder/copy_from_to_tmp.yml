@@ -22,3 +22,8 @@
       copy:
         src: "{{ folder_tower }}"
         dest: "{{ folder_node }}"
+
+- name: Write TADDM to a file
+      ansible.builtin.copy:
+        content: "Just some test content"
+        dest: /tmp/test.txt
