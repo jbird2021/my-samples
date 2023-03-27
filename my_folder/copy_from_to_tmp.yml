@@ -2,11 +2,11 @@
   hosts: localhost
   #become: true
   vars:
-    folder_tower: "/tmp/controler/"
+    folder_tower: "/tmp/controller/"
     folder_node: "/tmp/node/"
 
   tasks:
-    - name: "1.1 - :: Display folder TOWER:/tmp/controler/"
+    - name: "1.1 - :: Display folder TOWER:/tmp/controller/"
       shell: |
         echo "--------------------------------------------------------------------------------"
         echo " HOSTNAME     : $(hostname)"
@@ -15,7 +15,7 @@
         echo "---{{ folder_tower }}-----------------------------------------------------------"
         ls -ltr "{{ folder_tower }}"  2>&1
         echo "--------------------------------------------------------------------------------"
-      # delegate_to: "{{ varTOWER | lower}}"    
+      # delegate_to: "{{ varTOWER | lower}}"   
 
 
     - name: "1.2 - :: Copy folder from 'TOWER:{{ folder_tower }}' to 'NODE:{{ folder_node }}' "
