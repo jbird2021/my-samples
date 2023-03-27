@@ -28,3 +28,8 @@
         content: "Just some test content"
         dest: /tmp/node/test.txt
       delegate_to: localhost 
+
+   - name: Copy using inline content
+      ansible.builtin.copy:
+        content: '# This file was moved to /etc/other.conf'
+        dest: /tmp/testt.conf
