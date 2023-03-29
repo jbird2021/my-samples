@@ -1,0 +1,8 @@
+- name: print_extra_vars.yml
+  hosts: all
+  gather_facts: False
+  become: False
+  tasks:   
+    - name: "Ansible | List all known variables and facts"
+      debug:
+        var: hostvars[inventory_hostname]
