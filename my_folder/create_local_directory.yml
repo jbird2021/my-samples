@@ -8,6 +8,7 @@
     - name: list contents of "/{{base_directory}}"
       find:
         paths: "/{{base_directory}}"
+        file_type: directory
       register: directory_contents
     - debug:
         var: directory_contents      
@@ -21,6 +22,7 @@
     - name: list contents of "/{{base_directory}}"
       find:
         paths: "/{{base_directory}}"
+        file_type: directory
       register: directory_contents
     - debug:
         var: directory_contents   
