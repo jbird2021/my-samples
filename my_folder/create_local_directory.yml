@@ -5,14 +5,22 @@
     create_directory: demo_project
     
   tasks:
-    - command: "ls /{{base_directory}}"
-      register: dir_out
-    - debug: var={{item}}
-      with_items: dir_out.stdout_lines
-    
+    - name: list contents of "/{{base_directory}}"
+      find:
+        paths: "/{{base_directory}}"
+      register: directory_contents
+    - debug:
+        var: directory_contents      
+      
     - name: Create a directory if it does not exist
       ansible.builtin.file:
         path: "/{{base_directory}}/{{create_directory}}"
         state: directory
         mode: '0755'
-        # delegate_to: localhost
+
+    - name: list contents of "/{{base_directory}}"
+      find:
+        paths: "/{{base_directory}}"
+      register: directory_contents
+    - debug:
+        var: directory_contents   
