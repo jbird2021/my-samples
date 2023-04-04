@@ -1,10 +1,18 @@
 - name: create_local_directory.yml
   hosts: localhost
-
+  vars:
+    base_directory: staging
+    create_directory: demo_project
+    
   tasks:
+    - command: "ls /{{base_directory}}"
+      register: dir_out
+    - debug: var={{item}}
+      with_items: dir_out.stdout_lines
+    
     - name: Create a directory if it does not exist
       ansible.builtin.file:
-        path: /staging/demo_project
+        path: "/{{base_directory}}/{{create_directory}}
         state: directory
         mode: '0755'
         # delegate_to: localhost
