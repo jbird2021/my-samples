@@ -5,24 +5,14 @@
     create_directory: demo_project
     
   tasks:
-    - name: list contents of "/{{base_directory}}"
-      find:
-        paths: "/{{base_directory}}"
-        file_type: directory
-      register: directory_contents
-    - debug:
-        var: directory_contents      
-      
     - name: Create a directory if it does not exist
       ansible.builtin.file:
         path: "/{{base_directory}}/{{create_directory}}"
         state: directory
         mode: '0755'
 
-    - name: list contents of "/{{base_directory}}"
-      find:
-        paths: "/{{base_directory}}"
-        file_type: directory
-      register: directory_contents
-    - debug:
-        var: directory_contents   
+    - name: Create a directory if it does not exist
+      file:
+        path: "/{{base_directory}}/{{create_directory}}"
+        state: directory
+        mode: '0755'
