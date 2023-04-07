@@ -1,0 +1,11 @@
+- name: create_temp_directory.yml
+  hosts: all
+  gather_facts: True
+  become: False
+  tasks:   
+    - name: Create temporary folder
+  ansible.builtin.tempfile:
+    state: directory
+    suffix: temp
+  register: tempfile_1
+  delegate_to: localhost
