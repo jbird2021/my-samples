@@ -1,0 +1,13 @@
+- name: juniper_junos_test.yml
+  hosts: all
+  gather_facts: True
+  become: False
+  tasks:   
+    - name: Download file from remote device
+      junipernetworks.junos.junos_scp:
+        src: "/var/tmp/RSI_test.txt"
+        remote_src: true
+        recursive: true
+        dest: "/tmp/ansible.ipds9zkktemp/RSI_test.txt"
+     # provider: "{{ cli }}"
+  
