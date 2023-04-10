@@ -15,3 +15,4 @@ collections:
 #  version: 2.4.0
 #- ansible.windows
 #- openstack.cloud
+- junipernetworks.junos
