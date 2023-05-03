@@ -1,0 +1,11 @@
+---
+- name: Test command module running on localhost
+  hosts: localhost
+  gather_facts: no
+  become: false
+
+  tasks:
+    - name: Perform DNS lookup of FQDN
+      ansible.builtin.command: /usr/bin/dig {{ g_vm_fqdn }} +short +noedns
+      register: cmd_out
+      check_mode: no
