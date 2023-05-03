@@ -5,6 +5,10 @@
   become: false
 
   tasks:
+    - name: Perform a cat
+      ansible.builtin.command: cat /usr/bin/dig/text.txt
+      register: cmd_out1
+      check_mode: no
     - name: Perform DNS lookup of FQDN
       ansible.builtin.command: /usr/bin/dig {{ g_vm_fqdn }} +short +noedns
       register: cmd_out
