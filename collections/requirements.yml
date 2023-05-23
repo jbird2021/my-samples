@@ -1,7 +1,7 @@
 ---
 collections:
 # With just the collection name
-#- name: community.general
+- community.general
 #  version: 6.2.0
 #- awx.awx
 #- oracle.oci
@@ -16,4 +16,4 @@ collections:
 #  version: 2.4.0
 #- ansible.windows
 #- openstack.cloud
-- junipernetworks.junos
+#- junipernetworks.junos
