@@ -1,7 +1,8 @@
 ---
 collections:
 # With just the collection name
-- community.general
+- frr.frr
+#- community.general
 #  version: 6.2.0
 #- awx.awx
 #- oracle.oci
