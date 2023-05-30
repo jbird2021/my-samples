@@ -1,8 +1,0 @@
-- name: Hello World Sample
-  hosts: all
-  gather_facts: True
-  become: False
-  tasks:   
-    - name: Say Hello
-      debug:
-        msg: "Hello World!"
