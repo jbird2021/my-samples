@@ -1,7 +1,7 @@
 - name: test_package_module.yml
   hosts: all
   gather_facts: False
-  become: False
+  become: True
   tasks:   
 #    - name: Gather the package facts
 #      ansible.builtin.package_facts:
