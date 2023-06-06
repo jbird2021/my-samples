@@ -23,6 +23,7 @@
     - name: Package state=present
       ansible.builtin.package:
         name:
+        # UPDATE AVAILABLE
           - NetworkManager.x86_64
           - NetworkManager-libnm.x86_64
           - NetworkManager-team.x86_64
@@ -212,6 +213,95 @@
           - virt-what.x86_64
           - yum.noarch
           - yum-utils.noarch
+          
+         # DOES NOT EXIST 
+          - rust-lldb.noarch
+          - rust-src.noarch
+          - rust-srpm-macros.noarch
+          - saab-fonts.noarch
+          - sac.noarch
+          - samba-common.noarch
+          - samba-pidl.noarch
+          - samyak-devanagari-fonts.noarch
+          - samyak-fonts-common.noarch
+          - samyak-gujarati-fonts.noarch
+          - samyak-malayalam-fonts.noarch
+          - samyak-odia-fonts.noarch
+          - samyak-tamil-fonts.noarch
+          - sane-backends-doc.noarch
+          - sassist.noarch
+          - scala.noarch
+          - scala-apidoc.noarch
+          - scala-swing.noarch
+          - scap-security-guide.noarch
+          - scap-security-guide-doc.noarch
+          - seabios-bin.noarch
+          - seavgabios-bin.noarch
+          - selinux-policy.noarch
+          - selinux-policy-devel.noarch
+          - selinux-policy-doc.noarch
+          - selinux-policy-minimum.noarch
+          - selinux-policy-mls.noarch
+          - selinux-policy-sandbox.noarch
+          - selinux-policy-targeted.noarch
+          - sendmail-cf.noarch
+          - sendmail-doc.noarch
+          - setup.noarch
+          - sgabios-bin.noarch
+          - sgml-common.noarch
+          - sil-abyssinica-fonts.noarch
+          - sil-nuosu-fonts.noarch
+          - sil-padauk-book-fonts.noarch
+          - sil-padauk-fonts.noarch
+          - sil-scheherazade-fonts.noarch
+          - sisu-inject.noarch
+          - sisu-plexus.noarch
+          - skkdic.noarch
+          - slf4j.noarch
+          - smc-anjalioldlipi-fonts.noarch
+          - smc-dyuthi-fonts.noarch
+          - smc-fonts-common.noarch
+          - smc-kalyani-fonts.noarch
+          - smc-meera-fonts.noarch
+          - smc-rachana-fonts.noarch
+          - smc-raghumalayalam-fonts.noarch
+          - smc-suruma-fonts.noarch
+          - snactor.noarch
+          - sos.noarch
+          - sos-audit.noarch
+          - sos-collector.noarch
+          - sound-theme-freedesktop.noarch
+          - spacewalk-abrt.noarch
+          - spacewalk-client-cert.noarch
+          - spacewalk-koan.noarch
+          - spacewalk-oscap.noarch
+          - spacewalk-remote-utils.noarch
+          - spacewalk-usix.noarch
+          - spice-client-win-x64.noarch
+          - spice-client-win-x86.noarch
+          - spice-protocol.noarch
+          - spice-qxl-wddm-dod.noarch
+          - spice-qxl-xddm.noarch
+          - spice-vdagent-win-x64.noarch
+          - spice-vdagent-win-x86.noarch
+          - sqlite-doc.noarch
+          - stix-fonts.noarch
+          - stix-math-fonts.noarch
+          - stratis-cli.noarch
+          - subscription-manager-cockpit.noarch
+          - subscription-manager-migration-data.noarch
+          - subversion-javahl.noarch
+          - swig-doc.noarch
+          - syslinux-extlinux-nonlinux.noarch
+          - syslinux-nonlinux.noarch
+          - syslinux-tftpboot.noarch
+          - system-config-printer-libs.noarch
+          - system-storage-manager.noarch
+          - tagsoup.noarch
+          - target-restore.noarch
+          - targetcli.noarch
+          - tcl-doc.noarch
+          
         state: present
 
     - name: Yum list updates
