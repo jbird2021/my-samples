@@ -11,8 +11,11 @@
       ansible.builtin.debug:
         var: ansible_facts.packages
 
-    - name: Check whether a package called foobar is installed
-      ansible.builtin.debug:
-        msg: "{{ ansible_facts.packages['foobar'] | length }} versions of foobar are installed!"
-      when: "'foobar' in ansible_facts.packages"
+    - name: Yum list updates
+      ansible.builtin.yum:
+        list: updates
+      register: result
 
+    - name: Display users
+      debug:
+        msg: result
