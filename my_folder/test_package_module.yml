@@ -11,304 +11,308 @@
 #      ansible.builtin.debug:
 #        var: ansible_facts.packages
 
-    - name: Yum list updates
-      ansible.builtin.yum:
-        list: updates
-      register: result
+#    - name: Yum list updates
+#      ansible.builtin.yum:
+#        list: updates
+#      register: result
 
-    - name: Display results
-      debug:
-        msg: "{{ result }}"
+#    - name: Display results
+#      debug:
+#        msg: "{{ result }}"
         
     - name: Package state=present
       ansible.builtin.package:
+        state: present
         name:
-        # UPDATE AVAILABLE
-          - NetworkManager.x86_64
-          - NetworkManager-libnm.x86_64
-          - NetworkManager-team.x86_64
-          - NetworkManager-tui.x86_64
-          - authselect.x86_64
-          - authselect-compat.x86_64
-          - authselect-libs.x86_64
-          - bind-export-libs.x86_64
-          - cloud-init.noarch
-          - cloud-utils-growpart.noarch
-          - cockpit-bridge.x86_64
-          - cockpit-system.noarch
-          - cockpit-ws.x86_64
-          - coreutils.x86_64
-          - coreutils-common.x86_64
-          - crypto-policies.noarch
-          - crypto-policies-scripts.noarch
-          - cryptsetup-libs.x86_64
-          - curl.x86_64
-          - dbus.x86_64
-          - dbus-common.noarch
-          - dbus-daemon.x86_64
-          - dbus-libs.x86_64
-          - dbus-tools.x86_64
-          - device-mapper.x86_64
-          - device-mapper-libs.x86_64
-          - dhcp-client.x86_64
-          - dhcp-common.noarch
-          - dhcp-libs.x86_64
-          - dnf.noarch
-          - dnf-data.noarch
-          - dnf-plugin-subscription-manager.x86_64
-          - dnf-plugins-core.noarch
-          - dracut.x86_64
-          - dracut-config-generic.x86_64
-          - dracut-network.x86_64
-          - dracut-squash.x86_64
-          - elfutils-debuginfod-client.x86_64
-          - elfutils-default-yama-scope.noarch
-          - elfutils-libelf.x86_64
-          - elfutils-libs.x86_64
-          - expat.x86_64
-          - file.x86_64
-          - file-libs.x86_64
-          - glib2.x86_64
-          - glibc.x86_64
-          - glibc-all-langpacks.x86_64
-          - glibc-common.x86_64
-          - glibc-gconv-extra.x86_64
-          - gnutls.x86_64
-          - grub2-common.noarch
-          - grub2-efi-x64.x86_64
-          - grub2-pc.x86_64
-          - grub2-pc-modules.noarch
-          - grub2-tools.x86_64
-          - grub2-tools-extra.x86_64
-          - grub2-tools-minimal.x86_64
-          - hwdata.noarch
-          - insights-client.noarch
-          - irqbalance.x86_64
-          - kernel.x86_64
-          - kernel-core.x86_64
-          - kernel-modules.x86_64
-          - kernel-tools.x86_64
-          - kernel-tools-libs.x86_64
-          - kexec-tools.x86_64
-          - kpartx.x86_64
-          - libarchive.x86_64
-          - libblkid.x86_64
-          - libblockdev.x86_64
-          - libblockdev-crypto.x86_64
-          - libblockdev-fs.x86_64
-          - libblockdev-loop.x86_64
-          - libblockdev-mdraid.x86_64
-          - libblockdev-part.x86_64
-          - libblockdev-swap.x86_64
-          - libblockdev-utils.x86_64
-          - libcurl.x86_64
-          - libdnf.x86_64
-          - libfdisk.x86_64
-          - libffi.x86_64
-          - libgcc.x86_64
-          - libgomp.x86_64
-          - libibverbs.x86_64
-          - libldb.x86_64
-          - libmount.x86_64
-          - libnfsidmap.x86_64
-          - libpwquality.x86_64
-          - librepo.x86_64
-          - librhsm.x86_64
-          - libselinux.x86_64
-          - libselinux-utils.x86_64
-          - libsmartcols.x86_64
-          - libsoup.x86_64
-          - libssh.x86_64
-          - libssh-config.noarch
-          - libsss_autofs.x86_64
-          - libsss_certmap.x86_64
-          - libsss_idmap.x86_64
-          - libsss_nss_idmap.x86_64
-          - libsss_sudo.x86_64
-          - libstdc++.x86_64
-          - libtalloc.x86_64
-          - libtdb.x86_64
-          - libteam.x86_64
-          - libtevent.x86_64
-          - libudisks2.x86_64
-          - libuser.x86_64
-          - libuuid.x86_64
-          - libxml2.x86_64
-          - linux-firmware.noarch
-          - lmdb-libs.x86_64
-          - logrotate.x86_64
-          - mdadm.x86_64
-          - microcode_ctl.x86_64
-          - nfs-utils.x86_64
-          - oddjob.x86_64
-          - oddjob-mkhomedir.x86_64
-          - openssl-pkcs11.x86_64
-          - pam.x86_64
-          - pciutils.x86_64
-          - pciutils-libs.x86_64
-          - platform-python.x86_64
-          - platform-python-setuptools.noarch
-          - policycoreutils.x86_64
-          - policycoreutils-python-utils.noarch
-          - polkit.x86_64
-          - polkit-libs.x86_64
-          - postgresql.x86_64
-          - postgresql-server.x86_64
-          - procps-ng.x86_64
-          - python3-cloud-what.x86_64
-          - python3-dmidecode.x86_64
-          - python3-dnf.noarch
-          - python3-dnf-plugins-core.noarch
-          - python3-hawkey.x86_64
-          - python3-libdnf.x86_64
-          - python3-librepo.x86_64
-          - python3-libs.x86_64
-          - python3-libselinux.x86_64
-          - python3-libxml2.x86_64
-          - python3-linux-procfs.noarch
-          - python3-magic.noarch
-          - python3-perf.x86_64
-          - python3-policycoreutils.noarch
-          - python3-rpm.x86_64
-          - python3-setuptools.noarch
-          - python3-setuptools-wheel.noarch
-          - python3-subscription-manager-rhsm.x86_64
-          - python3-syspurpose.x86_64
-          - python3-unbound.x86_64
-          - qemu-guest-agent.x86_64
-          - redhat-release.x86_64
-          - redhat-release-eula.x86_64
-          - rhc.x86_64
-          - rhsm-icons.noarch
-          - rpm.x86_64
-          - rpm-build-libs.x86_64
-          - rpm-libs.x86_64
-          - rpm-plugin-selinux.x86_64
-          - rpm-plugin-systemd-inhibit.x86_64
-          - rsyslog.x86_64
-          - selinux-policy.noarch
-          - selinux-policy-targeted.noarch
-          - setup.noarch
-          - sos.noarch
-          - sscg.x86_64
-          - sssd-client.x86_64
-          - sssd-common.x86_64
-          - sssd-kcm.x86_64
-          - sssd-nfs-idmap.x86_64
-          - subscription-manager.x86_64
-          - subscription-manager-cockpit.noarch
-          - subscription-manager-rhsm-certificates.x86_64
-          - sudo.x86_64
-          - systemd.x86_64
-          - systemd-libs.x86_64
-          - systemd-pam.x86_64
-          - systemd-udev.x86_64
-          - tar.x86_64
-          - teamd.x86_64
-          - tuned.noarch
-          - tzdata.noarch
-          - udisks2.x86_64
-          - unbound-libs.x86_64
-          - util-linux.x86_64
-          - virt-what.x86_64
-          - yum.noarch
-          - yum-utils.noarch
+          - java-1.8.0-openjdk 
+ 
+ 
+           # UPDATE AVAILABLE
+ #         - NetworkManager.x86_64
+ #         - NetworkManager-libnm.x86_64
+ #         - NetworkManager-team.x86_64
+ #         - NetworkManager-tui.x86_64
+ #         - authselect.x86_64
+ #         - authselect-compat.x86_64
+ #         - authselect-libs.x86_64
+ #         - bind-export-libs.x86_64
+ #         - cloud-init.noarch
+ #         - cloud-utils-growpart.noarch
+ #         - cockpit-bridge.x86_64
+ #         - cockpit-system.noarch
+ #         - cockpit-ws.x86_64
+ #         - coreutils.x86_64
+ #         - coreutils-common.x86_64
+ #         - crypto-policies.noarch
+ #         - crypto-policies-scripts.noarch
+ #         - cryptsetup-libs.x86_64
+ #         - curl.x86_64
+ #         - dbus.x86_64
+ #         - dbus-common.noarch
+ #         - dbus-daemon.x86_64
+ #         - dbus-libs.x86_64
+ #         - dbus-tools.x86_64
+ #         - device-mapper.x86_64
+ #         - device-mapper-libs.x86_64
+ #         - dhcp-client.x86_64
+ #         - dhcp-common.noarch
+ #         - dhcp-libs.x86_64
+ #         - dnf.noarch
+ #         - dnf-data.noarch
+#          - dnf-plugin-subscription-manager.x86_64
+#          - dnf-plugins-core.noarch
+#          - dracut.x86_64
+#          - dracut-config-generic.x86_64
+#          - dracut-network.x86_64
+#          - dracut-squash.x86_64
+#          - elfutils-debuginfod-client.x86_64
+#          - elfutils-default-yama-scope.noarch
+#          - elfutils-libelf.x86_64
+#          - elfutils-libs.x86_64
+#          - expat.x86_64
+#          - file.x86_64
+#          - file-libs.x86_64
+#          - glib2.x86_64
+#          - glibc.x86_64
+#          - glibc-all-langpacks.x86_64
+#          - glibc-common.x86_64
+#          - glibc-gconv-extra.x86_64
+#          - gnutls.x86_64
+#          - grub2-common.noarch
+#          - grub2-efi-x64.x86_64
+#          - grub2-pc.x86_64
+#          - grub2-pc-modules.noarch
+#          - grub2-tools.x86_64
+#          - grub2-tools-extra.x86_64
+#          - grub2-tools-minimal.x86_64
+#          - hwdata.noarch
+#          - insights-client.noarch
+#          - irqbalance.x86_64
+#          - kernel.x86_64
+#          - kernel-core.x86_64
+#          - kernel-modules.x86_64
+#          - kernel-tools.x86_64
+#          - kernel-tools-libs.x86_64
+#          - kexec-tools.x86_64
+#          - kpartx.x86_64
+#          - libarchive.x86_64
+#          - libblkid.x86_64
+#          - libblockdev.x86_64
+#          - libblockdev-crypto.x86_64
+#          - libblockdev-fs.x86_64
+#          - libblockdev-loop.x86_64
+#          - libblockdev-mdraid.x86_64
+#          - libblockdev-part.x86_64
+#          - libblockdev-swap.x86_64
+#          - libblockdev-utils.x86_64
+#          - libcurl.x86_64
+#          - libdnf.x86_64
+#          - libfdisk.x86_64
+#          - libffi.x86_64
+#          - libgcc.x86_64
+#          - libgomp.x86_64
+#          - libibverbs.x86_64
+#          - libldb.x86_64
+#          - libmount.x86_64
+#          - libnfsidmap.x86_64
+#          - libpwquality.x86_64
+#          - librepo.x86_64
+#          - librhsm.x86_64
+#          - libselinux.x86_64
+#          - libselinux-utils.x86_64
+#          - libsmartcols.x86_64
+#          - libsoup.x86_64
+#          - libssh.x86_64
+#          - libssh-config.noarch
+#          - libsss_autofs.x86_64
+#          - libsss_certmap.x86_64
+#          - libsss_idmap.x86_64
+#          - libsss_nss_idmap.x86_64
+#          - libsss_sudo.x86_64
+#          - libstdc++.x86_64
+#          - libtalloc.x86_64
+#          - libtdb.x86_64
+#          - libteam.x86_64
+#          - libtevent.x86_64
+#          - libudisks2.x86_64
+#          - libuser.x86_64
+#          - libuuid.x86_64
+#          - libxml2.x86_64
+#          - linux-firmware.noarch
+#          - lmdb-libs.x86_64
+#          - logrotate.x86_64
+#          - mdadm.x86_64
+#          - microcode_ctl.x86_64
+#          - nfs-utils.x86_64
+#          - oddjob.x86_64
+#          - oddjob-mkhomedir.x86_64
+#          - openssl-pkcs11.x86_64
+#          - pam.x86_64
+#          - pciutils.x86_64
+#          - pciutils-libs.x86_64
+#          - platform-python.x86_64
+#          - platform-python-setuptools.noarch
+#          - policycoreutils.x86_64
+#          - policycoreutils-python-utils.noarch
+#          - polkit.x86_64
+#          - polkit-libs.x86_64
+#          - postgresql.x86_64
+#          - postgresql-server.x86_64
+#          - procps-ng.x86_64
+#          - python3-cloud-what.x86_64
+#          - python3-dmidecode.x86_64
+#          - python3-dnf.noarch
+#          - python3-dnf-plugins-core.noarch
+#          - python3-hawkey.x86_64
+#          - python3-libdnf.x86_64
+#          - python3-librepo.x86_64
+#          - python3-libs.x86_64
+#          - python3-libselinux.x86_64
+#          - python3-libxml2.x86_64
+#          - python3-linux-procfs.noarch
+#          - python3-magic.noarch
+#          - python3-perf.x86_64
+#          - python3-policycoreutils.noarch
+#          - python3-rpm.x86_64
+#          - python3-setuptools.noarch
+#          - python3-setuptools-wheel.noarch
+#          - python3-subscription-manager-rhsm.x86_64
+#          - python3-syspurpose.x86_64
+#          - python3-unbound.x86_64
+#          - qemu-guest-agent.x86_64
+#          - redhat-release.x86_64
+#          - redhat-release-eula.x86_64
+#          - rhc.x86_64
+#          - rhsm-icons.noarch
+#          - rpm.x86_64
+#          - rpm-build-libs.x86_64
+#          - rpm-libs.x86_64
+#          - rpm-plugin-selinux.x86_64
+#          - rpm-plugin-systemd-inhibit.x86_64
+#          - rsyslog.x86_64
+#          - selinux-policy.noarch
+#          - selinux-policy-targeted.noarch
+#          - setup.noarch
+#          - sos.noarch
+#          - sscg.x86_64
+#          - sssd-client.x86_64
+#          - sssd-common.x86_64
+#          - sssd-kcm.x86_64
+#          - sssd-nfs-idmap.x86_64
+#          - subscription-manager.x86_64
+#          - subscription-manager-cockpit.noarch
+#          - subscription-manager-rhsm-certificates.x86_64
+#          - sudo.x86_64
+#          - systemd.x86_64
+#          - systemd-libs.x86_64
+#          - systemd-pam.x86_64
+#          - systemd-udev.x86_64
+#          - tar.x86_64
+#          - teamd.x86_64
+#          - tuned.noarch
+#          - tzdata.noarch
+#          - udisks2.x86_64
+#          - unbound-libs.x86_64
+#          - util-linux.x86_64
+#          - virt-what.x86_64
+#          - yum.noarch
+#          - yum-utils.noarch
           
          # DOES NOT EXIST 
-          - rust-lldb.noarch
-          - rust-src.noarch
-          - rust-srpm-macros.noarch
-          - saab-fonts.noarch
-          - sac.noarch
-          - samba-common.noarch
-          - samba-pidl.noarch
-          - samyak-devanagari-fonts.noarch
-          - samyak-fonts-common.noarch
-          - samyak-gujarati-fonts.noarch
-          - samyak-malayalam-fonts.noarch
-          - samyak-odia-fonts.noarch
-          - samyak-tamil-fonts.noarch
-          - sane-backends-doc.noarch
-          - sassist.noarch
-          - scala.noarch
-          - scala-apidoc.noarch
-          - scala-swing.noarch
-          - scap-security-guide.noarch
-          - scap-security-guide-doc.noarch
-          - seabios-bin.noarch
-          - seavgabios-bin.noarch
-          - selinux-policy.noarch
-          - selinux-policy-devel.noarch
-          - selinux-policy-doc.noarch
-          - selinux-policy-minimum.noarch
-          - selinux-policy-mls.noarch
-          - selinux-policy-sandbox.noarch
-          - selinux-policy-targeted.noarch
-          - sendmail-cf.noarch
-          - sendmail-doc.noarch
-          - setup.noarch
-          - sgabios-bin.noarch
-          - sgml-common.noarch
-          - sil-abyssinica-fonts.noarch
-          - sil-nuosu-fonts.noarch
-          - sil-padauk-book-fonts.noarch
-          - sil-padauk-fonts.noarch
-          - sil-scheherazade-fonts.noarch
-          - sisu-inject.noarch
-          - sisu-plexus.noarch
-          - skkdic.noarch
-          - slf4j.noarch
-          - smc-anjalioldlipi-fonts.noarch
-          - smc-dyuthi-fonts.noarch
-          - smc-fonts-common.noarch
-          - smc-kalyani-fonts.noarch
-          - smc-meera-fonts.noarch
-          - smc-rachana-fonts.noarch
-          - smc-raghumalayalam-fonts.noarch
-          - smc-suruma-fonts.noarch
-          - snactor.noarch
-          - sos.noarch
-          - sos-audit.noarch
-          - sos-collector.noarch
-          - sound-theme-freedesktop.noarch
-          - spacewalk-abrt.noarch
-          - spacewalk-client-cert.noarch
-          - spacewalk-koan.noarch
-          - spacewalk-oscap.noarch
-          - spacewalk-remote-utils.noarch
-          - spacewalk-usix.noarch
-          - spice-client-win-x64.noarch
-          - spice-client-win-x86.noarch
-          - spice-protocol.noarch
-          - spice-qxl-wddm-dod.noarch
-          - spice-qxl-xddm.noarch
-          - spice-vdagent-win-x64.noarch
-          - spice-vdagent-win-x86.noarch
-          - sqlite-doc.noarch
-          - stix-fonts.noarch
-          - stix-math-fonts.noarch
-          - stratis-cli.noarch
-          - subscription-manager-cockpit.noarch
-          - subscription-manager-migration-data.noarch
-          - subversion-javahl.noarch
-          - swig-doc.noarch
-          - syslinux-extlinux-nonlinux.noarch
-          - syslinux-nonlinux.noarch
-          - syslinux-tftpboot.noarch
-          - system-config-printer-libs.noarch
-          - system-storage-manager.noarch
-          - tagsoup.noarch
-          - target-restore.noarch
-          - targetcli.noarch
-          - tcl-doc.noarch
+#          - rust-lldb.noarch
+#          - rust-src.noarch
+#          - rust-srpm-macros.noarch
+#          - saab-fonts.noarch
+#          - sac.noarch
+#          - samba-common.noarch
+#          - samba-pidl.noarch
+#          - samyak-devanagari-fonts.noarch
+#          - samyak-fonts-common.noarch
+#          - samyak-gujarati-fonts.noarch
+#          - samyak-malayalam-fonts.noarch
+#          - samyak-odia-fonts.noarch
+#          - samyak-tamil-fonts.noarch
+#          - sane-backends-doc.noarch
+#          - sassist.noarch
+#          - scala.noarch
+#          - scala-apidoc.noarch
+#          - scala-swing.noarch
+#          - scap-security-guide.noarch
+#          - scap-security-guide-doc.noarch
+#          - seabios-bin.noarch
+#          - seavgabios-bin.noarch
+#          - selinux-policy.noarch
+#          - selinux-policy-devel.noarch
+#          - selinux-policy-doc.noarch
+#          - selinux-policy-minimum.noarch
+#          - selinux-policy-mls.noarch
+#          - selinux-policy-sandbox.noarch
+#          - selinux-policy-targeted.noarch
+#          - sendmail-cf.noarch
+#          - sendmail-doc.noarch
+#          - setup.noarch
+#          - sgabios-bin.noarch
+#          - sgml-common.noarch
+#          - sil-abyssinica-fonts.noarch
+#          - sil-nuosu-fonts.noarch
+#          - sil-padauk-book-fonts.noarch
+#          - sil-padauk-fonts.noarch
+#          - sil-scheherazade-fonts.noarch
+#          - sisu-inject.noarch
+#          - sisu-plexus.noarch
+#          - skkdic.noarch
+#          - slf4j.noarch
+#          - smc-anjalioldlipi-fonts.noarch
+#          - smc-dyuthi-fonts.noarch
+#          - smc-fonts-common.noarch
+#          - smc-kalyani-fonts.noarch
+#          - smc-meera-fonts.noarch
+#          - smc-rachana-fonts.noarch
+#          - smc-raghumalayalam-fonts.noarch
+#          - smc-suruma-fonts.noarch
+#          - snactor.noarch
+#          - sos.noarch
+#          - sos-audit.noarch
+#          - sos-collector.noarch
+#          - sound-theme-freedesktop.noarch
+#          - spacewalk-abrt.noarch
+#          - spacewalk-client-cert.noarch
+#          - spacewalk-koan.noarch
+#          - spacewalk-oscap.noarch
+#          - spacewalk-remote-utils.noarch
+#          - spacewalk-usix.noarch
+#          - spice-client-win-x64.noarch
+#          - spice-client-win-x86.noarch
+#          - spice-protocol.noarch
+#          - spice-qxl-wddm-dod.noarch
+#          - spice-qxl-xddm.noarch
+#          - spice-vdagent-win-x64.noarch
+#          - spice-vdagent-win-x86.noarch
+#          - sqlite-doc.noarch
+#          - stix-fonts.noarch
+#          - stix-math-fonts.noarch
+#          - stratis-cli.noarch
+#          - subscription-manager-cockpit.noarch
+#          - subscription-manager-migration-data.noarch
+#          - subversion-javahl.noarch
+#          - swig-doc.noarch
+#          - syslinux-extlinux-nonlinux.noarch
+#          - syslinux-nonlinux.noarch
+#          - syslinux-tftpboot.noarch
+#          - system-config-printer-libs.noarch
+#          - system-storage-manager.noarch
+#          - tagsoup.noarch
+#          - target-restore.noarch
+#          - targetcli.noarch
+#          - tcl-doc.noarch
           
-        state: present
+        
 
-    - name: Yum list updates
-      ansible.builtin.yum:
-        list: updates
-      register: result2
+#    - name: Yum list updates
+#      ansible.builtin.yum:
+#        list: updates
+#      register: result2
 
-    - name: Display results
-      debug:
-        msg: "{{ result2 }}"
+#    - name: Display results
+#      debug:
+#        msg: "{{ result2 }}"
