@@ -1,5 +1,5 @@
 - name: test_package_module.yml
-  hosts: jbird-rhel8
+  hosts: 10.0.110.43
   gather_facts: False
   become: True
   tasks:   
