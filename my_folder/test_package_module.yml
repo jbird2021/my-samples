@@ -1,5 +1,5 @@
 - name: test_package_module.yml
-  hosts: all
+  hosts: jbird-rhel8
   gather_facts: False
   become: True
   tasks:   
@@ -19,3 +19,21 @@
     - name: Display results
       debug:
         msg: "{{ result }}"
+        
+    - name: Package state=present
+      ansible.builtin.package:
+        name:
+          - sos.noarch
+          - yum.noarch
+          - rsyslog.x86_64
+          - ansible
+        state: present
+
+    - name: Yum list updates
+      ansible.builtin.yum:
+        list: updates
+      register: result2
+
+    - name: Display results
+      debug:
+        msg: "{{ result2 }}"
