@@ -16,6 +16,6 @@
         list: updates
       register: result
 
-    - name: Display users
+    - name: Display results
       debug:
         msg: result
