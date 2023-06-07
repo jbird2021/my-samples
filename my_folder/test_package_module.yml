@@ -1,6 +1,6 @@
 - name: test_package_module.yml
   hosts: 10.0.110.43
-  gather_facts: False
+  gather_facts: True
   become: True
   tasks:   
 #    - name: Gather the package facts
