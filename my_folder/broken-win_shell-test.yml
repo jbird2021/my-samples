@@ -1,0 +1,8 @@
+---
+- name: Provision R Drive Share on Weka
+  hosts: efs-mgmt.grove.ad.uconn.edu
+  gather_facts: no
+  tasks:
+    - name: Hello World
+      ansible.windows.win_shell: |
+        Write-Host 'Hello World!'
