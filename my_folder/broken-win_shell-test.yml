@@ -1,6 +1,6 @@
 ---
 - name: Provision R Drive Share on Weka
-  hosts: efs-mgmt.grove.ad.uconn.edu
+  hosts: all
   gather_facts: no
   tasks:
     - name: Hello World
