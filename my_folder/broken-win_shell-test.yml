@@ -4,5 +4,6 @@
   gather_facts: no
   tasks:
     - name: Hello World
+      # ansible.windows.win_shell: |
       ansible.windows.win_shell: |
         Write-Host 'Hello World!'
