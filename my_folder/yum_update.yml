@@ -5,7 +5,7 @@
   tasks:
     - name: "update all packages to latest"
       yum:
-         name: "*"
+         name: "bash.x86_64"
          state: latest
       register: yumupdate_status
 
