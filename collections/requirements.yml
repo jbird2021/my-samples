@@ -1,7 +1,7 @@
 ---
 collections:
 # With just the collection name
-- frr.frr
+# - frr.frr
 #- community.general
 #  version: 6.2.0
 #- awx.awx
@@ -18,5 +18,5 @@ collections:
 #- ansible.windows
 #- openstack.cloud
 #- junipernetworks.junos
-- ansible.controller
-- ansible.windows
+#- ansible.controller
+#- ansible.windows
