@@ -19,5 +19,5 @@ collections:
 #- openstack.cloud
 #- junipernetworks.junos
  - name: ansible.controller
-   version: 4.4.0
+   version: 4.2.0
 #- ansible.windows
