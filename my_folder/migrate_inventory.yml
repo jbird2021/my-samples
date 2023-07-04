@@ -22,7 +22,7 @@
         state: present
         
     - name: Export inventory
-      awx.awx.export:
+      ansible.tower.tower_export:
         controller_host: 10.0.109.3
         controller_username: "admin"
         controller_password: "test"
