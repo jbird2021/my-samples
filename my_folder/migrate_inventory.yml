@@ -1,0 +1,36 @@
+---
+
+- name: Migrate Networking Inventory.
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  become: false
+
+  vars_files:
+    - /vaults/tower.yml
+
+  tasks:
+    #ansible.tower.tower_export:
+    - name: Export inventory
+      ansible.controller.export:
+        inventory: 'TestTower'
+        tower_host: 10.0.109.3
+        tower_username: "admin"
+        tower_password: "test"
+      register: export_output
+
+#    - name: Import inventory
+#      ansible.controller.import:
+#        assets: "{{ export_output }}"
+#        controller_host: 10.0.109.3
+#        controller_username: "{{ tower_user }}"
+#        controller_password: "{{ tower_pass }}"
+#      register: import_output
+
+    - name: Show Export Output.
+      ansible.builtin.debug:
+        var: export_output
+
+#    - name: Show Import Output.
+#      ansible.builtin.debug:
+#        var: import_output
