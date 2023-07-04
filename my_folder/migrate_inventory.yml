@@ -6,8 +6,8 @@
   gather_facts: false
   become: false
 
-  vars_files:
-    - /vaults/tower.yml
+#  vars_files:
+#    - /vaults/tower.yml
 
   tasks:
     #ansible.tower.tower_export:
