@@ -18,5 +18,5 @@ collections:
 #- ansible.windows
 #- openstack.cloud
 #- junipernetworks.junos
-- ansible.controller
+ - ansible.controller
 #- ansible.windows
