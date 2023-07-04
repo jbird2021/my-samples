@@ -27,7 +27,7 @@
         controller_username: "admin"
         controller_password: "test"
         validate_certs: False
-        inventory: ['Foo Inventory']
+        inventory: "Foo Inventory"
       register: export_output
 
 #    - name: Import inventory
