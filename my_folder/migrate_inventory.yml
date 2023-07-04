@@ -11,6 +11,13 @@
 
   tasks:
     #ansible.tower.tower_export:
+    - name: Add inventory
+      inventory:
+        name: "Foo Inventory"
+        description: "Our Foo Cloud Servers"
+        organization: "Bar Org"
+        state: present
+        
     - name: Export inventory
       ansible.controller.export:
         inventory: 'inventory_test'
