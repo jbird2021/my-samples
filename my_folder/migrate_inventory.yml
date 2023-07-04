@@ -12,10 +12,12 @@
   tasks:
     - name: Add inventory
       ansible.controller.inventory:
-        controller_host: 10.0.109.3      
+        controller_host: 10.0.109.3
+        controller_username: "admin"
+        controller_password: "test"
         name: "Foo Inventory"
         description: "Our Foo Cloud Servers"
-        organization: "Bar Org"
+        organization: "Default"
         state: present
         
     - name: Export inventory
