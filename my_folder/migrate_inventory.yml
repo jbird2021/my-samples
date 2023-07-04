@@ -10,9 +10,8 @@
 #    - /vaults/tower.yml
 
   tasks:
-    #ansible.tower.tower_export:
     - name: Add inventory
-      inventory:
+      ansible.controller.inventory:
         name: "Foo Inventory"
         description: "Our Foo Cloud Servers"
         organization: "Bar Org"
