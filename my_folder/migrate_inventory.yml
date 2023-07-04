@@ -11,7 +11,7 @@
 
   tasks:
     - name: Add inventory
-      ansible.controller.inventory:
+      awx.awx.inventory:
         controller_host: 10.0.109.3
         controller_username: "admin"
         controller_password: "test"
@@ -22,7 +22,7 @@
         state: present
         
     - name: Export inventory
-      ansible.controller.export:
+      awx.awx.export:
         controller_host: 10.0.109.3
         controller_username: "admin"
         controller_password: "test"
