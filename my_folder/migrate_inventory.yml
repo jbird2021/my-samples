@@ -22,11 +22,11 @@
 #        state: present
         
     - name: Export inventory
-      awx.awx.export:
-        inventory: all
-        controller_host: 10.0.109.3
-        controller_password: "admin"
-        controller_username: "test"
+      ansible.controller.export:
+        inventory: "Foo Inventory"
+        host: 10.0.109.3
+        password: "admin"
+        username: "test"
         validate_certs: False
       register: export_output
 
