@@ -23,7 +23,7 @@
         
     - name: Export inventory
       ansible.controller.export:
-        projects: 'all'
+        project: 'all'
         controller_host: 10.0.109.3
         controller_password: "admin"
         controller_username: "test"
