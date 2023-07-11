@@ -23,7 +23,7 @@
         
     - name: Export inventory
       ansible.controller.export:
-        inventory: 'all'
+        inventory: 'Foo Inventory'
         tower_host: 10.0.109.3
         tower_username: "admin"
         tower_password: "test"
