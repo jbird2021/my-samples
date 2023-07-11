@@ -23,11 +23,11 @@
         
     - name: Export inventory
       ansible.controller.export:
-        controller_host: 10.0.109.3
-        controller_username: "admin"
-        controller_password: "test"
+        inventory: 'Foo Inventory'
+        tower_host: 10.0.109.3
+        tower_username: "admin"
+        tower_password: "test"
         validate_certs: False
-        inventory: ['Foo Inventory']
       register: export_output
 
 #    - name: Import inventory
