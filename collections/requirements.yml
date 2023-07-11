@@ -20,5 +20,5 @@ collections:
 #- junipernetworks.junos
  - name: ansible.controller
    version: 4.4.0
- - ansible.tower
+# - ansible.tower
 #- ansible.windows
