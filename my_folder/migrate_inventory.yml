@@ -23,7 +23,7 @@
         
     - name: Export inventory
       awx.awx.export:
-        project: 'all'
+        inventory: all
         controller_host: 10.0.109.3
         controller_password: "admin"
         controller_username: "test"
