@@ -10,16 +10,16 @@
 #    - /vaults/tower.yml
 
   tasks:
-    - name: Add inventory
-      awx.awx.inventory:
-        controller_host: 10.0.109.3
-        controller_username: "admin"
-        controller_password: "test"
-        validate_certs: False
-        name: "Foo Inventory"
-        description: "Our Foo Cloud Servers"
-        organization: "Default"
-        state: present
+#    - name: Add inventory
+#      awx.awx.inventory:
+#        controller_host: 10.0.109.3
+#        controller_username: "admin"
+#        controller_password: "test"
+#        validate_certs: False
+#        name: "Foo Inventory"
+#        description: "Our Foo Cloud Servers"
+#        organization: "Default"
+#        state: present
         
     - name: Export inventory
       ansible.controller.export:
