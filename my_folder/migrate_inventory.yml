@@ -22,7 +22,7 @@
         state: present
         
     - name: Export inventory
-      export:
+      ansible.controller.export:
         inventory: 'all'
         tower_host: 10.0.109.3
         tower_username: "admin"
