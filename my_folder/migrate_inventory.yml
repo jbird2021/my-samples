@@ -11,33 +11,34 @@
 #    - /vaults/tower.yml
 
   tasks:
-#    - name: Add inventory
-#      awx.awx.inventory:
-#        controller_host: 10.0.109.3
-#        controller_username: "admin"
-#        controller_password: "test"
-#        validate_certs: False
-#        name: "Foo Inventory"
-#        description: "Our Foo Cloud Servers"
-#        organization: "Default"
-#        state: present
-        
+    #   - name: Add inventory
+    #  awx.awx.inventory:
+    #    controller_host: 10.0.109.3
+    #    controller_username: "admin"
+    #    controller_password: "test"
+    #    validate_certs: False
+    #    name: "Foo Inventory"
+    #    description: "Our Foo Cloud Servers"
+    #    organization: "Default"
+    #    state: present
+       
     - name: Export inventory
       ansible.controller.export:
-        inventory: 'all'
+        inventory: 'inventory_test'
         controller_host: 10.0.109.3
-        controller_password: "admin"
-        controller_username: "test"
+        controller_username: "admin"
+        controller_password: "test"
         validate_certs: False
       register: export_output
 
-#    - name: Import inventory
-#      ansible.controller.import:
-#        assets: "{{ export_output }}"
-#        controller_host: 10.0.109.3
-#        controller_username: "{{ tower_user }}"
-#        controller_password: "{{ tower_pass }}"
-#      register: import_output
+    - name: Import inventory
+      ansible.controller.import:
+        assets: "{{ export_output.assets }}"
+        controller_host: 10.0.110.51
+        controller_username: "admin"
+        controller_password: "test"
+        validate_certs: False
+      register: import_output
 
     - name: Show Export Output.
       ansible.builtin.debug:
