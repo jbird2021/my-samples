@@ -1,6 +1,6 @@
 ---
 
-- name: Migrate Networking Inventory...
+- name: Migrate Networking Inventory....
   hosts: localhost
   connection: local
   gather_facts: false
