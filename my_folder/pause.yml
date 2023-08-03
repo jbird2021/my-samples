@@ -4,7 +4,8 @@
   become: False
   tasks:
     - name: Pause for 5 minutes
-      ansible.builtin.pause:
+      pause:
+      #ansible.builtin.pause:
         minutes: 5
     - name: Say Hello
       debug:
