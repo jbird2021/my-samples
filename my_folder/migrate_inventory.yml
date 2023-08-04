@@ -24,7 +24,7 @@
        
     - name: Export inventory
       ansible.controller.export:
-        inventory: 'inventory_test'
+        inventory: 'inventory_test2'
         controller_host: 10.0.109.3
         controller_username: "admin"
         controller_password: "test"
