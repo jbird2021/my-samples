@@ -1,7 +1,7 @@
 - name: dnf_java.yml
   hosts: 10.0.110.43
   gather_facts: False
-  become: False
+  become: True
   tasks:   
     - name: Package state=present
       ansible.builtin.package:
