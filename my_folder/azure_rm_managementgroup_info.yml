@@ -3,4 +3,4 @@
   hosts: localhost
   tasks:
     - name: Get facts for all root management groups for authenticated principal
-      azure_rm_managementgroup_info:  
+      azure.azcollection.azure_rm_managementgroup_info:  
