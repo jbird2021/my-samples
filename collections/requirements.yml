@@ -22,3 +22,6 @@ collections:
    version: 4.4.0
 # - ansible.tower
 #- ansible.windows
+ - name: azure.azcollection
+ - name: community.general
+ - name: ansible.windows
