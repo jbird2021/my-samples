@@ -3,52 +3,52 @@
   gather_facts: False
   tasks:
     - name: Hello Message
-      ansible.builtin.pause:
-        minutes: 5
+      pause:
+        minutes: 1
       debug:
         msg: "Hello World 1 of 10"
     - name: Hello Message
-      ansible.builtin.pause:
-        minutes: 5
+      pause:
+        minutes: 1
       debug:
         msg: "Hello World 2 of 10"
     - name: Hello Message
-      ansible.builtin.pause:
-        minutes: 5
+      pause:
+        minutes: 1
       debug:
         msg: "Hello World 3 of 10"
     - name: Hello Message
-      ansible.builtin.pause:
-        minutes: 5
+      pause:
+        minutes: 1
       debug:
         msg: "Hello World 4 of 10"
     - name: Hello Message
-      ansible.builtin.pause:
-        minutes: 5
+      pause:
+        minutes: 1
       debug:
         msg: "Hello World 5 of 10"
     - name: Hello Message
-      ansible.builtin.pause:
-        minutes: 5
+      pause:
+        minutes: 1
       debug:
         msg: "Hello World 6 of 10"
     - name: Hello Message
-      ansible.builtin.pause:
-        minutes: 5
+      pause:
+        minutes: 1
       debug:
         msg: "Hello World 7 of 10"
     - name: Hello Message
-      ansible.builtin.pause:
-        minutes: 5
+      pause:
+        minutes: 1
       debug:
         msg: "Hello World 8 of 10"
     - name: Hello Message
-      ansible.builtin.pause:
-        minutes: 5
+      pause:
+        minutes: 1
       debug:
         msg: "Hello World 9 of 10"
     - name: Hello Message
-      ansible.builtin.pause:
-        minutes: 5
+      pause:
+        minutes: 1
       debug:
         msg: "Hello World 10 of 10"
