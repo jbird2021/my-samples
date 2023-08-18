@@ -2,13 +2,12 @@
     
   gather_facts: no
   vars:
-    echo_list:
-      - "one"
-      - "two"
-      - "three"
+    num_loops: 10
+    delay_secs: 30
   tasks:
     - name: print items
-      debug: 
-        msg:
-          - "{{ item }}"
-      loop: "{{ echo_list }}"
+      debug: "{{ index_var }}"
+      until: num_loops = index_var
+      retries: num_loops
+     
+
