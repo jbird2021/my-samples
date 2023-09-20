@@ -1,4 +1,8 @@
-- name: Download from artifactory uri
+- name: uri.yml
+  hosts: localhost
+  gather_facts: False
+  tasks:  
+  - name: Download from artifactory uri
     uri:
       url: "{{ item }}"
       dest: "/tmp/suri-non-release-uri"
