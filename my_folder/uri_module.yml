@@ -2,20 +2,23 @@
   hosts: localhost
   gather_facts: False
   tasks:  
-  - name: Download from artifactory uri
-    uri:
-      url: "{{ item }}"
-      dest: "/tmp/suri-non-release-uri"
-      mode: 0777
-      timeout: 300
-      url_username: "{{ artifactoryUser }}"
-      url_password: "{{ artifactoryPwd }}"
-    with_items:
-      - "{{ publishedArtifactUrl }}"
-    async: 10
-    poll: 2
-    when: execute == 'uri' or execute == 'all'
-
-  - name: check dir uri and cleanup
-    shell: ls -ltrha /tmp/suri-non-release-uri && rm -rf /tmp/suri-non-release-uri    
-    when: execute == 'uri' or execute == 'all'
+  - name: Check that you can connect (GET) to a page and it returns a status 200
+    ansible.builtin.uri:
+      url: http://www.example.com
+#  - name: Download from artifactory uri
+#    uri:
+#      url: "{{ item }}"
+#      dest: "/tmp/suri-non-release-uri"
+#      mode: 0777
+#      timeout: 300
+#      url_username: "{{ artifactoryUser }}"
+#      url_password: "{{ artifactoryPwd }}"
+#    with_items:
+#      - "{{ publishedArtifactUrl }}"
+#    async: 10
+#    poll: 2
+#    when: execute == 'uri' or execute == 'all'
+#
+#  - name: check dir uri and cleanup
+#    shell: ls -ltrha /tmp/suri-non-release-uri && rm -rf /tmp/suri-non-release-uri    
+#    when: execute == 'uri' or execute == 'all'
