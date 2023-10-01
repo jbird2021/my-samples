@@ -4,7 +4,7 @@ collections:
 # - frr.frr
 #- community.general
 #  version: 6.2.0
-# - awx.awx
+ - awx.awx
 #- oracle.oci
 #- infoblox.nios_modules
 #- myfirst.test_collection
@@ -22,7 +22,7 @@ collections:
 #   version: 4.4.0
 # - ansible.tower
 #- ansible.windows
- - name: azure.azcollection
-   version: >=1.14.0
+# - name: azure.azcollection
+#   version: >=1.14.0
 # - name: community.general
 # - name: ansible.windows
