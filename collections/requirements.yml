@@ -26,5 +26,5 @@ collections:
 #   version: 1.14.0
 # - name: community.general
 # - name: ansible.windows
- - azure.azcollection:
+ - azure.azcollection
    version: >=1.14.0
