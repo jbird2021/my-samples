@@ -5,6 +5,8 @@ collections:
 #- community.general
 #  version: 6.2.0
  - awx.awx
+ - azure.azcollection
+   version: >=1.14.0
 #- oracle.oci
 #- infoblox.nios_modules
 #- myfirst.test_collection
@@ -26,5 +28,4 @@ collections:
 #   version: 1.14.0
 # - name: community.general
 # - name: ansible.windows
- - azure.azcollection
-   version: >=1.14.0
+
