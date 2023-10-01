@@ -5,7 +5,7 @@ collections:
 #- community.general
 #  version: 6.2.0
  - awx.awx
- - azure.azcollection
+ - name: azure.azcollection
    version: >=1.14.0
 #- oracle.oci
 #- infoblox.nios_modules
