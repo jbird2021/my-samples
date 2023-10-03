@@ -8,8 +8,9 @@ def log():
     print(data)
     return ''
 
-# create a py file on the controller server with the above. Then run it with the command below. 
+# create a log.py file on the controller server with the above. Then run it with the command below. 
 # If flask is not installed, use pip3 to install.
+   # pip3 install flask --user
 # FLASK_APP=log flask run -h 0.0.0.0 -p 8080
 
 
@@ -26,8 +27,9 @@ def log():
     print(data)
     return ''
 
-# create a py file on the controller server with the above. Then run it with the command below. 
+# create a log.py file on the controller server with the above. Then run it with the command below. 
 # If flask is not installed, use pip3 to install.
+   # pip3 install flask --user
 # FLASK_APP=log flask run -h 0.0.0.0 -p 8080
 
 
