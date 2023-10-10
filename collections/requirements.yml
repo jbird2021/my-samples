@@ -4,9 +4,7 @@ collections:
 # - frr.frr
 #- community.general
 #  version: 6.2.0
- - awx.awx
- - name: azure.azcollection
-   version: ">=1.19.0"
+- awx.awx
 #- oracle.oci
 #- infoblox.nios_modules
 #- myfirst.test_collection
