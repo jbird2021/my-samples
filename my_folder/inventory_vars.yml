@@ -1,0 +1,8 @@
+- name: inventory_vars.yml
+  hosts: localhost
+  gather_facts: False
+  become: False
+  tasks:   
+    - name: print server value
+      debug:
+        msg: {{ server }}
