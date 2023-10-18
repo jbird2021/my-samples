@@ -5,4 +5,4 @@
   tasks:   
     - name: print server value
       debug:
-        msg: {{ server }}
+        msg: "{{ server }}"
