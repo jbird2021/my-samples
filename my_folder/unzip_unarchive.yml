@@ -6,4 +6,3 @@
     ansible.builtin.unarchive:
       src: /tmp/foo.zip
       dest: /tmp
-    remote_src: yes
