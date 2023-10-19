@@ -1,0 +1,9 @@
+- name: unzip_unarchive.yml
+  hosts: localhost
+  gather_facts: False
+  tasks:
+  - name: Unarchive a file that is already on the remote machine
+    ansible.builtin.unarchive:
+      src: /tmp/foo.zip
+      dest: /tmp
+    remote_src: yes
