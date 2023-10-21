@@ -1,7 +1,7 @@
 - name: Hello World Sample
   hosts: all
-  #gather_facts: True
-  become: False
+  gather_facts: True
+  become: True
   tasks:   
     - name: Say Hello
       debug:
