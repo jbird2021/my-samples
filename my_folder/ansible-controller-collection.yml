@@ -6,9 +6,6 @@
     controller_password: "test"       #username and password changed
   connection: local
   gather_facts: false
-  collections:
-    - name: ansible.controller
-      version: 4.3.0 
 
   tasks:
     - name: Create temporary inventory file
