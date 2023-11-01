@@ -2,7 +2,7 @@
   hosts: localhost
   gather_facts: false  
   vars:
-    controller_host: "10.0.109.3"
+    controller_host: "10.0.109.163"
     controller_username: "admin"
     controller_password: "test" 
 
