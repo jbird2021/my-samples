@@ -7,44 +7,56 @@
   connection: local
   gather_facts: false
   collections:
-    - ansible.controller
+    - name: ansible.controller
+      version: 4.3.0 
 
   tasks:
-    - name: Include variables from respective files
-      include_vars:
-        file: credentials.yml
-
-    - name: Debug loaded variables
-      debug:
-        var: creds
-
-    - name: Debug loaded variables
-      debug:
-        var: orgs
-
-    - name: Add credentials to controller
-      ansible.controller.credential:
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        name: "{{ item.name }}"
-        organization: "{{ item.org }}"
-        description: "Added by Gokulan"
-        credential_type: "{{ item.type }}"
-        state: "{{ item.state }}"
-        inputs:
-          password: "{{ item.password }}"
-          username: "{{ item.username }}"
-        validate_certs: false
-      loop: "{{ creds }}"
-
-    - name: Add organization to the controller
-      ansible.controller.organization:
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        name: "{{ item.name }}"
-        description: "{{ item.description }}"
-        state: "{{ item.state }}"
-        validate_certs: false
-      loop: "{{ orgs }}"
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: Default
+        state: present
+    
+    
+    
+    
+    
+    
+#    - name: Include variables from respective files
+#      include_vars:
+#        file: credentials.yml
+#
+#    - name: Debug loaded variables
+#      debug:
+#        var: creds###
+#
+#    - name: Debug loaded variables
+#      debug:
+#        var: orgs
+#
+#    - name: Add credentials to controller
+#      ansible.controller.credential:
+#        controller_host: "{{ controller_host }}"
+#        controller_username: "{{ controller_username }}"
+#        controller_password: "{{ controller_password }}"
+#        name: "{{ item.name }}"
+#        organization: "{{ item.org }}"
+#        description: "Added by Gokulan"
+#        credential_type: "{{ item.type }}"
+#        state: "{{ item.state }}"
+#        inputs:
+#          password: "{{ item.password }}"
+#          username: "{{ item.username }}"
+#        validate_certs: false
+#      loop: "{{ creds }}"
+#
+#    - name: Add organization to the controller
+#      ansible.controller.organization:
+#        controller_host: "{{ controller_host }}"
+#        controller_username: "{{ controller_username }}"
+#        controller_password: "{{ controller_password }}"
+#        name: "{{ item.name }}"
+#        description: "{{ item.description }}"
+#        state: "{{ item.state }}"
+#        validate_certs: false
+#      loop: "{{ orgs }}"
