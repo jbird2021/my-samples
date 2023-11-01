@@ -2,16 +2,15 @@
   hosts: localhost
   gather_facts: false  
   vars:
-    controller_host: "https://10.0.109.163/"
-    controller_username: "admin"      #username and password changed
-    controller_password: "test"       #username and password changed
-
+    controller_host: "10.0.109.163"
+    controller_username: "admin"
+    controller_password: "test" 
 
   tasks:
     - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
-        organization: Default
+        organization: "Default"
         state: present
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
