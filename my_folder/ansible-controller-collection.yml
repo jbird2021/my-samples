@@ -3,7 +3,7 @@
   gather_facts: false  
   vars:
     controller_host: "10.0.109.163"
-    controller_username: "admin"
+    controller_username: "admin2"
     controller_password: "test" 
 
   tasks:
