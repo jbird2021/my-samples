@@ -3,7 +3,10 @@
   gather_facts: True
   become: True
   tasks:   
-  - debug:
+  - name: init
+    set_fact:
+      output: {}
+  - debug:    
       msg: "{{ output }}"
 
   - name: set fact with status
