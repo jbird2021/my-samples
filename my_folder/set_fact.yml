@@ -1,0 +1,13 @@
+- name: set_fact.yml
+  hosts: all
+  gather_facts: True
+  become: True
+  tasks:   
+  - debug:
+      msg: "{{ output }}"
+
+  - name: set fact with status
+    set_fact:
+      out: "{{ out|default([]) + [item.value.Status] }}"
+    with_dict: "{{ output.drifts[0] }}"
+    ignore_errors: true
