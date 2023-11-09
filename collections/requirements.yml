@@ -18,8 +18,8 @@ collections:
 #- ansible.windows
 #- openstack.cloud
 #- junipernetworks.junos
-- name: ansible.controller
-  version: 4.3.0
+#- name: ansible.controller
+#  version: 4.3.0
 # - ansible.tower
 #- ansible.windows
 # - name: azure.azcollection
