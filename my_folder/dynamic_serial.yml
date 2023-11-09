@@ -5,6 +5,5 @@
   serial: "{{ nnserial }}"
   
   tasks:
-    - name: Say Hello
-      debug:
-        msg: "Hello World!"
+    - debug:
+        msg: "{{ nnserial }}"
