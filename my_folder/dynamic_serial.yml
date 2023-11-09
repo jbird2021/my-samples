@@ -6,4 +6,4 @@
   
   tasks:
     - debug:
-        msg: "{{ nnserial }}"
+        msg: nnserial= "{{ nnserial }}"
