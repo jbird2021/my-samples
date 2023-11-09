@@ -4,5 +4,6 @@
   serial: "{{ nnserial }}"
   
   tasks:
-    - import_role:
-        name: gso_lnx_patch
+    - name: Say Hello
+      debug:
+        msg: "Hello World!"
