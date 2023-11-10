@@ -1,0 +1,21 @@
+{
+    "drifts": [
+        {
+            "drift_details": {
+                "Details": [
+                    "Drift Detail #M312",
+                    "Value of net.ipv4.conf.all.send_redirects before remediation: 0",
+                    "Value of net.ipv4.conf.default.send_redirects before remediation: 0",
+                    "Value of net.ipv4.conf.all.send_redirects after remediation: 0",
+                    "Value of net.ipv4.conf.default.send_redirects after remediation: 0",
+                    "Commands failed to set below active Kernel parameters: NA ",
+                    "Commands succeded to set below active Kernel parameters: net.ipv4.conf.all.send_redirects net.ipv4.conf.default.send_redirects  net.ipv4.route.flush"
+                ],
+                "Operation": "Remediate",
+                "Status": "Successful",
+                "SubOperation": ""
+            },
+            "drift_name": "M312"
+        }
+    ]
+}
