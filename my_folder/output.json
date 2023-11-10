@@ -12,7 +12,7 @@
                     "Commands succeded to set below active Kernel parameters: net.ipv4.conf.all.send_redirects net.ipv4.conf.default.send_redirects  net.ipv4.route.flush"
                 ],
                 "Operation": "Remediate",
-                "Status": "Successful",
+#                "Status": "Successful",
                 "SubOperation": ""
             },
             "drift_name": "M312"
