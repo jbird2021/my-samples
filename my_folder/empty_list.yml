@@ -9,7 +9,12 @@
         msg: "Ansible Version {{ ansible_version }}"
     - name: checking mesg
       debug:
+        msg: "{{ output.drifts[0] }}"
+        
+    - name: checking first item
+      debug:
         msg: "{{ output }}"
+
 
     - name: set fact with status
       set_fact:
