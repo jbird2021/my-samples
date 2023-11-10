@@ -2,7 +2,14 @@
   hosts: all
   gather_facts: True
   become: True
-  tasks:   
-    - name: Reboot a slow machine that might have lots of updates to apply
+  tasks:
+   #  This commented out task works fine
+   # - name: Reboot a slow machine that might have lots of updates to apply
+   #   ansible.builtin.reboot:
+   #     reboot_timeout: 3600
+    - name: "(( UPGRADE )) - 3rd reboot to upgrade (DO NOT CANCEL IT)- ( IT MIGHT TAKE 30-45 MINUTES )"
       ansible.builtin.reboot:
-        reboot_timeout: 3600
+        msg: "Reboot initiated by Ansible to conclude the upgrade process on the RAM disk"
+        reboot_timeout: 43200
+        post_reboot_delay: "120
+      timeout: 43260
