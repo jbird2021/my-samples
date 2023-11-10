@@ -1,0 +1,21 @@
+---
+- name: checking output
+  hosts: localhost
+  vars:
+    output: "{{ lookup('file', 'output.json') | from_json }}"
+  tasks:
+    - name: ansible version
+      debug:
+        msg: "Ansible Version {{ ansible_version }}"
+    - name: checking mesg
+      debug:
+        msg: "{{ output }}"
+
+    - name: set fact with status
+      set_fact:
+        out: "{{ out|default([]) + [item.value.Status] }}"
+      with_dict: "{{ output.drifts[0] }}"
+      ignore_errors: true
+
+    - debug:
+        msg: "{{ out }}"
