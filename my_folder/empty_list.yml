@@ -3,6 +3,7 @@
   hosts: localhost
   vars:
     output: "{{ lookup('file', 'output.json') | from_json }}"
+    out:
   tasks:
     - name: ansible version
       debug:
