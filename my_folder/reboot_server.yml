@@ -11,5 +11,5 @@
       ansible.builtin.reboot:
         msg: "Reboot initiated by Ansible to conclude the upgrade process on the RAM disk"
         reboot_timeout: 43200
-        post_reboot_delay: "120
+        post_reboot_delay: "120"
       timeout: 43260
