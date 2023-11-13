@@ -1,6 +1,6 @@
 ---
 - name: change pword
-  hosts: 10.0.110.162
+  hosts: all
   gather_facts: false
   tasks:
     - name: Change root password
