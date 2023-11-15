@@ -1,0 +1,7 @@
+- name: debug_host_vars.yml
+  hosts: all
+  become: true
+  tasks: 
+    - name: Print host variables
+      ansible.builtin.debug:
+        var: hostvars[inventory_hostname]
