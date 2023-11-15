@@ -1,6 +1,6 @@
 - name: debug_host_vars.yml
   hosts: all
-  become: true
+  become: false
   tasks: 
     - name: Print host variables
       ansible.builtin.debug:
