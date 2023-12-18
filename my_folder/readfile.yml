@@ -4,4 +4,6 @@
   tasks:   
     - name: Read File
       ansible.builtin.debug:
-        msg: "the value of test.txt is {{lookup('ansible.builtin.file', '/tmp/test.txt') }}"
+        ### This file needs to be on the execution node
+      # msg: "the value of test.txt is {{lookup('ansible.builtin.file', '/tmp/test.txt') }}"
+        msg: "the value of test.txt is {{lookup('ansible.builtin.file', '/tmp/arcticwolf/arcticwolfagent.txt') }}"
