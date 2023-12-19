@@ -26,4 +26,5 @@ collections:
 #   version: 1.14.0
 # - name: community.general
 # - name: ansible.windows
+- vmware.vmware_rest
 
