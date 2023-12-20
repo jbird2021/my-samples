@@ -1,7 +1,7 @@
 - name: vmware.vmware_rest.vm_moid.yml
   hosts: localhost
   gather_facts: False
-  become: False
+  become: True
   tasks:   
   - name: set connection info
     ansible.builtin.set_fact:
