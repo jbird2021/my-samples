@@ -1,0 +1,7 @@
+- name: shuffle.yml
+  hosts: all
+  order: shuffle
+  gather_facts: False
+  tasks:
+    - debug:
+        var: inventory_hostname
