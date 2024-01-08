@@ -5,15 +5,17 @@
     - name: Hello Message
       pause:
         minutes: 1
+      tags:
+        - hello
       debug:
         msg: "Hello World 1 of 10"
+
     - name: Hello Message
       pause:
         minutes: 1
       debug:
         msg: "Hello World 2 of 10"
-      tags:
-        - hello
+
     - name: Hello Message
       pause:
         minutes: 1
