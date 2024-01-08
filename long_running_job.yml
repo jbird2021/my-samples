@@ -12,6 +12,8 @@
         minutes: 1
       debug:
         msg: "Hello World 2 of 10"
+      tags:
+        - hello
     - name: Hello Message
       pause:
         minutes: 1
