@@ -21,4 +21,4 @@
      - name: Build a list of all the clusters
        vmware.vmware_rest.vcenter_cluster_info:
          cluster: "my_cluster"
-  register: my_cluster_info
+       register: my_cluster_info
