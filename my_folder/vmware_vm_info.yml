@@ -1,18 +1,24 @@
 - name: My Test
   hosts: localhost
   gather_facts: False
+  collections:
+    - vmware.vmware_rest
   vars:
     vcenter_hostname: "localhost"
     vcenter_username: "vcenter_username"
     vcenter_password: "vcenter_password"
 
   tasks:   
-     - name: Gather all registered virtual machines
-       community.vmware.vmware_vm_info:
-         hostname: '{{ vcenter_hostname }}'
-         username: '{{ vcenter_username }}'
-         password: '{{ vcenter_password }}'
-       delegate_to: localhost
-       register: vminfo
-     - debug:
-       var: vminfo.virtual_machines
+#     - name: Gather all registered virtual machines
+#       community.vmware.vmware_vm_info:
+#         hostname: '{{ vcenter_hostname }}'
+#         username: '{{ vcenter_username }}'
+#         password: '{{ vcenter_password }}'
+#       delegate_to: localhost
+#       register: vminfo
+#     - debug:
+#       var: vminfo.virtual_machines
+     - name: Build a list of all the clusters
+       vmware.vmware_rest.vcenter_cluster_info:
+         cluster: "my_cluster"
+  register: my_cluster_info
