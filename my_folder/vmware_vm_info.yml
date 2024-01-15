@@ -20,5 +20,7 @@
 #       var: vminfo.virtual_machines
      - name: Build a list of all the clusters
        vmware.vmware_rest.vcenter_cluster_info:
-         cluster: "my_cluster"
+         vcenter_hostname: "localhost"
+         vcenter_username: "vcenter_username"
+         vcenter_password: "vcenter_password"
        register: my_cluster_info
