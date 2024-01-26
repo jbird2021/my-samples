@@ -95,7 +95,7 @@
             "type": "job_template"
           }
         }
-      ]
+      ],
     },
     "invocation": {
       "module_args": {
