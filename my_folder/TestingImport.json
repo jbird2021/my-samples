@@ -86,7 +86,7 @@
           "name": "Default",
           "type": "organization"
         },
-#        "name": "Demo Job Template",
+        "name": "",
         "type": "job_template"
       }
     }
