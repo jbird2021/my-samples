@@ -10,3 +10,8 @@
         controller_username: admin
         controller_password: test
         validate_certs: False
+      register: export_output
+
+    - name: Show Export Output.
+      ansible.builtin.debug:
+        var: export_output  
