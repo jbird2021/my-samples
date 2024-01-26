@@ -1,23 +1,25 @@
 {
+  "export_output": {
     "changed": false,
     "assets": {
       "job_templates": [
         {
-          "name": "Testing export delete import",
+          "name": "Demo Job Template",
           "description": "",
           "job_type": "run",
           "playbook": "hello_world.yml",
           "scm_branch": "",
           "forks": 0,
           "limit": "",
-          "verbosity": 4,
-          "extra_vars": "---",
+          "verbosity": 0,
+          "extra_vars": "",
           "job_tags": "",
           "force_handlers": false,
           "skip_tags": "",
           "start_at_task": "",
           "timeout": 0,
-          "use_fact_cache": true,
+          "use_fact_cache": false,
+          "execution_environment": null,
           "host_config_key": "",
           "ask_scm_branch_on_launch": false,
           "ask_diff_mode_on_launch": false,
@@ -45,24 +47,19 @@
           "prevent_instance_group_fallback": false,
           "inventory": {
             "organization": {
-              "id": 1,
-              "name": "Default"
+              "name": "Default",
+              "type": "organization"
             },
-            "name": "localhost",
+            "name": "Demo Inventory",
             "type": "inventory"
           },
           "project": {
             "organization": {
-              "organization": {
-                "id": 1,
-                "name": "Default"
+              "name": "Default",
+              "type": "organization"
             },
             "name": "Demo Project",
             "type": "project"
-          },
-          "execution_environment": {
-            "name": "2.15.0",
-            "type": "execution_environment"
           },
           "related": {
             "labels": [],
@@ -74,8 +71,9 @@
                 },
                 "name": "Demo Credential",
                 "credential_type": {
-                  "id": 1,
-                  "name": "Machine"
+                  "name": "Machine",
+                  "kind": "ssh",
+                  "type": "credential_type"
                 },
                 "type": "credential"
               }
@@ -91,39 +89,15 @@
               "name": "Default",
               "type": "organization"
             },
-            "name": "Testing export delete import",
+            "name": "Demo Job Template",
             "type": "job_template"
           }
         }
       ]
     },
-    "invocation": {
-      "module_args": {
-        "job_templates": [
-          "Testing export delete import"
-        ],
-        "controller_host": "https://10.0.110.31",
-        "controller_username": "admin",
-        "controller_password": "test",
-        "validate_certs": false,
-        "controller_oauthtoken": "",
-        "all": false,
-        "request_timeout": null,
-        "controller_config_file": null,
-        "users": null,
-        "organizations": null,
-        "teams": null,
-        "credential_types": null,
-        "credentials": null,
-        "notification_templates": null,
-        "projects": null,
-        "inventory": null,
-        "inventory_sources": null,
-        "workflow_job_templates": null,
-        "execution_environments": null,
-        "applications": null,
-        "schedules": null
-      }
-    },
-    "_ansible_no_log": null
-  }
+    "failed": false
+  },
+  "_ansible_verbose_always": true,
+  "_ansible_no_log": null,
+  "changed": false
+}
