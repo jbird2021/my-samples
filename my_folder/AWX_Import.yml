@@ -5,3 +5,7 @@
     - name: Import Assets
       awx.awx.import: 
         assets: "{{ lookup( 'ansible.builtin.file', './TestingImport.json' ) | from_json() }}"
+        controller_host: 10.0.110.31
+        controller_username: admin
+        controller_password: test
+        validate_certs: False
