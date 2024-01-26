@@ -80,15 +80,16 @@
         "notification_templates_success": [],
         "notification_templates_error": [],
         "survey_spec": {}
-      },
-      "natural_key": {
+       }
+#      },
+#      "natural_key": {
 #        "organization": {
 #          "name": "Default",
 #          "type": "organization"
 #        },
 #        "name": "Demo Job Template",
 #        "type": "job_template"
-      }
+#      }
     }
   ]
 }
