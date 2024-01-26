@@ -1,1 +1,12 @@
-re
+---
+- name: Testing awx.awx.export
+  hosts: all
+  tasks:
+    - name: Export Assets
+      awx.awx.export: 
+        job_templates: "Demo Job Template"
+        #assets: "{{ lookup( 'ansible.builtin.file', './TestingImport.json' ) | from_json() }}"
+        controller_host: 10.0.110.31
+        controller_username: admin
+        controller_password: test
+        validate_certs: False
