@@ -1,0 +1,7 @@
+---
+- name: Testing awx.awx.import
+  hosts: all
+  tasks:
+    - name: Import Assets
+      awx.awx.import: 
+        assets: "{{ lookup( 'ansible.builtin.file', './TestingImport.json' ) | from_json() }}"
