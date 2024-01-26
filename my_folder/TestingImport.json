@@ -1,7 +1,7 @@
 {
   "job_templates": [
     {
-      "name": "Demo Job Template2",
+      "name": "Demo Job Template 3",
       "description": "",
       "job_type": "run",
       "playbook": "hello_world.yml",
