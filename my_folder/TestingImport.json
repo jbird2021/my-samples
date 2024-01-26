@@ -6,7 +6,7 @@
           "name": "Testing export delete import",
           "description": "",
           "job_type": "run",
-          "playbook": "AWX_Export.yml",
+          "playbook": "hello_world.yml",
           "scm_branch": "",
           "forks": 0,
           "limit": "",
@@ -45,22 +45,23 @@
           "prevent_instance_group_fallback": false,
           "inventory": {
             "organization": {
-              "name": "SST",
-              "type": "organization"
+              "id": 1,
+              "name": "Default"
             },
             "name": "localhost",
             "type": "inventory"
           },
           "project": {
             "organization": {
-              "name": "SST",
-              "type": "organization"
+              "organization": {
+                "id": 1,
+                "name": "Default"
             },
-            "name": "GitLab01_Playbooks",
+            "name": "Demo Project",
             "type": "project"
           },
           "execution_environment": {
-            "name": "SST-Testing",
+            "name": "2.15.0",
             "type": "execution_environment"
           },
           "related": {
@@ -68,14 +69,13 @@
             "credentials": [
               {
                 "organization": {
-                  "name": "SST",
+                  "name": "Default",
                   "type": "organization"
                 },
-                "name": "amoen",
+                "name": "Demo Credential",
                 "credential_type": {
-                  "name": "Red Hat Ansible Automation Platform",
-                  "kind": "cloud",
-                  "type": "credential_type"
+                  "id": 1,
+                  "name": "Machine"
                 },
                 "type": "credential"
               }
@@ -88,7 +88,7 @@
           },
           "natural_key": {
             "organization": {
-              "name": "SST",
+              "name": "Default",
               "type": "organization"
             },
             "name": "Testing export delete import",
@@ -102,9 +102,9 @@
         "job_templates": [
           "Testing export delete import"
         ],
-        "controller_host": "https://hrxpanc01.hap.org",
-        "controller_username": "amoen",
-        "controller_password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+        "controller_host": "https://10.0.110.31",
+        "controller_username": "admin",
+        "controller_password": "test",
         "validate_certs": false,
         "controller_oauthtoken": "",
         "all": false,
