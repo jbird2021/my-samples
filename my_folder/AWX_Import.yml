@@ -4,4 +4,4 @@
   tasks:
     - name: Import Assets
       awx.awx.import: 
-        assets: "{{ lookup( 'ansible.builtin.file', 'TestingImport.json' ) | from_json() }}"
+        assets: "{{ lookup( 'ansible.builtin.file', './TestingImport.json' ) | from_json() }}"
