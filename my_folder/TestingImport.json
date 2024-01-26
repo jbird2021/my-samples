@@ -82,12 +82,12 @@
         "survey_spec": {}
       },
       "natural_key": {
-        "organization": {
-          "name": "Default",
-          "type": "organization"
-        },
-        "name": "Demo Job Template",
-        "type": "job_template"
+#        "organization": {
+#          "name": "Default",
+#          "type": "organization"
+#        },
+#        "name": "Demo Job Template",
+#        "type": "job_template"
       }
     }
   ]
