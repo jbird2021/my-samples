@@ -1,5 +1,5 @@
 - name: dnf_java.yml
-  hosts: 10.0.110.43
+  hosts: all
   gather_facts: False
   become: True
   tasks:   
