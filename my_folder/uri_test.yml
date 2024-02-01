@@ -15,4 +15,5 @@
       #force_basic_auth: true
       status_code: 200
       body_format: json
+      validate_certs: false
     
