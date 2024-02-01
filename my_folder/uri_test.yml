@@ -1,0 +1,15 @@
+- name: generate ERPM token
+          uri:
+            url: "{{erpm_rest_url}}/Login"
+            method: POST
+            body_format: json
+            body:
+                  Username: "{{ erpm_user }}"
+                  Password: "{{ erpm_password }}"
+                  LoginType: 1     
+            validate_certs: yes
+            use_proxy: No
+            status_code: 200
+          delegate_to: localhost
+          register: token            
+          no_log: true
