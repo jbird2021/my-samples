@@ -1,15 +1,18 @@
-- name: generate ERPM token
-          uri:
-            url: "{{erpm_rest_url}}/Login"
-            method: POST
-            body_format: json
-            body:
-                  Username: "{{ erpm_user }}"
-                  Password: "{{ erpm_password }}"
-                  LoginType: 1     
-            validate_certs: yes
-            use_proxy: No
-            status_code: 200
-          delegate_to: localhost
-          register: token            
-          no_log: true
+- name: Hello World Sample
+  hosts: all
+  gather_facts: True
+  become: True
+  tasks:  
+  - name: Create a JIRA issue
+    ansible.builtin.uri:
+      url: https://10.0.110.232/api/v2/login
+      user: admin
+      password: test
+      method: POST
+      body:
+        Username: admin
+        Password: test
+      #force_basic_auth: true
+      status_code: 200
+      body_format: json
+    
