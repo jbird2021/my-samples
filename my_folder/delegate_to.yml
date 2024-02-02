@@ -1,15 +1,7 @@
 ---
-- name: Hello World!
+- name: delegate_to.yml
   hosts: all
-  vars:
-    foo: 
-      lolo: lele 
   tasks:
- 
-  - name: Check SSH
-    shell: "echo Hello World"
-
   - name: "Execution node: {{ awx_execution_node }}; Managed Node: {{ ansible_hostname }} var foo={{ foo.lolo }}"
-    debug: 
-      msg: "Execution node: {{ awx_execution_node }}; Managed Node: {{ ansible_hostname }} var foo={{ foo.lolo }}"
+    shell: "echo Hello World"
     delegate_to: "{{ awx_execution_node }}"
