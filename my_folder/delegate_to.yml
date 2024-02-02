@@ -4,5 +4,5 @@
   tasks:
   - name: "Execution node: {{ awx_execution_node }}; Managed Node: {{ ansible_hostname }} var foo={{ foo.lolo }}"
     uri:
-      url: "www.google.com"
+      url: "https://www.google.com"
     delegate_to: "{{ awx_execution_node }}"
