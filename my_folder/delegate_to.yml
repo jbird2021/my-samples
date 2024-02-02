@@ -3,5 +3,6 @@
   hosts: all
   tasks:
   - name: "Execution node: {{ awx_execution_node }}; Managed Node: {{ ansible_hostname }} var foo={{ foo.lolo }}"
-      shell: "echo Hello World"
+    uri:
+      url: "www.google.com"
     delegate_to: "{{ awx_execution_node }}"
