@@ -165,34 +165,4 @@
       }
     }
   ]
-},
-"invocation": {
-  "module_args": {
-    "inventory": [
-      "Devops export POC-inventory"
-    ],
-    "job_templates": [
-      "Devops export POC"
-    ],
-    "controller_host": "https://hrxpanc01.hap.org",
-    "controller_username": "sjain10",
-    "controller_password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
-    "validate_certs": false,
-    "controller_oauthtoken": "",
-    "all": false,
-    "request_timeout": null,
-    "controller_config_file": null,
-    "users": null,
-    "organizations": null,
-    "teams": null,
-    "credential_types": null,
-    "credentials": null,
-    "notification_templates": null,
-    "projects": null,
-    "inventory_sources": null,
-    "workflow_job_templates": null,
-    "execution_environments": null,
-    "applications": null,
-    "schedules": null
-  }
 }
