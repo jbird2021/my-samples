@@ -4,5 +4,8 @@
   order: sorted
   tasks:
   - name: create user
-    user: name={{ my_user }} groups={{ my_group }} password="{{ my_pass | password_hash('sha512') }}"
-    
+    user: 
+      name: "{{ my_user }}"
+      groups: "{{ my_group }}" 
+      password: "{{ my_pass | password_hash('sha512') }}"
+      update_password: on_create
