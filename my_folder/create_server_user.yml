@@ -1,0 +1,6 @@
+- name: test create user
+  hosts: all
+  tasks:
+  - name: create user
+    user: name={{ my_user }} groups={{ my_group }} password="{{ my_pass | password_hash('sha512') }}"
+    
