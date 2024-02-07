@@ -1,6 +1,7 @@
 ---
 - name: Testing awx.awx.export
   hosts: localhost
+  gather_facts: false
   tasks:
     - name: Export Assets
       awx.awx.export: 
