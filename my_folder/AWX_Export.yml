@@ -2,7 +2,8 @@
 - name: Testing awx.awx.export
   hosts: localhost
   gather_facts: false
-  ansible_python_interpreter: '{{ ansible_playbook_python }}'
+  vars: 
+    ansible_python_interpreter: '{{ ansible_playbook_python }}'
   tasks:
     - name: Export Assets
       awx.awx.export: 
