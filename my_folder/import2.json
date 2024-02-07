@@ -164,5 +164,78 @@
         "type": "job_template"
       }
     }
+  ],
+  "organizations": [
+    {
+      "default_environment": null,
+      "description": "",
+      "max_hosts": 0,
+      "name": "Digital",
+      "natural_key": {
+        "name": "Digital",
+        "type": "organization"
+      },
+      "related": {
+        "execution_environments": [],
+        "galaxy_credentials": [
+          {
+            "credential_type": {
+              "kind": "galaxy",
+              "name": "Ansible Galaxy/Automation Hub API Token",
+              "type": "credential_type"
+            },
+            "name": "Ansible Galaxy",
+            "organization": null,
+            "type": "credential"
+          }
+        ],
+        "notification_templates": [],
+        "notification_templates_approvals": [],
+        "notification_templates_error": [],
+        "notification_templates_started": [],
+        "notification_templates_success": []
+      }
+    }
+  ],
+  "projects": [
+    {
+      "allow_override": false,
+      "credential": null,
+      "default_environment": {
+        "name": "Default execution environment",
+        "type": "execution_environment"
+      },
+      "description": "",
+      "local_path": "_6__DevopsPOC",
+      "name": "DevopsPOC",
+      "natural_key": {
+        "name": "DevopsPOC",
+        "organization": {
+          "name": "Default",
+          "type": "organization"
+        },
+        "type": "project"
+      },
+      "organization": {
+        "name": "Default",
+        "type": "organization"
+      },
+      "related": {
+        "notification_templates_error": [],
+        "notification_templates_started": [],
+        "notification_templates_success": []
+      },
+      "scm_branch": "",
+      "scm_clean": false,
+      "scm_delete_on_update": false,
+      "scm_refspec": "",
+      "scm_track_submodules": false,
+      "scm_type": "git",
+      "scm_update_cache_timeout": 0,
+      "scm_update_on_launch": false,
+      "scm_url": "https://github.com/ansible/ansible-tower-samples",
+      "signature_validation_credential": null,
+      "timeout": 0
+    }
   ]
 }
