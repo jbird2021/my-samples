@@ -1,7 +1,7 @@
 {
   "inventory": [
     {
-      "name": "Devops export POC-inventory",
+      "name": "Devops export POC-inventory 2",
       "description": "Devops export POC-inventory'",
       "kind": "",
       "host_filter": null,
@@ -24,7 +24,7 @@
                 "name": "Digital",
                 "type": "organization"
               },
-              "name": "Devops export POC-inventory",
+              "name": "Devops export POC-inventory 2",
               "type": "inventory"
             },
             "related": {
@@ -37,7 +37,7 @@
                   "name": "Digital",
                   "type": "organization"
                 },
-                "name": "Devops export POC-inventory",
+                "name": "Devops export POC-inventory 2",
                 "type": "inventory"
               },
               "type": "host"
@@ -54,7 +54,7 @@
                 "name": "Digital",
                 "type": "organization"
               },
-              "name": "Devops export POC-inventory",
+              "name": "Devops export POC-inventory 2",
               "type": "inventory"
             },
             "related": {
@@ -67,7 +67,7 @@
                   "name": "Digital",
                   "type": "organization"
                 },
-                "name": "Devops export POC-inventory",
+                "name": "Devops export POC-inventory 2",
                 "type": "inventory"
               },
               "type": "host"
@@ -82,14 +82,14 @@
           "name": "Digital",
           "type": "organization"
         },
-        "name": "Devops export POC-inventory",
+        "name": "",
         "type": "inventory"
       }
     }
   ],
   "job_templates": [
     {
-      "name": "Devops export POC",
+      "name": "Devops export POC 2",
       "description": "Devops export POC",
       "job_type": "run",
       "playbook": "export2.yml",
@@ -135,7 +135,7 @@
           "name": "Digital",
           "type": "organization"
         },
-        "name": "Devops export POC-inventory",
+        "name": "Devops export POC-inventory 2",
         "type": "inventory"
       },
       "project": {
@@ -160,7 +160,7 @@
           "name": "Digital",
           "type": "organization"
         },
-        "name": "Devops export POC",
+        "name": "",
         "type": "job_template"
       }
     }
