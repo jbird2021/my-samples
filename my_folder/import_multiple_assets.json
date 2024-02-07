@@ -12,14 +12,14 @@
         "become_username": "",
         "username": "admin"
       },
-      "name": "Demo Credential",
+      "name": "Demo Credential IMPORTED",
       "natural_key": {
         "credential_type": {
           "kind": "ssh",
           "name": "Machine",
           "type": "credential_type"
         },
-        "name": "Demo Credential",
+        "name": "Demo Credential IMPORTED",
         "organization": {
           "name": "Default",
           "type": "organization"
@@ -37,9 +37,9 @@
       "description": "",
       "host_filter": null,
       "kind": "",
-      "name": "Demo Inventory",
+      "name": "Demo Inventory IMPORTED",
       "natural_key": {
-        "name": "Demo Inventory",
+        "name": "Demo Inventory IMPORTED",
         "organization": {
           "name": "Default",
           "type": "organization"
@@ -59,7 +59,7 @@
             "enabled": true,
             "instance_id": "",
             "inventory": {
-              "name": "Demo Inventory",
+              "name": "Demo Inventory IMPORTED",
               "organization": {
                 "name": "Default",
                 "type": "organization"
@@ -69,7 +69,7 @@
             "name": "localhost",
             "natural_key": {
               "inventory": {
-                "name": "Demo Inventory",
+                "name": "Demo Inventory IMPORTED",
                 "organization": {
                   "name": "Default",
                   "type": "organization"
@@ -121,7 +121,7 @@
       "forks": 0,
       "host_config_key": "",
       "inventory": {
-        "name": "Demo Inventory",
+        "name": "Demo Inventory IMPORTED",
         "organization": {
           "name": "Default",
           "type": "organization"
@@ -132,9 +132,9 @@
       "job_tags": "",
       "job_type": "run",
       "limit": "",
-      "name": "Demo Job Template",
+      "name": "Demo Job Template IMPORTED",
       "natural_key": {
-        "name": "Demo Job Template",
+        "name": "Demo Job Template IMPORTED",
         "organization": {
           "name": "Default",
           "type": "organization"
@@ -144,7 +144,7 @@
       "playbook": "hello_world.yml",
       "prevent_instance_group_fallback": false,
       "project": {
-        "name": "Demo Project",
+        "name": "Demo Project IMPORTED",
         "organization": {
           "name": "Default",
           "type": "organization"
@@ -159,7 +159,7 @@
               "name": "Machine",
               "type": "credential_type"
             },
-            "name": "Demo Credential",
+            "name": "Demo Credential IMPORTED",
             "organization": {
               "name": "Default",
               "type": "organization"
@@ -226,10 +226,10 @@
         "type": "execution_environment"
       },
       "description": "",
-      "local_path": "_6__demo_project",
-      "name": "Demo Project",
+      "local_path": "_6__demo_project_IMPORTED",
+      "name": "Demo Project IMPORTED",
       "natural_key": {
-        "name": "Demo Project",
+        "name": "Demo Project IMPORTED",
         "organization": {
           "name": "Default",
           "type": "organization"
