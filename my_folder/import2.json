@@ -165,7 +165,7 @@
       "name": "Devops export POC 2",
       "description": "Devops export POC",
       "job_type": "run",
-      "playbook": "",
+      "playbook": "hello_world.yml",
       "scm_branch": "",
       "forks": 0,
       "limit": "",
