@@ -4,8 +4,8 @@
   tasks:
     - name: Export Assets
       awx.awx.export: 
-        #job_templates: "Demo Job Template"
-        inventory: ['Demo Inventory']
+        job_templates: "Demo Job Template"
+        #inventory: ['Demo Inventory']
         #assets: "{{ lookup( 'ansible.builtin.file', './awx_test_export.json' ) | from_json() }}"
         controller_host: 10.0.110.31
         controller_username: admin
