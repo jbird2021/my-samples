@@ -212,11 +212,11 @@
         "type": "inventory"
       },
       "project": {
+        "name": "DevopsPOC",        
         "organization": {
           "name": "Digital",
           "type": "organization"
         },
-        "name": "DevopsPOC",
         "type": "project"
       },
       "related": {
