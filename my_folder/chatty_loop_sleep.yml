@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  gather_facts: false
+  gather_facts: true
   vars:
     sleep_interval: 1
     num_messages: 50
