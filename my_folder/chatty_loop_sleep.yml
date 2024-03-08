@@ -3,7 +3,7 @@
   gather_facts: true
   vars:
     sleep_interval: 1
-    num_messages: 50
+    num_messages: 60
   tasks:
     - name: debug and sleep for configured time
       include_tasks: debug_and_sleep.yml
