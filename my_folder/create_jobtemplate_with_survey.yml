@@ -1,0 +1,16 @@
+- name: create_jobtemplate_with_survey.yml
+  hosts: all
+  #gather_facts: True
+  #become: True
+  tasks:   
+    - name: Create Ping job template
+      job_template:
+        name: "create_jobtemplate_with_survey"
+        job_type: "run"
+        organization: "Default"
+        inventory: "Demo Inventory"
+        project: "Demo Project"
+        playbook: "hello_world.yml"
+        state: "present"
+        survey_enabled: yes
+        survey_spec: "{{ lookup('file', 'my_survey.json') }}"
