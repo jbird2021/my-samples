@@ -1,0 +1,1 @@
+{"name": "", "spec": [{"max": 1024, "min": 0, "type": "multiplechoice", "choices": ["one", "two", "three", "1", "2", "3"], "default": "", "required": true, "variable": "test", "new_question": false, "question_name": "test", "question_description": ""}], "description": ""}
