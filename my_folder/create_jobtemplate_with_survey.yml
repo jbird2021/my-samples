@@ -4,7 +4,7 @@
   #become: True
   tasks:   
     - name: Create Ping job template
-      job_template:
+      ansible.controller.job_template:
         controller_host: "10.0.109.2"
         controller_username: "admin"
         controller_password: "test"
