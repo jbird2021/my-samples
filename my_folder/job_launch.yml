@@ -1,0 +1,9 @@
+- name: job_launch.yml
+  hosts: all
+  #gather_facts: True
+  #become: True
+  tasks:   
+  - name: Launch a job
+    job_launch:
+      job_template: "Demo Job Template"
+    register: job
