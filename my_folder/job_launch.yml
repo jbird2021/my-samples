@@ -3,7 +3,7 @@
   #gather_facts: True
   #become: True
   tasks:   
-  - name: Launch a job
-    job_launch:
-      job_template: "Demo Job Template"
-    register: job
+    - name: Launch a job
+      ansible.controller.job_launch:
+        job_template: "Demo Job Template"
+      register: job
