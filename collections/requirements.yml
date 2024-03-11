@@ -7,7 +7,7 @@ collections:
 - awx.awx
 - name: vmware.vmware_rest
   version: 2.3.1
-#- ansible.controller
+- ansible.controller
 #- oracle.oci
 #- infoblox.nios_modules
 #- myfirst.test_collection
