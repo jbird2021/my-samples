@@ -6,4 +6,5 @@
     - name: Launch a job
       ansible.controller.job_launch:
         job_template: "Demo Job Template"
+        controller_host: 10.0.109.2
       register: job
