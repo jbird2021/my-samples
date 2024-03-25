@@ -1,33 +1,31 @@
 ---
 collections:
-# With just the collection name
-# - frr.frr
-#- community.general
-#  version: 6.2.0
-- awx.awx
-- name: vmware.vmware_rest
-  version: 2.3.1
+
+
+## CERTIFIED ##
+#- frr.frr
 - ansible.controller
-#- oracle.oci
 #- infoblox.nios_modules
-#- myfirst.test_collection
 #- vyos.vyos
-#- community.vmware
-#- name: 'https://github.com/jbird2021/ansible-tower-samples/blob/master/freeipa-ansible_freeipa-1.6.2.tar.gz'
-#- name: 'https://github.com/mkayontour/icinga2_ansible_collection/releases/download/0.1.0/icinga2-icinga2_collection-0.1.0.tar.gz'
+#- ansible.windows
 #- arista.eos
+#- name: azure.azcollection
+#  version: 1.14.0
+
+
+## VALIDATED ##
+#- infra.ah_configuration
+
+
+## COMMUNITY ##
+#- name: community.general
+#  version: 6.2.0
+#- name: vmware.vmware_rest
+#  version: 2.3.1
 #- name: community.vmware
 #  version: 2.4.0
-#- ansible.windows
-#- openstack.cloud
-#- junipernetworks.junos
-#- name: ansible.controller
-#  version: 4.3.0
-# - ansible.tower
-#- ansible.windows
-# - name: azure.azcollection
-#   version: 1.14.0
-# - name: community.general
-# - name: ansible.windows
+#- awx.awx
+#- oracle.oci
+
 
 
