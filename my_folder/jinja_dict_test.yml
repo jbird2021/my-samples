@@ -1,0 +1,29 @@
+---
+- name: Dummy PoC playbook
+  hosts: localhost
+  gather_facts: false
+  vars:
+    test_dict:
+      - name: thing1
+        value: 1
+      - name: thing2
+        value: 2
+      - name: thing99
+        value: 99
+
+  tasks:
+    - name: Join still works with json query if a string
+      ansible.builtin.debug:
+        msg: "{{ test_dict | json_query('[*].name') | join(', ') }}"
+
+    - name: Join seems to return an array/list instead of a string
+      ansible.builtin.debug:
+        msg: "{{ test_dict | json_query('[*].value') | join(', ') }}"
+
+    - name: But gets desired results if I pad with a space?
+      ansible.builtin.debug:
+        msg: " {{ test_dict | json_query('[*].value') | join(', ') }}"
+
+    - name: But gets desired results if I pad with a space?
+      ansible.builtin.debug:
+        msg: '{{ test_dict | json_query("[*].value") | join(", ") }}'
