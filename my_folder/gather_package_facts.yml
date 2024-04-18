@@ -10,5 +10,8 @@
           {{ item }}
           Version: {{ ansible_facts.packages[item][0]['version'] }}
           Release: {{ ansible_facts.packages[item][0]['release'] }}
-      loop: "{{ ansible_facts.packages.keys() | select('match','^falcon-sensor$') | list }}"
-      when: "'falcon-sensor' in ansible_facts.packages"
+          
+   #   loop: "{{ ansible_facts.packages.keys() | select('match','^falcon-sensor$') | list }}"
+   #   when: "'falcon-sensor' in ansible_facts.packages"
+      loop: "{{ ansible_facts.packages.keys() | select('match','^kernel$') | list }}"
+      when: "'kernel' in ansible_facts.packages"      
