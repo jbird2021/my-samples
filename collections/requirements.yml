@@ -18,8 +18,8 @@ collections:
 
 
 ## COMMUNITY ##
-#- name: community.general
-#  version: 6.2.0
+- name: community.general
+  version: 6.2.0
 #- name: vmware.vmware_rest
 #  version: 2.3.1
 - name: community.vmware
