@@ -23,7 +23,3 @@
     - name: But gets desired results if I pad with a space?
       ansible.builtin.debug:
         msg: " {{ test_dict | json_query('[*].value') | join(', ') }}"
-
-    - name: But gets desired results if I pad with a space?
-      ansible.builtin.debug:
-        msg: '{{ test_dict | json_query("[*].value") | join(", ") }}'
