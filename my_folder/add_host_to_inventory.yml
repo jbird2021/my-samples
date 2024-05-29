@@ -3,12 +3,12 @@
   gather_facts: false
   become: false
   tasks:   
-    - name: Add host to inventory
+    - name: Add host {{ hmi_device_name }} to inventory {{ tower_inventory }}
       ansible.controller.host:
         controller_host: 10.0.109.2
         controller_username: admin
         controller_password: test
-        name: testing1
+        name: test_host1
         description: Updated using ignition_managehost.yml
         inventory: "{{ tower_inventory }}"
         state: present
