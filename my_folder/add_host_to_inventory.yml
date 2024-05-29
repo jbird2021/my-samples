@@ -3,6 +3,12 @@
   gather_facts: true
   become: false
   tasks:   
+
+    - name: debug it
+      debug:
+        msg: "{{ lookup('env', 'TOWER_HOST') }}"
+
+  
     - name: Add host {{ hmi_device_name }} to inventory {{ tower_inventory }}
       ansible.controller.host:
         controller_host: "{{ lookup('env', 'TOWER_HOST') }}"
