@@ -1,11 +1,11 @@
 - name: add_host_to_inventory.yml
   hosts: all
-  gather_facts: false
+  gather_facts: true
   become: false
   tasks:   
     - name: Add host {{ hmi_device_name }} to inventory {{ tower_inventory }}
       ansible.controller.host:
-        controller_host: 10.0.109.2
+        controller_host: "{{ lookup('env', 'TOWER_HOST') }}"
         controller_username: admin
         controller_password: test
         name: rkt-pcn-mazama5ctbedge1
