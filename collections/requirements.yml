@@ -4,7 +4,7 @@ collections:
 
 ## CERTIFIED ##
 #- frr.frr
-#- ansible.controller
+- ansible.controller
 #- infoblox.nios_modules
 #- vyos.vyos
 #- ansible.windows
