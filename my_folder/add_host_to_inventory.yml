@@ -6,7 +6,7 @@
 
     - name: debug it
       debug:
-        msg: "{{ lookup('env', 'TOWER_HOST') }}"
+        msg: "{{ lookup('env', 'TOWER_HOST') }}"   and then "{{ lookup('env', 'AWX_HOST') }}"
 
   
     - name: Add host {{ hmi_device_name }} to inventory {{ tower_inventory }}
