@@ -8,7 +8,7 @@
         controller_host: 10.0.109.2
         controller_username: admin
         controller_password: test
-        name: rkt-pcn-mazama5ctbedge1
+        name: testing1
         description: Updated using ignition_managehost.yml
         inventory: "{{ tower_inventory }}"
         state: present
