@@ -21,4 +21,4 @@
           thin_client_parent:
             hostname: localhost
             ip: 127.0.0.1
-        thick_client_children: null
+          thick_client_children: null
