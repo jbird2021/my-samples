@@ -1,0 +1,24 @@
+- name: add_host_to_inventory.yml
+  hosts: all
+  gather_facts: false
+  become: false
+  tasks:   
+    - name: Add host to inventory
+      ansible.controller.host:
+        controller_host: 10.0.109.2
+        controller_username: admin
+        controller_password: test
+        name: rkt-pcn-mazama5ctbedge1
+        description: Updated using ignition_managehost.yml
+        inventory: "{{ tower_inventory }}"
+        state: present
+        validate_certs: no
+        variables: 
+          hmi_device_name: rkt-pcn-mazama5ctbedge1
+          ansible_host: 10.2.88.120
+          site_name: MAZAMA 5 CTB
+          thin_client: false
+          thin_client_parent:
+            hostname: localhost
+            ip: 127.0.0.1
+        thick_client_children: null
