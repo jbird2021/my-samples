@@ -27,7 +27,7 @@
         controller_username: "admin"
         controller_password: "test"
         validate_certs: false
-        inventory: 'Single host Inv'
+        inventory: 'SinglehostInv'
       register: controller_project_list
 
     - name: debug output
