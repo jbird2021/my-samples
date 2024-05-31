@@ -6,7 +6,7 @@
   tasks:
     - name: Export Assets
       ansible.controller.export:
-        projects: 'all'
+        job_templates: 'all'
         controller_host: 10.0.109.3
         controller_username: admin
         controller_password: test
