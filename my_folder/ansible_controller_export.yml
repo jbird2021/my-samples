@@ -1,18 +1,35 @@
+#---
+#- name: Testing ansible.controller.export
+#  hosts: localhost
+#  gather_facts: false
+#
+#  tasks:
+#    - name: Export Assets
+#      ansible.controller.export:
+#        job_templates: "all"
+#        controller_host: 10.0.109.3
+#        controller_username: admin
+#        controller_password: test
+#        validate_certs: False
+#      register: export_output
+#    - name: Show Export Output.
+#      ansible.builtin.debug:
+#        var: export_output  
 ---
-- name: Testing ansible.controller.export
+- name: sync project from github webhook
   hosts: localhost
-  gather_facts: false
-
+  collections:
+    - ansible.controller
   tasks:
-    - name: Export Assets
-      ansible.controller.export:
+    - name: retrieve all projects from Controller
+      export:
+        controller_host: https://mycontrollerurl
+        controller_username: "admin"
+        controller_password: "password"
+        validate_certs: false
         job_templates: "all"
-        controller_host: 10.0.109.3
-        controller_username: admin
-        controller_password: test
-        validate_certs: False
-      register: export_output
+      register: controller_project_list
 
-    - name: Show Export Output.
-      ansible.builtin.debug:
-        var: export_output  
+    - name: debug output
+      debug:
+        var: controller_project_list
