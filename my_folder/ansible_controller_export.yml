@@ -23,9 +23,9 @@
   tasks:
     - name: retrieve all projects from Controller
       export:
-        controller_host: https://mycontrollerurl
+        controller_host: https://10.0.109.3
         controller_username: "admin"
-        controller_password: "password"
+        controller_password: "test"
         validate_certs: false
         job_templates: "all"
       register: controller_project_list
