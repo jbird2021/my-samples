@@ -46,7 +46,7 @@
         controller_password: "{{ controller_password }}"
         validate_certs: false
         
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -118,7 +118,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -190,7 +190,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -262,7 +262,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -334,7 +334,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -406,7 +406,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -478,7 +478,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -550,7 +550,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -622,7 +622,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -694,7 +694,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -766,7 +766,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -838,7 +838,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -910,7 +910,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -982,7 +982,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -1054,7 +1054,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -1126,7 +1126,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -1198,7 +1198,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -1270,7 +1270,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -1342,7 +1342,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -1414,7 +1414,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -1486,7 +1486,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -1558,7 +1558,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -1630,7 +1630,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -1702,7 +1702,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -1774,7 +1774,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -1846,7 +1846,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -1918,7 +1918,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -1990,7 +1990,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -2062,7 +2062,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -2134,7 +2134,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -2206,7 +2206,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -2278,7 +2278,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -2350,7 +2350,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -2422,7 +2422,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -2494,7 +2494,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -2566,7 +2566,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -2638,7 +2638,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -2710,7 +2710,7 @@
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
         validate_certs: false
-     - name: Create temporary inventory file
+    - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
         organization: "Default"
@@ -2748,19 +2748,19 @@
         validate_certs: false
 
         
-#    - name: Include variables from respective files
+    - name: Include variables from respective files
 #      include_vars:
 #        file: credentials.yml
 #
-#    - name: Debug loaded variables
+    - name: Debug loaded variables
 #      debug:
 #        var: creds###
 #
-#    - name: Debug loaded variables
+    - name: Debug loaded variables
 #      debug:
 #        var: orgs
 #
-#    - name: Add credentials to controller
+    - name: Add credentials to controller
 #      ansible.controller.credential:
 #        controller_host: "{{ controller_host }}"
 #        controller_username: "{{ controller_username }}"
@@ -2776,7 +2776,7 @@
 #        validate_certs: false
 #      loop: "{{ creds }}"
 #
-#    - name: Add organization to the controller
+    - name: Add organization to the controller
 #      ansible.controller.organization:
 #        controller_host: "{{ controller_host }}"
 #        controller_username: "{{ controller_username }}"
