@@ -1,6 +1,6 @@
 - name: Content creation started
   hosts: localhost
-  gather_facts: false  
+  gather_facts: false
   vars:
     controller_host: "10.0.108.52"
     controller_username: "admin"
@@ -81,24 +81,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false      
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -117,7 +99,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -153,24 +153,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -189,7 +171,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -225,24 +225,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false     
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -261,7 +243,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -297,24 +297,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -333,7 +315,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -369,24 +369,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -405,7 +387,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -441,24 +441,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -477,7 +459,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -513,24 +513,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -549,7 +531,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -585,24 +585,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -621,7 +603,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -657,24 +657,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -693,7 +675,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -729,24 +729,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -765,7 +747,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -801,24 +801,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -837,7 +819,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -873,24 +873,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -909,7 +891,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -945,24 +945,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -981,7 +963,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -1017,24 +1017,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -1053,7 +1035,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -1089,24 +1089,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -1125,7 +1107,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -1161,24 +1161,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -1197,7 +1179,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -1233,24 +1233,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -1269,7 +1251,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -1305,24 +1305,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -1341,7 +1323,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -1377,24 +1377,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -1413,7 +1395,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -1449,24 +1449,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -1485,7 +1467,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -1521,24 +1521,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -1557,7 +1539,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -1593,24 +1593,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -1629,7 +1611,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -1665,24 +1665,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -1701,7 +1683,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -1737,24 +1737,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -1773,7 +1755,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -1809,24 +1809,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -1845,7 +1827,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -1881,24 +1881,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -1917,7 +1899,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -1953,24 +1953,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -1989,7 +1971,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -2025,24 +2025,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -2061,7 +2043,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -2097,24 +2097,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -2133,7 +2115,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -2169,24 +2169,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -2205,7 +2187,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -2241,24 +2241,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -2277,7 +2259,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -2313,24 +2313,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -2349,7 +2331,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -2385,24 +2385,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -2421,7 +2403,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -2457,24 +2457,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -2493,7 +2475,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -2529,24 +2529,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -2565,7 +2547,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -2601,24 +2601,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -2637,7 +2619,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -2673,24 +2673,6 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false 
-    - name: Create temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: present
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        validate_certs: false
-    - name: Delete temporary inventory file
-      ansible.controller.inventory:
-        name: "TestInventory"
-        organization: "Default"
-        state: absent
-        controller_host: "{{ controller_host }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
         validate_certs: false
     - name: Create temporary inventory file
       ansible.controller.inventory:
@@ -2709,7 +2691,25 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false   
+        validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ controller_host }}"
+        controller_username: "{{ controller_username }}"
+        controller_password: "{{ controller_password }}"
+        validate_certs: false
      - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
@@ -2745,7 +2745,7 @@
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
-        validate_certs: false     
+        validate_certs: false
 
         
 #    - name: Include variables from respective files
