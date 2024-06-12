@@ -19,7 +19,7 @@
     - name: Delete temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
-        #organization: "Default"
+        organization: "Default"
         state: absent
         controller_host: "{{ controller_host }}"
         controller_username: "{{ controller_username }}"
