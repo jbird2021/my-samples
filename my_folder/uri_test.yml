@@ -1,13 +1,13 @@
 - name: uri_test.yml
   hosts: all
   gather_facts: True
-  become: True
+  #become: True
   tasks:  
-  - name: Create a JIRA issue
+  - name: login to controller
     ansible.builtin.uri:
       url: https://10.0.108.52/api/v2/login
-      user: admin
-      password: test
+      #user: admin
+      #password: test
       method: GET
       body:
         Username: admin
