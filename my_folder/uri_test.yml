@@ -5,7 +5,7 @@
   tasks:  
   - name: login to controller
     ansible.builtin.uri:
-      url: https://10.0.108.52/api/v2/login
+      url: https://10.0.108.52/api/login/
       #user: admin
       #password: test
       method: GET
