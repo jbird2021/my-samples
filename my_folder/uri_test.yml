@@ -13,9 +13,11 @@
         Username: admin
         Password: test
       #force_basic_auth: true
-      status_code: 200
+      status_code: [200, 429, 472, 473]
       body_format: json
       validate_certs: false
+
+      body: json
     register: response
 
   - name: "DEBUG: response"
