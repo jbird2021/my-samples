@@ -3,7 +3,7 @@ collections:
 
 ## CERTIFIED ##
 #- frr.frr
-- name: ansible.controller
+#- name: ansible.controller
 #- infoblox.nios_modules
 #- vyos.vyos
 #- ansible.windows
@@ -20,7 +20,7 @@ collections:
   version: 8.5.0
 #- name: vmware.vmware_rest
 #  version: 2.3.1
-- name: community.vmware
-  version: 2.4.0
+#- name: community.vmware
+#  version: 2.4.0
 #- awx.awx
 #- oracle.oci
