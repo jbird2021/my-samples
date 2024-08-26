@@ -3,7 +3,7 @@
   gather_facts: false
   vars:
     controller_host: "10.0.108.52"
-    controller_username: "admin333"
+    controller_username: "admin"
     #controller_password: "test" 
     controller_password: !vault |
           $ANSIBLE_VAULT;1.1;AES256
