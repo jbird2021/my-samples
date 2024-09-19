@@ -28,9 +28,9 @@
         controller_password: "test"
         validate_certs: false
 #        inventory: 'SinglehostInv'
-        job_templates: 'lotsa jobs'
+        job_templates: 'test'
       register: controller_list
 
     - name: debug output
       debug:
-        var: controller_list
+        var: controller_list.assets
