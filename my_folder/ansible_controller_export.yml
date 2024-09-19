@@ -29,7 +29,7 @@
         validate_certs: false
 #        inventory: 'SinglehostInv'
         job_templates: 'test'
-        organizations: 'test'
+        organizations: 'AVC Tribe (based on LDAP)'
       register: controller_list
 
     - name: debug output
