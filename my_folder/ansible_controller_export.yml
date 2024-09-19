@@ -16,12 +16,12 @@
 #      ansible.builtin.debug:
 #        var: export_output  
 ---
-- name: sync project from github webhook
+- name: export stuff using ansible.controller collection
   hosts: localhost
   collections:
     - ansible.controller
   tasks:
-    - name: retrieve all projects from Controller
+    - name: export it
       export:
         controller_host: https://10.0.108.52
         controller_username: "admin"
@@ -29,6 +29,7 @@
         validate_certs: false
 #        inventory: 'SinglehostInv'
         job_templates: 'test'
+        organizations: 'test'
       register: controller_list
 
     - name: debug output
