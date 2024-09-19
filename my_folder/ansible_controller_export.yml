@@ -28,7 +28,7 @@
         controller_password: "test"
         validate_certs: false
 #        inventory: 'SinglehostInv'
-        job_templates: 'test'
+        job_templates: all
         organizations: 'AVC Tribe (based on LDAP)'
       register: controller_list
 
