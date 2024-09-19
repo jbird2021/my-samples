@@ -23,13 +23,14 @@
   tasks:
     - name: retrieve all projects from Controller
       export:
-        controller_host: https://10.0.109.3
+        controller_host: https://10.0.108.52
         controller_username: "admin"
         controller_password: "test"
         validate_certs: false
-        inventory: 'SinglehostInv'
-      register: controller_project_list
+#        inventory: 'SinglehostInv'
+        job_template: 'lotsa jobs'
+      register: controller_list
 
     - name: debug output
       debug:
-        var: controller_project_list
+        var: controller_list
