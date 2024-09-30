@@ -39,6 +39,6 @@
       ansible.controller.workflow_launch:
         name: "Biztalk_NonProd_Template"
         controller_host: "{{ controller_host }}"
-        controller_username: "{{ lookup ('env', 'tower_username') }}"
-        controller_password: "{{ lookup ('env', 'tower_password') }}"
+        controller_username: "{{ lookup ('env', 'TOWER_USERNAME') }}"
+        controller_password: "{{ lookup ('env', 'TOWER_PASSWORD') }}"
         validate_certs: false
