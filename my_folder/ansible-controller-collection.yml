@@ -2,9 +2,9 @@
   hosts: localhost
   gather_facts: false
   vars:
-    controller_host: "https://10.0.108.52"
-#    controller_username: "admin"
-#    controller_password: "test" 
+    host: "https://10.0.108.52"
+    username: "admin"
+    password: "test" 
 #    controller_password: !vault |
 #          $ANSIBLE_VAULT;1.1;AES256
 #          66346161326266386336316630663663363737346462633434636234653964326639663563626339
@@ -15,30 +15,30 @@
           
   tasks:
 
- #   - name: Create temporary inventory file
- #     ansible.controller.inventory:
- #       name: "TestInventory"
- #       organization: "Default"
- #       state: present
- #       controller_host: "{{ controller_host }}"
- #       controller_username: "{{ controller_username }}"
- #       controller_password: "{{ controller_password }}"
- #       validate_certs: false
+    - name: Create temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: present
+        controller_host: "{{ host }}"
+        controller_username: "{{ username }}"
+        controller_password: "{{ password }}"
+        validate_certs: false
         
- #   - name: Delete temporary inventory file
- #     ansible.controller.inventory:
- #       name: "TestInventory"
- #       organization: "Default"
- #       state: absent
- #       controller_host: "{{ controller_host }}"
- #       controller_username: "{{ controller_username }}"
- #       controller_password: "{{ controller_password }}"
- #       validate_certs: false
+    - name: Delete temporary inventory file
+      ansible.controller.inventory:
+        name: "TestInventory"
+        organization: "Default"
+        state: absent
+        controller_host: "{{ host }}"
+        controller_username: "{{ username }}"
+        controller_password: "{{ password }}"
+        validate_certs: false
 
     - name: Triggering workflow job template
       ansible.controller.workflow_launch:
         name: "Biztalk_NonProd_Template"
         controller_host: "{{ controller_host }}"
-        controller_username: "{{ lookup ('env', 'TOWER_USERNAME') }}"
-        controller_password: "{{ lookup ('env', 'TOWER_PASSWORD') }}"
+        controller_username: '{{ lookup("env", "CONTROLLER_USERNAME") }}'
+        controller_password: '{{ lookup("env", "CONTROLLER_PASSWORD") }}'
         validate_certs: false
