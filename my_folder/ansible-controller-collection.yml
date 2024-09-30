@@ -2,7 +2,7 @@
   hosts: localhost
   gather_facts: false
   vars:
-    controller_host: "10.0.108.52"
+    controller_host: "https://10.0.108.52"
     controller_username: "admin"
     #controller_password: "test" 
     controller_password: !vault |
