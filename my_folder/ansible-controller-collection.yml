@@ -14,16 +14,16 @@
 #          37313439613533383063393433356233626161366334623236303564613437343265
           
   tasks:
-    - name: Assign project permissions from Organzaition2 to Team1 
-      ansible.controller.role:
-        team: Team1
-        project: Project1
-        role: use
-        lookup_organization: Organization1
-        controller_host: "{{ host }}"
-        controller_username: "{{ username }}"
-        controller_password: "{{ password }}"
-        validate_certs: false
+ #   - name: Assign project permissions from Organzaition2 to Team1 
+ #     ansible.controller.role:
+ #       team: Team1
+ #       project: Project1
+ #       role: use
+ #       lookup_organization: Organization1
+ #       controller_host: "{{ host }}"
+ #       controller_username: "{{ username }}"
+ #       controller_password: "{{ password }}"
+ #       validate_certs: false
         
     - name: Create temporary inventory file
       ansible.controller.inventory:
