@@ -20,7 +20,11 @@
         project: 'Organization Project TEST'
         role: use
         lookup_organization: 'Organization2' 
-    
+        controller_host: "{{ host }}"
+        controller_username: "{{ username }}"
+        controller_password: "{{ password }}"
+        validate_certs: false
+        
     - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
