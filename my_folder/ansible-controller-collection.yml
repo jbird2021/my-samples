@@ -2,7 +2,7 @@
   hosts: localhost
   gather_facts: false
   vars:
-    host: "https://10.0.109.139"
+    host: "https://10.0.108.52"
     username: "admin"
     password: "test" 
 #    controller_password: !vault |
@@ -17,9 +17,9 @@
     - name: Assign project permissions from Organzaition2 to Team1 
       ansible.controller.role:
         team: Team1
-        project: 'Organization Project TEST'
+        project: Project1
         role: use
-        lookup_organization: 'Organization2' 
+        lookup_organization: Organization2
         controller_host: "{{ host }}"
         controller_username: "{{ username }}"
         controller_password: "{{ password }}"
