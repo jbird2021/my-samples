@@ -5,6 +5,7 @@
     host: "https://10.0.108.52"
     username: "admin"
     password: "test" 
+    token: "j2PflVekHLw02G8HKcIluY7UPT71q9"
 #    controller_password: !vault |
 #          $ANSIBLE_VAULT;1.1;AES256
 #          66346161326266386336316630663663363737346462633434636234653964326639663563626339
@@ -31,6 +32,7 @@
         organization: "Default"
         state: present
         controller_host: "{{ host }}"
+        controller_oauthtoken: "{{ token }}"
         controller_username: "{{ username }}"
         controller_password: "{{ password }}"
         validate_certs: false
@@ -41,6 +43,7 @@
         organization: "Default"
         state: absent
         controller_host: "{{ host }}"
+        controller_oauthtoken: "{{ token }}"
         controller_username: "{{ username }}"
         controller_password: "{{ password }}"
         validate_certs: false
