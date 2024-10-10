@@ -2,7 +2,7 @@
   hosts: localhost
   gather_facts: false
   vars:
-    host: "https://10.0.108.52"
+    host: "https://10.0.109.139"
     username: "admin"
     password: "test" 
 #    controller_password: !vault |
@@ -14,7 +14,13 @@
 #          37313439613533383063393433356233626161366334623236303564613437343265
           
   tasks:
-
+    - name: Assign project permissions from Organzaition2 to Team1 
+      ansible.controller.role:
+        team: Team1
+        project: 'Organization Project TEST'
+        role: use
+        lookup_organization: 'Organization2' 
+    
     - name: Create temporary inventory file
       ansible.controller.inventory:
         name: "TestInventory"
