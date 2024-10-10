@@ -17,8 +17,9 @@
   tasks:
     - name: Assign project permissions from Organzaition2 to Team1 
       ansible.controller.role:
-        team: Team1
-        project: Project1
+        organizations: Organization1
+        teams: Team1
+        projects: Project1
         role: use
         #lookup_organization: Organization2
         controller_host: "{{ host }}"
