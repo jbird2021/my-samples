@@ -19,7 +19,7 @@
         team: Team1
         project: Project1
         role: use
-        lookup_organization: Organization2
+        lookup_organization: Organization1
         controller_host: "{{ host }}"
         controller_username: "{{ username }}"
         controller_password: "{{ password }}"
