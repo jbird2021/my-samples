@@ -45,10 +45,10 @@
         controller_password: "{{ password }}"
         validate_certs: false
 
-    - name: Triggering workflow job template
-      ansible.controller.workflow_launch:
-        name: "Biztalk_NonProd_Template"
-        controller_host: "{{ controller_host }}"
-        controller_username: '{{ lookup("env", "CONTROLLER_USERNAME") }}'
-        controller_password: '{{ lookup("env", "CONTROLLER_PASSWORD") }}'
-        validate_certs: false
+#    - name: Triggering workflow job template
+#      ansible.controller.workflow_launch:
+#        name: "NonProd_Template"
+#        controller_host: "{{ controller_host }}"
+#        controller_username: '{{ lookup("env", "CONTROLLER_USERNAME") }}'
+#        controller_password: '{{ lookup("env", "CONTROLLER_PASSWORD") }}'
+#        validate_certs: false
