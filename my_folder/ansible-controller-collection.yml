@@ -21,7 +21,7 @@
         teams: Team1
         projects: Project1
         role: use
-        lookup_organization: Organization2
+        #lookup_organization: Organization2
         controller_host: "{{ host }}"
         controller_oauthtoken: "{{ token }}"
         controller_username: "{{ username }}"
