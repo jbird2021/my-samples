@@ -17,7 +17,7 @@
   tasks:
     - name: Assign project permissions from Organzaition2 to Team1 
       ansible.controller.role:
-        organizations: Organization1
+        #organizations: Organization1
         teams: Team1
         projects: Project1
         role: use
