@@ -42,22 +42,22 @@
         controller_username: "{{ username }}"
         controller_password: "{{ password }}"
         validate_certs: false
-        extra_data: {
-          "callbackUrl": "{{callbackUrl}}",
-          "Accountemail": "{{Accountemail}}",
-          "ServiceAccountAD": "{{ServiceAccountAD}}",
-          "DomainServer": "{{DomainServer}}",
-          "systemName": "{{systemName}}",
-          "users": "{{users}}",
-          "controller_oauthtoken": "{{tower_oauthtoken}}",
-          "controller_host": "{{tower_host}}",
-          "domainuser": "{{domainuser}}",
-          "sysId": "{{sysId}}",
-          "ticketNumber": "{{ticketNumber}}",
-          "slackChannel_success": "{{slackChannel_success}}",
-          "slackChannel_failure": "{{slackChannel_failure}}",
-          "count": "{{count|int +1}}"
-        }
+  #      extra_data: {
+  #        "callbackUrl": "{{callbackUrl}}",
+  #        "Accountemail": "{{Accountemail}}",
+  #        "ServiceAccountAD": "{{ServiceAccountAD}}",
+  #        "DomainServer": "{{DomainServer}}",
+  #        "systemName": "{{systemName}}",
+  #        "users": "{{users}}",
+  #        "controller_oauthtoken": "{{tower_oauthtoken}}",
+  #        "controller_host": "{{tower_host}}",
+  #        "domainuser": "{{domainuser}}",
+  #        "sysId": "{{sysId}}",
+  #        "ticketNumber": "{{ticketNumber}}",
+  #        "slackChannel_success": "{{slackChannel_success}}",
+  #        "slackChannel_failure": "{{slackChannel_failure}}",
+  #        "count": "{{count|int +1}}"
+  #      }
 
 # WORKS
 #    - name: Assign project permissions from Organzaition2 to Team1 
