@@ -31,7 +31,7 @@
 
     - name: schedule to rerun the job after 20 minutes
       ansible.controller.schedule:
-        name: "Shared Mailbox-Access Provision -JobId:<https://{{tower_host}}/#/jobs/playbook/{{ awx_job_id }} | {{ awx_job_id }}>"
+        name: "Shared Mailbox-Access Provision -JobId:<https://test/#/jobs/playbook/{{ awx_job_id }} | {{ awx_job_id }}>"
         state: present
         unified_job_template: "Demo Job Template"
         rrule: "DTSTART:{{lookup('pipe', 'date +%Y%m%dT%H%M%SZ')}} RRULE:FREQ=MINUTELY;INTERVAL=20;COUNT=2"
