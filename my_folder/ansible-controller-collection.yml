@@ -6,8 +6,8 @@
     username: "admin"
     password: "test" 
     token: "j2PflVekHLw02G8HKcIluY7UPT71q9"
-    ansible_port: 443
-    delegate_to: localhost
+    #ansible_port: 443
+    #delegate_to: localhost
 #    controller_password: !vault |
 #          $ANSIBLE_VAULT;1.1;AES256
 #          66346161326266386336316630663663363737346462633434636234653964326639663563626339
