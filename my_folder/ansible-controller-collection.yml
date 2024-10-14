@@ -15,20 +15,47 @@
 #          37313439613533383063393433356233626161366334623236303564613437343265
           
   tasks:
-    - name: Assign project permissions from Organzaition2 to Team1 
-      ansible.controller.role:
-        #organizations: Organization1
-        teams: Team1
-        projects: Project1
-        role: use
-        organizations: Organization2
-        #lookup_organization: Organization2
+#    - name: Assign project permissions from Organzaition2 to Team1 
+#      ansible.controller.role:
+#        #organizations: Organization1
+#        teams: Team1
+#        projects: Project1
+#        role: use
+#        organizations: Organization2
+#        #lookup_organization: Organization2
+#        controller_host: "{{ host }}"
+#        controller_oauthtoken: "{{ token }}"
+#        controller_username: "{{ username }}"
+#        controller_password: "{{ password }}"
+#        validate_certs: false
+
+    - name: schedule to rerun the job after 20 minutes
+      ansible.controller.schedule:
+        name: "Shared Mailbox-Access Provision -JobId:<https://{{tower_host}}/#/jobs/playbook/{{ awx_job_id }} | {{ awx_job_id }}>"
+        state: present
+        unified_job_template: "Demo Job Template"
+        rrule: "DTSTART:{{lookup('pipe', 'date +%Y%m%dT%H%M%SZ')}} RRULE:FREQ=MINUTELY;INTERVAL=20;COUNT=2"
         controller_host: "{{ host }}"
         controller_oauthtoken: "{{ token }}"
         controller_username: "{{ username }}"
         controller_password: "{{ password }}"
         validate_certs: false
-
+        extra_data: {
+          "callbackUrl": "{{callbackUrl}}",
+          "Accountemail": "{{Accountemail}}",
+          "ServiceAccountAD": "{{ServiceAccountAD}}",
+          "DomainServer": "{{DomainServer}}",
+          "systemName": "{{systemName}}",
+          "users": "{{users}}",
+          "controller_oauthtoken": "{{tower_oauthtoken}}",
+          "controller_host": "{{tower_host}}",
+          "domainuser": "{{domainuser}}",
+          "sysId": "{{sysId}}",
+          "ticketNumber": "{{ticketNumber}}",
+          "slackChannel_success": "{{slackChannel_success}}",
+          "slackChannel_failure": "{{slackChannel_failure}}",
+          "count": "{{count|int +1}}"
+        }
 
 # WORKS
 #    - name: Assign project permissions from Organzaition2 to Team1 
