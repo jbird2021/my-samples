@@ -35,7 +35,7 @@
       ansible.controller.schedule:
         name: "Shared Mailbox-Access Provision -JobId:<https://{{tower_host}}/#/jobs/playbook/{{ awx_job_id }} | {{ awx_job_id }}>"
         state: present
-        unified_job_template: "Demo Job Template1"
+        unified_job_template: "{{awx_job_template_name}}"
         rrule: "DTSTART:{{lookup('pipe', 'date +%Y%m%dT%H%M%SZ')}} RRULE:FREQ=MINUTELY;INTERVAL=20;COUNT=2"
         controller_host: "{{ host }}"
         controller_oauthtoken: "{{ token }}"
