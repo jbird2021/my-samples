@@ -1,0 +1,17 @@
+---
+- name: timeout.yml
+  hosts: all
+  gather_facts: true
+    
+  tasks:
+    - name: this task will run for 5 seconds and timeout at 10
+      ansible.builtin.shell: sleep 5s
+      timeout: 10
+
+    - name: this task will run for 10 seconds and timeout at 10
+      ansible.builtin.shell: sleep 10s
+      timeout: 10
+
+    - name: this task will run for 15 seconds and timeout at 10
+      ansible.builtin.shell: sleep 15s
+      timeout: 10
