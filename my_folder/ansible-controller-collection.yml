@@ -3,10 +3,9 @@
   gather_facts: false
   vars:
     host: "https://10.0.109.139/"
-  #  username: "admin"
+    username: "admin"
     password: "test" 
-    username: "test1"
-  
+   
     #token: "j2PflVekHLw02G8HKcIluY7UPT71q9"
     #ansible_port: 443
     #delegate_to: localhost
