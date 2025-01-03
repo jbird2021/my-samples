@@ -4,7 +4,7 @@ collections:
 ## CERTIFIED ##
 #- frr.frr
 - name: ansible.controller
-#  version: 4.5.11
+  version: 4.5.15
 #- infoblox.nios_modules
 #- vyos.vyos
 #- ansible.windows
