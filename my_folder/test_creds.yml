@@ -12,7 +12,7 @@
   tasks:   
     - name: Print Machine Creds
       debug:
-        msg: "Username: {{ ansible_user }}, Password: {{ ansible_password }}"
+        msg: "Username: {{ machine.username }}, Password: {{ machine.password }}"
     - name: Print Tower Creds
       debug:
         msg: "host: {{ controller.host }}, username: {{ controller.username }}, password: {{ controller.password }}"
