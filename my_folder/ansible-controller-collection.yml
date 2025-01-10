@@ -40,6 +40,15 @@
         controller_username: "{{ username }}"
         controller_password: "{{ password }}"
         validate_certs: false
+    - name: Create a new token using username/password
+      ansible.controller.token:
+        description: testing
+        scope: "write"
+        state: present
+        controller_host: "{{ host }}"
+        controller_username: "{{ username }}"
+        controller_password: "{{ password }}"
+        validate_certs: false 
         
 #    - name: schedule to rerun the job after 20 minutes
 #      ansible.controller.schedule:
