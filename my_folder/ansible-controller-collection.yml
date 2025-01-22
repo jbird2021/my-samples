@@ -6,6 +6,7 @@
     host: "https://10.0.111.182/"
     username: "admin"
     password: "test" 
+  environment:
     AWXKIT_API_BASE_PATH: "/api/controller/" 
    
     #token: "j2PflVekHLw02G8HKcIluY7UPT71q9"
