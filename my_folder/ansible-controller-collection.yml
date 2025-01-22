@@ -1,13 +1,16 @@
 - name: Content creation started
   hosts: localhost
   gather_facts: false
+
+  environment:
+    AWXKIT_API_BASE_PATH: "/api/controller/" 
+
   vars:
     #host: "https://10.0.109.139/"
     host: "https://10.0.111.182/"
     username: "admin"
     password: "test" 
-  environment:
-    AWXKIT_API_BASE_PATH: "/api/controller/" 
+
    
     #token: "j2PflVekHLw02G8HKcIluY7UPT71q9"
     #ansible_port: 443
