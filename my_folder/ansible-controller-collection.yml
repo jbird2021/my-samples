@@ -2,7 +2,8 @@
   hosts: localhost
   gather_facts: false
   vars:
-    host: "https://10.0.109.139/"
+    #host: "https://10.0.109.139/"
+    host: "https://10.0.111.182/"
     username: "admin"
     password: "test" 
    
@@ -18,6 +19,15 @@
 #          37313439613533383063393433356233626161366334623236303564613437343265
           
   tasks:
+    - name: Export projects
+      ansible.controller.export:
+        projects: 'all'
+        controller_host: "{{ host }}"
+        controller_oauthtoken: "{{ token }}"
+        controller_username: "{{ username }}"
+        controller_password: "{{ password }}"
+        validate_certs: false
+      
 #    - name: Assign project permissions from Organzaition2 to Team1 
 #      ansible.controller.role:
 #        #organizations: Organization1
@@ -31,24 +41,24 @@
 #        controller_username: "{{ username }}"
 #        controller_password: "{{ password }}"
 #        validate_certs: false
-    - name: Add host
-      ansible.controller.host:
-        name: 1.1.1.1
-        inventory: "test-inv"
-        state: present
-        controller_host: "{{ host }}"
-        controller_username: "{{ username }}"
-        controller_password: "{{ password }}"
-        validate_certs: false
-    - name: Create a new token using username/password
-      ansible.controller.token:
-        description: testing
-        scope: "write"
-        state: present
-        controller_host: "{{ host }}"
-        controller_username: "{{ username }}"
-        controller_password: "{{ password }}"
-        validate_certs: false 
+#    - name: Add host
+#      ansible.controller.host:
+#        name: 1.1.1.1
+#        inventory: "test-inv"
+#        state: present
+#        controller_host: "{{ host }}"
+#        controller_username: "{{ username }}"
+#        controller_password: "{{ password }}"
+#        validate_certs: false
+#    - name: Create a new token using username/password
+#      ansible.controller.token:
+#        description: testing
+#        scope: "write"
+#        state: present
+#        controller_host: "{{ host }}"
+#        controller_username: "{{ username }}"
+#        controller_password: "{{ password }}"
+#        validate_certs: false 
         
 #    - name: schedule to rerun the job after 20 minutes
 #      ansible.controller.schedule:
