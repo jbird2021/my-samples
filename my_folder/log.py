@@ -37,7 +37,7 @@ def log():
 #Controller settings:
 #Logging Aggregator = http://localhost
 #Logging Aggregator Port = 8080
-#Logging Aggregator Type = 
+#Logging Aggregator Type = Other
 #Logging Aggregator Protocol = HTTPS/HHTP
 #
 #
