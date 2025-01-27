@@ -1,6 +1,7 @@
 #FROM GABE
 import json
-from flask import Flask, escape, request
+from flask import Flask, request
+from markupsafe import escape
 app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def log():
@@ -18,6 +19,7 @@ def log():
 # FROM BEN
 import json
 from flask import Flask, escape, request
+from markupsafe import escape
 import logging
 app = Flask(__name__)
 logging.basicConfig(filename='tower_elk.log', level=logging.DEBUG)
