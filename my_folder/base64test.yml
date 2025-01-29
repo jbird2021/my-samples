@@ -11,4 +11,4 @@
         msg: "{{ lookup('ansible.builtin.file', 'test.cert') | b64encode }}"
 
     - ansible.builtin.debug:
-        msg: "{{ (lookup('ansible.builtin.file', 'test.cert') | b64encode) b64decode }}"        
+        msg: "{{ (lookup('ansible.builtin.file', 'test.cert') | b64encode) | b64decode }}"        
