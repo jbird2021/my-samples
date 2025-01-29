@@ -6,6 +6,10 @@
   tasks:   
     - ansible.builtin.debug:
         msg: "{{ lookup('ansible.builtin.file', 'test.cert') }}"
+        register: test_cert
+
+    - ansible.builtin.debug:
+        msg: "{{ test_cert}}"
 
 #    - encoded: "{{ lookup('ansible.builtin.file', 'test.cert') | b64encode }}"
 
