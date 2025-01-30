@@ -5,7 +5,8 @@ collections:
 #- frr.frr
 - name: ansible.controller
   #version: 4.5.15
-  version: 4.6.3
+  #version: 4.6.3
+  version: 4.4.8
 #- infoblox.nios_modules
 #- vyos.vyos
 #- ansible.windows
