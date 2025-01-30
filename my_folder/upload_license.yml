@@ -17,4 +17,5 @@
         controller_username: "{{ username }}"
         controller_password: "{{ password }}"
         validate_certs: false
+        force: true
 
