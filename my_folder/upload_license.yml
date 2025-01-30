@@ -1,0 +1,7 @@
+- name: upload_license.yml
+  hosts: localhost
+  gather_facts: false
+  tasks:   
+    - name: Set the license using a file
+      license:
+        manifest: "test.zip"
