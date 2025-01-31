@@ -19,8 +19,8 @@ collections:
 #- infra.ah_configuration
 
 ## COMMUNITY ##
-- name: community.general
-  version: 8.5.0
+  - name: community.general
+    version: 8.5.0
 #- name: vmware.vmware_rest
 #  version: 2.3.1
 #- name: community.vmware
