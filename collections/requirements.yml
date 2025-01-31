@@ -20,7 +20,7 @@ collections:
 
 ## COMMUNITY ##
   - name: community.general
-    version: 8.5.0
+#    version: 8.5.0
 #- name: vmware.vmware_rest
 #  version: 2.3.1
 #- name: community.vmware
