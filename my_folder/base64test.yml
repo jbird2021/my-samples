@@ -4,11 +4,18 @@
   become: False
   
   tasks:   
+    - name: do the encode
+      shell: echo {{ lookup('ansible.builtin.file', 'test.cert') }} > /tmp/output
+      
+
     - ansible.builtin.debug:
-        msg: "{{ lookup('ansible.builtin.file', 'test.cert') }}"
+        msg: "{{ lookup('ansible.builtin.file', '/tmp/output') }}"
 
     - ansible.builtin.debug:
         msg: "{{ lookup('ansible.builtin.file', 'test.cert') | b64encode }}"
+
+
+
 
     - ansible.builtin.debug:
         msg: "{{ (lookup('ansible.builtin.file', 'test.cert') | b64encode) | b64decode }}"        
