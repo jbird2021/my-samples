@@ -2,12 +2,12 @@
   hosts: localhost
   gather_facts: false
 
-  vars:
+#  vars:
     #host: "https://10.0.109.139/"
     #host: "https://10.0.111.182/"
-    host: "https://10.0.108.230/"
-    username: "admin"
-    password: "test" 
+#    host: "https://10.0.108.230/"
+#    username: "admin"
+#    password: "test" 
     
   tasks:   
     - name: Set the license using a file
