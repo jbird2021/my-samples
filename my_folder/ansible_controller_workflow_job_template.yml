@@ -1,0 +1,34 @@
+- name: Content creation started
+  hosts: localhost
+  gather_facts: false
+
+  vars:
+    host: "https://10.0.111.201/"
+    username: "admin"
+    password: "test" 
+
+  environment:
+    organization: Default
+    controller_host: "{{ host }}"
+    controller_username: "{{ username }}"
+    controller_password: "{{ password }}"
+    validate_certs: false
+
+  tasks:
+    - name: Create a workflow job template
+      workflow_job_template:
+        name: example-workflow
+        description: created by Ansible Playbook
+
+    - name: Create a node, follows workflow_job_template example
+      workflow_job_template_node:
+        identifier: my-first-node
+        workflow: example-workflow
+        unified_job_template: jt-for-node-use
+        organization: Default  # organization of workflow job template
+        extra_data:
+          foo_key: bar_value
+
+
+
+
