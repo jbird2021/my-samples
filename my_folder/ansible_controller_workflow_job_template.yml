@@ -24,8 +24,6 @@
         identifier: my-first-node
         workflow: example-workflow
         unified_job_template: job1
-        extra_data:
-          foo_key: bar_value
         organization: Default
         controller_host: "{{ host }}"
         controller_username: "{{ username }}"
