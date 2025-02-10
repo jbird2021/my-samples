@@ -30,5 +30,15 @@
         controller_password: "{{ password }}"
         validate_certs: false
 
-
-
+    - name: Create parent node for prior node
+      ansible.controller.workflow_job_template_node:
+        identifier: my-root-node
+        workflow: example-workflow
+        unified_job_template: job1
+        organization: Default
+        success_nodes:
+          - my-first-node
+        controller_host: "{{ host }}"
+        controller_username: "{{ username }}"
+        controller_password: "{{ password }}"
+        validate_certs: false
