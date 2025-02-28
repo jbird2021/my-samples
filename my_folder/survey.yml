@@ -1,9 +1,8 @@
-- name: Hello World Sample
+- name: survey.yml
   hosts: all
   gather_facts: False
   become: False
 
-  
   tasks:   
     - name: Display Survey Value
       debug:
