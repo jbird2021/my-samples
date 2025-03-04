@@ -1,0 +1,11 @@
+---
+- name: Testing awx.awx.import
+  hosts: all
+  tasks:
+    - name: Import Assets
+      ansible.controller.import: 
+        assets: "{{ lookup( 'ansible.builtin.file', './export_output-03-03-2025.json' ) | from_json() }}"
+        controller_host: 10.0.109.60
+        controller_username: admin
+        controller_password: test
+        validate_certs: False
