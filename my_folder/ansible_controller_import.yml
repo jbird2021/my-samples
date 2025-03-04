@@ -1,6 +1,6 @@
 ---
-- name: Testing awx.awx.import
-  hosts: all
+- name: ansible_controller_import.yml
+  hosts: localhost
   tasks:
     - name: Import Assets
       ansible.controller.import: 
