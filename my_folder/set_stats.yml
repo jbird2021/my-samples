@@ -1,0 +1,10 @@
+- name: set_stats.yml
+  hosts: all
+  gather_facts: True
+  become: True
+  tasks:   
+    - name: Setting stats (not aggregating)
+      ansible.builtin.set_stats:
+        data:
+          the_answer: 42
+        aggregate: no
