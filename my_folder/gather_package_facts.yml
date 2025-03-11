@@ -1,4 +1,6 @@
 - hosts: all
+  become: true
+  
   tasks:
     - name: "Gather package facts"
       package_facts:
@@ -13,6 +15,6 @@
           
    #   loop: "{{ ansible_facts.packages.keys() | select('match','^falcon-sensor$') | list }}"
    #   when: "'falcon-sensor' in ansible_facts.packages"
-      #loop: "{{ ansible_facts.packages.keys() | select('match','^powershell$') | list }}"
+      loop: "{{ ansible_facts.packages.keys() | list }}"
      # when: "'powershell' in ansible_facts.packages"      
 
