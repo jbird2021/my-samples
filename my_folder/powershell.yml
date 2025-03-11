@@ -1,0 +1,53 @@
+---
+- name: Run PowerShell locally on AAP Controller
+  hosts: localhost
+  connection: local
+  gather_facts: true
+
+  become: true
+  become_user: root
+
+  vars: 
+    ansible_ssh_private_key_file: /root/.ssh/known_hosts
+
+  tasks:
+    - name: Check if PowerShell is installed
+      shell: /usr/bin/pwsh --version
+      register: pwsh_installed
+      environment:
+        PATH: "{{ ansible_env.PATH }}:/usr/bin/pwsh"  # Ensure pwsh path is included
+      ignore_errors: true
+
+    - name: Output result if PowerShell is installed
+      debug:
+        msg: "PowerShell is installed: {{ pwsh_installed.stdout }}"
+      when: pwsh_installed.rc == 0
+
+    - name: Output result if PowerShell is not installed
+      debug:
+        msg: "PowerShell is not installed on this system."
+      when: pwsh_installed.rc != 0
+
+    - name: Ensure pwsh version is accessible with sudo
+      shell: /usr/bin/pwsh --version
+      register: pwsh_version_output
+      environment:
+        PATH: "{{ ansible_env.PATH }}:/usr/bin/pwsh"  # Ensure pwsh path is included
+      when: pwsh_installed.rc == 0
+
+    - name: Show PowerShell version output
+      debug:
+        var: pwsh_version_output.stdout
+      when: pwsh_installed.rc == 0
+
+    - name: Execute PowerShell script
+      ansible.builtin.shell: /usr/bin/pwsh -Command 'Write-Host "Hello, World from PowerShell on localhost!"'
+      register: ps_output
+      environment:
+        PATH: "{{ ansible_env.PATH }}:/usr/bin/pwsh"  # Ensure pwsh path is included
+      when: pwsh_installed.rc == 0
+
+    - name: Show script output
+      debug:
+        var: ps_output.stdout
+      when: pwsh_installed.rc == 0
