@@ -8,7 +8,13 @@
 
     - name: Check whether a package called powershell is installed
       ansible.builtin.debug:
-        msg: "{{ ansible_facts.packages['powershell'] | length }} versions of powershell are installed!"
+        msg: 
+          "{{ ansible_facts.packages['powershell'] | length }} versions of powershell are installed!"
+          Name: "{{ ansible_facts.packages['powershell'].name }}"
+          Version: "{{ ansible_facts.packages['powershell'].version }}"
+          Release: "{{ ansible_facts.packages['powershell'].release }}"
+          #          Version: {{ ansible_facts.packages[item][0]['version'] }}
+#          Release: {{ ansible_facts.packages[item][0]['release'] }}   
       when: "'powershell' in ansible_facts.packages"
  
 #    - name: "Print installed package versions"
@@ -16,10 +22,8 @@
 #        msg: |
 #          {{ item }}
 #          Version: {{ ansible_facts.packages[item][0]['version'] }}
-#          Release: {{ ansible_facts.packages[item][0]['release'] }}
-          
+#          Release: {{ ansible_facts.packages[item][0]['release'] }}          
    #   loop: "{{ ansible_facts.packages.keys() | select('match','^falcon-sensor$') | list }}"
    #   when: "'falcon-sensor' in ansible_facts.packages"
- #     loop: "{{ ansible_facts.packages.keys() | list }}"
-     # when: "'powershell' in ansible_facts.packages"      
+
 
