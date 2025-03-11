@@ -10,9 +10,9 @@
       ansible.builtin.debug:
         msg: 
           - "{{ ansible_facts.packages['powershell'] | length }} versions of powershell are installed!"
-          - "Name: {{ ansible_facts.packages['powershell']['name'] }}"
-          - "Version: {{ ansible_facts.packages['powershell']['version'] }}"
-          - "Release: {{ ansible_facts.packages['powershell']['release'] }}"
+          - "Name: {{ ansible_facts.packages['powershell'][0]['name'] }}"
+          - "Version: {{ ansible_facts.packages['powershell'][0]['version'] }}"
+          - "Release: {{ ansible_facts.packages['powershell'][0]['release'] }}"
 
 #          Release: {{ ansible_facts.packages[item][0]['release'] }}   
       when: "'powershell' in ansible_facts.packages"
