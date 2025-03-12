@@ -14,7 +14,7 @@
         controller_username: "{{ username }}"
         controller_password: "{{ password }}"
         validate_certs: false
-        role_definition: Controller Organization Admin
+        role_definition: Organization Execute
         object_id: 2
         team: Team1
         state: present
