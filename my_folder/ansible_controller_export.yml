@@ -28,7 +28,7 @@
         controller_password: "test"
         validate_certs: false
 #        inventory: 'SinglehostInv'
-        credential_types: all
+        all: true
       register: export_output
 
     - name: debug output
