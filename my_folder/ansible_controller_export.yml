@@ -35,9 +35,7 @@
       debug:
         var: export_output.assets
 
-      register: export_output
-
     - name: Save export to file
       copy:
         content: "{{ export_output['assets'] }}"
-        dest: export_output.json
+        dest: /tmp/export_output.json
