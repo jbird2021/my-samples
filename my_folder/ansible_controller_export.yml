@@ -1,20 +1,3 @@
-#---
-#- name: Testing ansible.controller.export
-#  hosts: localhost
-#  gather_facts: false
-#
-#  tasks:
-#    - name: Export Assets
-#      ansible.controller.export:
-#        job_templates: "all"
-#        controller_host: 10.0.109.3
-#        controller_username: admin
-#        controller_password: test
-#        validate_certs: False
-#      register: export_output
-#    - name: Show Export Output.
-#      ansible.builtin.debug:
-#        var: export_output  
 ---
 - name: export stuff using ansible.controller collection
   hosts: localhost
@@ -27,7 +10,6 @@
         controller_username: "admin"
         controller_password: "test"
         validate_certs: false
-#        inventory: 'SinglehostInv'
         all: true
       register: export_output
 
