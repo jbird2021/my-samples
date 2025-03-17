@@ -29,8 +29,15 @@
         validate_certs: false
 #        inventory: 'SinglehostInv'
         credential_types: all
-      register: controller_list
+      register: export_output
 
     - name: debug output
       debug:
-        var: controller_list.assets
+        var: export_output.assets
+
+      register: export_output
+
+    - name: Save export to file
+      copy:
+        content: "{{ export_output['assets'] }}"
+        dest: export_output.json
