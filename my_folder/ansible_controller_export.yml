@@ -17,7 +17,7 @@
 #        var: export_output  
 ---
 - name: export stuff using ansible.controller collection
-  hosts: all
+  hosts: localhost
   collections:
     - ansible.controller
   tasks:
