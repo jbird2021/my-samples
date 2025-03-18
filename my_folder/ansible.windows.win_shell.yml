@@ -4,5 +4,5 @@
   become: false
   tasks:   
     - name: Say Hello
-      ansible.windows.win_ping
+      ansible.windows.win_ping:
       #win_shell: dir
