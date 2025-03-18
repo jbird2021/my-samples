@@ -1,0 +1,7 @@
+- name: ansible.windows.win_shell.yml
+  hosts: localhost
+  gather_facts: false
+  become: false
+  tasks:   
+    - name: Say Hello
+      ansible.windows.win_shell: dir
