@@ -1,5 +1,6 @@
 - name: Hello World Sample
   hosts: localhost
+  connection: local
   become: yes
   gather_facts: False
   tasks:   
