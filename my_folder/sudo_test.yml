@@ -1,6 +1,6 @@
 - name: sudo_test.yml
   hosts: localhost
-  gather_facts: False
+  gather_facts: true
   become: true
 
   tasks:   
