@@ -5,4 +5,4 @@
 
   tasks:   
     - name: sleep for 5 seconds
-      shell: sudo bash -c 'sleep 4s; command'
+      ansible.builtin.shell: sudo bash -c 'sleep 4s; command'
