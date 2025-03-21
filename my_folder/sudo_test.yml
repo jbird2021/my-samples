@@ -1,0 +1,8 @@
+- name: sudo_test.yml
+  hosts: localhost
+  gather_facts: False
+  become: true
+
+  tasks:   
+    - name: sleep for 5 seconds
+      shell: sudo bash -c 'sleep 4s; command'
