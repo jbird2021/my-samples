@@ -1,0 +1,16 @@
+- name: Hello World Sample
+  hosts: localhost
+  gather_facts: false
+  become: false
+
+  vars:
+    my_var: "True"
+    
+  
+  tasks:   
+    - name: Output text
+      debug:
+        msg: "{{ my_var }}"
+    - name: Output bool
+      debug:
+        msg: "{{ my_var | bool}}"     
