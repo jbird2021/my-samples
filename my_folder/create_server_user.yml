@@ -12,7 +12,11 @@
       name: "{{ my_user }}"
       groups: "{{ my_group }}" 
       password: "{{ my_pass | password_hash('sha512') }}"
-      update_password: on_create
+#      update_password: on_create
+      password_expire_max: 60
+      password_expire_min: 30
+      password_expire_warn: 10
+
 
   - name: Remove the user
     ansible.builtin.user:
