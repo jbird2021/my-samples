@@ -1,8 +1,12 @@
 - name: test create user
   hosts: all
-  serial: 1
-  order: sorted
+
   tasks:
+  - name: Ensure group exists
+    ansible.builtin.group:
+      name: "{{ my_group }}" 
+      state: present
+  
   - name: create user
     user: 
       name: "{{ my_user }}"
