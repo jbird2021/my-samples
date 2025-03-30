@@ -19,4 +19,4 @@
       name: "{{ my_user }}"
       state: absent
       remove: yes
-    when: "{{ remove_user }}" == 'true'
+    when: "{{ remove_user }}"
