@@ -8,8 +8,15 @@
       state: present
   
   - name: create user
-    user: 
+    ansible.builtin.user: 
       name: "{{ my_user }}"
       groups: "{{ my_group }}" 
       password: "{{ my_pass | password_hash('sha512') }}"
       update_password: on_create
+
+  - name: Remove the user 'johnd'
+    ansible.builtin.user:
+      name: "{{ my_user }}"
+      state: absent
+      remove: yes
+    when: "{{ remove_user }}" = true
