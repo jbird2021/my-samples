@@ -1,0 +1,15 @@
+- name: test.yml
+  hosts: all
+  gather_facts: true
+
+  tasks:
+  - name: Create container foo and upload a file
+    azure.azcollection.azure_rm_storageblob:
+      resource_group: 'default_domain'
+      storage_account_name: jbirdstorageaccount
+      container: foo
+      blob: test.png
+      #src: /home/cloud-user/builder/04110706/test.png
+      src: test.png
+      public_access: container
+      content_type: 'application/image'
