@@ -2,7 +2,7 @@
   hosts: all
   gather_facts: true
   vars: 
-    ansible_python_interpreter: /usr/bin/python3.11
+    ansible_python_interpreter: /usr/bin/python3
   tasks:
   - name: Create container foo and upload a file
     azure.azcollection.azure_rm_storageblob:
