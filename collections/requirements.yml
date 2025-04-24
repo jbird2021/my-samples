@@ -1,6 +1,7 @@
 ---
 collections:
-
+  - name: ansible.posix
+    version: ">=1,<2"  
 ## CERTIFIED ##
 #- frr.frr
 #- name: ansible.controller
