@@ -1,6 +1,6 @@
 - name: win_powershell.yml
   hosts: all
-  gather_facts: False
+  gather_facts: True
   tasks:
     - name: Run basic PowerShell script
       ansible.windows.win_powershell:
