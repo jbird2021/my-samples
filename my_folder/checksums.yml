@@ -4,13 +4,13 @@
   hosts: localhost
   tasks:
     # Task that Works Correctly
-  - name: Download Image - Works
+    - name: Download Image - Works
       ansible.builtin.get_url:
         url: https://cloud-images.ubuntu.com/noble/current/noble-server-cloudimg-amd64.img
         checksum: sha256:https://cloud-images.ubuntu.com/noble/current/SHA256SUMS
         dest: images/noble-server-cloudimg-amd64.img
    # Task that FAILS
-  - name: Download Image - Fails
+    - name: Download Image - Fails
       ansible.builtin.get_url:
         url: https://download.fedoraproject.org/pub/fedora/linux/releases/40/Cloud/x86_64/images/Fedora-Cloud-Base-Generic.x86_64-40-1.14.qcow2
         checksum: sha256:https://download.fedoraproject.org/pub/fedora/linux/releases/40/Cloud/x86_64/images/Fedora-Cloud-40-1.14-x86_64-CHECKSUM
