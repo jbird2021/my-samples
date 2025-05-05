@@ -1,6 +1,7 @@
 - name: checksums.yml
   become: false
   gather_facts: false
+  hosts: localhost
   tasks:
     # Task that Works Correctly
   - name: Download Image - Works
