@@ -10,6 +10,7 @@
         - a
         - b
         - c
+      ping_data: "{{ query('ansible.controller.controller_api', 'ping') }}"
 
   - name: Print all available facts
     ansible.builtin.debug:
