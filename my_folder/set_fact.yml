@@ -5,15 +5,12 @@
   tasks:   
   - name: init
     set_fact:
-      output: testing
-  - debug:    
-      msg: "{{ output }}"
+      one_fact: something
+      one_list:
+        - a
+        - b
+        - c
 
-  - name: set fact with status
-    set_fact:
-      out: "{{ out|default([]) + [item.value.Status] }}"
-    with_dict: "{{ output.drifts[0] }}"
-    ignore_errors: true
   - name: Print all available facts
     ansible.builtin.debug:
       var: ansible_facts
