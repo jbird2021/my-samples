@@ -1,6 +1,5 @@
 ---
 collections:
-  - name: ansible.windowss
 ## CERTIFIED ##
 #- frr.frr
 #- name: ansible.controller
