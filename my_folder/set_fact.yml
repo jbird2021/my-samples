@@ -1,6 +1,7 @@
 - name: set_fact.yml
   hosts: localhost
   gather_facts: True
+  use_fact_cache: True
   become: True
   tasks:   
   - name: init
