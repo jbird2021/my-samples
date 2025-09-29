@@ -5,5 +5,5 @@
   vars:
     command_var:
   tasks:
-     - name: run cmd
-       ansible.builtin.command: "{{ command_var }}"
+    - name: run cmd
+      ansible.builtin.command: "{{ command_var }}"
