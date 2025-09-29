@@ -1,0 +1,9 @@
+- name: Run Adhoc Command
+  hosts: all
+  gather_facts: yes
+  become: yes
+  vars:
+    command_var:
+  tasks:
+     - name: run cmd
+       ansible.builtin.command: "{{ command_var }}"
