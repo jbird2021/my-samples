@@ -1,7 +1,7 @@
 - name: ansible_play_hosts.yml
   hosts: all
-  gather_facts: False
-  become: False
+  gather_facts: True
+  become: True
   tasks:   
     - name: Print the ansible_play_hosts_all
       debug:
