@@ -1,0 +1,19 @@
+- name: ansible_play_hosts.yml
+  hosts: all
+  gather_facts: False
+  become: False
+  tasks:   
+    - name: Print the ansible_play_hosts_all
+      debug:
+        var: ansible_play_hosts_all
+      run_once: yes
+
+    - name: Print the ansible_play_hosts
+      debug:
+        var: ansible_play_hosts
+      run_once: yes
+
+    - name: Print the symmetric difference
+      debug:
+        msg: "List is {{ ansible_play_hosts_all | symmetric_difference(ansible_play_hosts) }}"
+      run_once: yes
