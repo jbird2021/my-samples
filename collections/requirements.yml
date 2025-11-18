@@ -2,6 +2,7 @@
 collections:
 ## CERTIFIED ##
 #- kubernetes.core
+- community.kubernetes
 #  - name: ansible.controller
 #    version: 4.6.16
   #version: 4.6.8
