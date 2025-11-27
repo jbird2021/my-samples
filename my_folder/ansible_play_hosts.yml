@@ -3,6 +3,12 @@
   gather_facts: True
   become: True
   tasks:   
+    - name: Create an empty file
+      ansible.builtin.file:
+        path: /tmp/my_file.txt
+        state: touch
+      run_once: yes
+      
     - name: Print the ansible_play_hosts_all
       debug:
         var: ansible_play_hosts_all
