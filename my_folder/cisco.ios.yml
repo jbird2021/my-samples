@@ -1,0 +1,13 @@
+---
+  - name: Network Backup
+    connection: ansible.netcommon.network_cli
+    hosts: all
+    gather_facts: false
+
+    tasks:
+       - name: Get configuration
+         become: true
+         become_method: enable
+         cisco.ios.ios_command:
+           commands: show ssh
+         register: cli_output
