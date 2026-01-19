@@ -1,0 +1,61 @@
+---
+- name: Playbook to configure an Organization
+  hosts: all
+  gather_facts: false
+  pre_tasks:
+    - name: Include vars
+      ansible.builtin.include_vars:
+        dir: "{{ includeVarsFolder }}"
+        extensions: ["yml"]
+  tasks:
+
+  - name: Include organization
+    ansible.builtin.include_role:
+      name: infra.aap_configuration.gateway_organizations
+    when: hostvars[inventory_hostname]['aap_organizations'] is defined
+
+  - name: Include teams
+    ansible.builtin.include_role:
+      name: infra.aap_configuration.gateway_teams
+    when: hostvars[inventory_hostname]['aap_teams'] is defined
+
+  - name: Include credentials
+    ansible.builtin.include_role:
+      name: infra.aap_configuration.controller_credentials
+    when: hostvars[inventory_hostname]['controller_credentials'] is defined
+
+  - name: Include inventories
+    ansible.builtin.include_role:
+      name: infra.aap_configuration.controller_inventories
+    when: hostvars[inventory_hostname]['controller_inventories'] is defined 
+
+  - name: Include hosts
+    ansible.builtin.include_role:
+      name: infra.aap_configuration.controller_hosts
+    when: hostvars[inventory_hostname]['controller_hosts'] is defined
+
+  - name: Include team controller roles
+    ansible.builtin.include_role:
+      name: infra.aap_configuration.controller_roles
+    when: hostvars[inventory_hostname]['controller_roles'] is defined
+
+  - name: Include gateway_role_team_assignments
+    ansible.builtin.include_role:
+      name: infra.aap_configuration.gateway_role_team_assignments
+    when: hostvars[inventory_hostname]['gateway_role_team_assignments'] is defined
+
+  - name: include authenticator_maps
+    ansible.builtin.include_role:
+      name: infra.aap_configuration.gateway_authenticator_maps
+    when: hostvars[inventory_hostname]['gateway_authenticator_maps'] is defined
+
+  - name: List applied roles
+    ansible.builtin.debug:
+      msg:
+        - "{% if hostvars[inventory_hostname]['aap_organizations'] is defined %}infra.aap_configuration.gateway_organizations{% endif %}"
+        - "{% if hostvars[inventory_hostname]['aap_teams'] is defined %}infra.aap_configuration.gateway_teams{% endif %}"
+        - "{% if hostvars[inventory_hostname]['controller_credentials'] is defined %}infra.aap_configuration.controller_credentials{% endif %}"
+        - "{% if hostvars[inventory_hostname]['controller_inventories'] is defined %}infra.aap_configuration.controller_inventories{% endif %}"
+        - "{% if hostvars[inventory_hostname]['controller_hosts'] is defined %}infra.aap_configuration.controller_hosts{% endif %}"
+        - "{% if hostvars[inventory_hostname]['controller_roles'] is defined %}infra.aap_configuration.controller_roles{% endif %}"
+        - "{% if hostvars[inventory_hostname]['gateway_authenticator_maps'] is defined %}infra.aap_configuration.gateway_authenticator_maps{% endif %}"
