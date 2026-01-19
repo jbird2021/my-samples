@@ -1,0 +1,7 @@
+---
+gateway_role_team_assignments:
+  - assignment_objects:
+      - name: org1
+        type: organizations
+    role_definition: Organization Inventory Admin
+    team: team2
