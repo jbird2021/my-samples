@@ -5,7 +5,7 @@
   pre_tasks:
     - name: Include vars
       ansible.builtin.include_vars:
-        dir: "{{ includeVarsFolder }}"
+        dir: "../{{ includeVarsFolder }}"
         extensions: ["yml"]
   tasks:
 
