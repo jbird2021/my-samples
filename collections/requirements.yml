@@ -17,7 +17,7 @@ collections:
 
 
 ## VALIDATED ##
-- infra.aap_configuration
+- name: infra.aap_configuration
   version: 4.2.0
 
 ## COMMUNITY ##
