@@ -1,5 +1,6 @@
 ---
 aap_teams:
-  - name: team2
-    description: test
-    organization: IT Infrastructure and Servers Administration - dev
+  - name: TeamA
+    organization: Org1
+  - name: TeamA
+    organization: Org2
