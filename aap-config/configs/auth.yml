@@ -1,0 +1,6 @@
+---
+# Connection details
+aap_hostname: 10.0.110.223
+aap_username: admin
+aap_password: test
+aap_validate_certs: false  # Set to true in production
