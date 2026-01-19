@@ -2,3 +2,4 @@
 aap_teams:
   - name: team2
     description: test
+    organization: IT Infrastructure and Servers Administration - dev
