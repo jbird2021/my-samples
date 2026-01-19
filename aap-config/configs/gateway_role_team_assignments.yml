@@ -4,7 +4,7 @@ gateway_role_team_assignments:
   - name: IT Infrastructure and Servers Administration - dev
     type: organizations
   role_definition: Organization Inventory Admin
-  team: IT Infrastructure and Servers Administration
+  team: team2
   
 #gateway_role_team_assignments:
 #  - assignment_objects:
