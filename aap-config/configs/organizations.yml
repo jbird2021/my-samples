@@ -1,0 +1,6 @@
+---
+aap_organizations:
+  - name: MyOrg
+    description: My First Organization
+  - name: Development
+    description: Development Environment Organization
