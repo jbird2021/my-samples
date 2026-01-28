@@ -1,5 +1,5 @@
 - name: Hello World Sample
-  hosts: localhost
+  hosts: all
   connection: local
   become: yes
   gather_facts: yes
