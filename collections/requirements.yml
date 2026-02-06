@@ -1,5 +1,5 @@
----
-collections:
+#---
+#collections:
 ## CERTIFIED ##
 #- kubernetes.core
 #- community.kubernetes
