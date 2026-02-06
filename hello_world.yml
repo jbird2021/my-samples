@@ -1,6 +1,6 @@
 - name: Hello World Sample
   hosts: all
-  connection: local
+#  connection: local
   become: yes
   gather_facts: yes
   tasks:   
