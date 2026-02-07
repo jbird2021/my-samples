@@ -1,0 +1,14 @@
+- name: Ping Pong
+  hosts: all
+  become: true
+  become_user: root
+  gather_facts: false
+
+  tasks:
+    - name: Simple Ping Test
+      ansible.builtin.ping:
+
+    - name: Show file.
+      ansible.builtin.command:
+        cmd: cat /usr/local/tmp/test_file
+      changed_when: false
