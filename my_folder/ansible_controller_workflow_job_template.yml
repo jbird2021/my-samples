@@ -2,11 +2,6 @@
   hosts: localhost
   gather_facts: false
 
-  vars:
-    host: "https://10.0.111.201/"
-    username: "admin"
-    password: "test" 
-
   tasks:
     - name: Create a workflow job template
       ansible.controller.workflow_job_template:
