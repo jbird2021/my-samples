@@ -1,5 +1,6 @@
 - name: test create user
   hosts: all
+  gather_facts: true
 
   tasks:
   - name: Ensure group exists
