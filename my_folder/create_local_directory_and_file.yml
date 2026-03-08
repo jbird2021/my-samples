@@ -1,4 +1,4 @@
-- name: Create directory and file on local system
+- name: create_local_directory_and_file.yml
   hosts: localhost
   gather_facts: False
   
@@ -8,7 +8,6 @@
     json_health_report: this is a test
     
   tasks:   
-
     - name: Create {{ local_report_directory }}
       ansible.builtin.file:
         path: "{{ local_report_directory }}/healthcheck"
