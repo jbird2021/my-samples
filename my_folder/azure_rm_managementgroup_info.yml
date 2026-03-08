@@ -1,6 +1,0 @@
----
-- name: Using Azure collection Management Group
-  hosts: localhost
-  tasks:
-    - name: Get facts for all root management groups for authenticated principal
-      azure.azcollection.azure_rm_managementgroup_info:  
