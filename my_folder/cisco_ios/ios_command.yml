@@ -1,5 +1,5 @@
 ---
-- name: Connect to Cisco Switch
+- name: ios_command.yml
   hosts: all
   gather_facts: no
   tasks:
