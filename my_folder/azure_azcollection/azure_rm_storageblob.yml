@@ -1,0 +1,16 @@
+- name: azure_rm_storageblob.yml
+  hosts: all
+  gather_facts: true
+  vars: 
+    ansible_python_interpreter: /usr/bin/python3
+  tasks:
+  - name: Create container foo and upload a file
+    azure.azcollection.azure_rm_storageblob:
+      resource_group: "{{ resource_group }}"
+      storage_account_name: "{{ storage_account_name }}"
+      container: "{{ container }}"
+      blob: "{{ blob }}"
+      src: "{{ src }}"
+      content_type: "{{ content_type }}"
+      public_access: "{{ public_access }}"
+
