@@ -1,15 +1,15 @@
 ---
-- name: export stuff using ansible.controller collection
+- name: export_all_content.yml
   hosts: localhost
   collections:
     - ansible.controller
   tasks:
     - name: export it
       export:
-        controller_host: https://10.0.109.60
-        controller_username: "admin"
-        controller_password: "test"
-        validate_certs: false
+        controller_host: "{{ host }}"
+        controller_username: "{{ username }}"
+        controller_password: "{{ password }}"
+        validate_certs: "{{ validate_certs }}"
         all: true
       register: export_output
 
