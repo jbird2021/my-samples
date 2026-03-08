@@ -1,9 +1,0 @@
-- name: sudo_test.yml
-  hosts: localhost
-  gather_facts: true
-  connection: local
-  become: true
-
-  tasks:   
-    - name: sleep for 5 seconds
-      ansible.builtin.shell: sudo bash -c 'sleep 4s; command'
