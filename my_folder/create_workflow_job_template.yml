@@ -1,4 +1,4 @@
-- name: Content creation started
+- name: create_workflow_job_template.yml
   hosts: localhost
   gather_facts: false
 
@@ -11,7 +11,7 @@
         controller_host: "{{ host }}"
         controller_username: "{{ username }}"
         controller_password: "{{ password }}"
-        validate_certs: false
+        validate_certs: "{{ validate_certs }}"
 
     
     - name: Create a node, follows workflow_job_template example
@@ -23,7 +23,7 @@
         controller_host: "{{ host }}"
         controller_username: "{{ username }}"
         controller_password: "{{ password }}"
-        validate_certs: false
+        validate_certs: "{{ validate_certs }}"
 
     - name: Create parent node for prior node
       ansible.controller.workflow_job_template_node:
@@ -36,4 +36,4 @@
         controller_host: "{{ host }}"
         controller_username: "{{ username }}"
         controller_password: "{{ password }}"
-        validate_certs: false
+        validate_certs: "{{ validate_certs }}"
