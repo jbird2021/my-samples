@@ -1,11 +1,6 @@
 - name: role_team_assignment.yml
   hosts: localhost
   gather_facts: false
-
-  vars:
-    host: "https://10.0.109.49/"
-    username: "admin"
-    password: "test" 
       
   tasks:
     - name: role_team_assignment
@@ -13,7 +8,7 @@
         controller_host: "{{ host }}"
         controller_username: "{{ username }}"
         controller_password: "{{ password }}"
-        validate_certs: false
+        validate_certs: "{{ validate_certs }}"
         role_definition: Organization Execute
         object_id: 2
         team: Team1
