@@ -1,9 +1,0 @@
-- hosts: all
-  gather_facts: false
-  become: true
-  #debugger: always
-  serial: "{{ nnserial | default(7) }}"
-  
-  tasks:
-    - debug:
-        msg: nnserial= "{{ nnserial }}"
