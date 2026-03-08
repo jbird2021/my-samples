@@ -1,5 +1,5 @@
 ---
-- name: Reproducing Issue in Case 03190279
+- name: async_poll.yml
   hosts: all
   gather_facts: false
 
