@@ -1,5 +1,6 @@
-- hosts: all
-#  become: true
+- name: gather_package_facts.yml
+  hosts: all
+  become: true
   
   tasks:
     - name: "Gather package facts"
@@ -13,17 +14,15 @@
           - "Name: {{ ansible_facts.packages['powershell'][0]['name'] }}"
           - "Version: {{ ansible_facts.packages['powershell'][0]['version'] }}"
           - "Release: {{ ansible_facts.packages['powershell'][0]['release'] }}"
-
-#          Release: {{ ansible_facts.packages[item][0]['release'] }}   
       when: "'powershell' in ansible_facts.packages"
  
-#    - name: "Print installed package versions"
-#      debug:
-#        msg: |
-#          {{ item }}
-#          Version: {{ ansible_facts.packages[item][0]['version'] }}
-#          Release: {{ ansible_facts.packages[item][0]['release'] }}          
-   #   loop: "{{ ansible_facts.packages.keys() | select('match','^falcon-sensor$') | list }}"
-   #   when: "'falcon-sensor' in ansible_facts.packages"
+    - name: "Print installed package versions"
+      debug:
+        msg: |
+          {{ item }}
+          Version: {{ ansible_facts.packages[item][0]['version'] }}
+          Release: {{ ansible_facts.packages[item][0]['release'] }}          
+     loop: "{{ ansible_facts.packages.keys() | select('match','^falcon-sensor$') | list }}"
+     when: "'falcon-sensor' in ansible_facts.packages"
 
 
