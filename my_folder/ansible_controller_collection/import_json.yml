@@ -1,0 +1,11 @@
+---
+- name: import_json.yml
+  hosts: localhost
+  tasks:
+    - name: Import Assets
+      ansible.controller.import: 
+        assets: "{{ lookup( 'ansible.builtin.file', './export_output.json' ) | from_json() }}"
+        controller_host: "{{ host }}"
+        controller_username: "{{ username }}"
+        controller_password: "{{ password }}"
+        validate_certs: "{{ validate_certs }}"
