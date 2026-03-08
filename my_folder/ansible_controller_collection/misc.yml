@@ -1,29 +1,7 @@
-- name: Content creation started
+- name: misc.yml
   hosts: localhost
   gather_facts: false
-
-  environment:
-    AWXKIT_API_BASE_PATH: "/api/controller/" 
-
-  vars:
-    #host: "https://10.0.109.139/"
-    #host: "https://10.0.111.182/"
-    host: "https://10.0.108.230/"
-    username: "admin"
-    password: "test" 
-
-   
-    #token: "j2PflVekHLw02G8HKcIluY7UPT71q9"
-    #ansible_port: 443
-    #delegate_to: localhost
-#    controller_password: !vault |
-#          $ANSIBLE_VAULT;1.1;AES256
-#          66346161326266386336316630663663363737346462633434636234653964326639663563626339
-#          6261383737653662363431363062386165343939333264650a633038303962623337313365373362
-#          37653832393431343234323933343037376239376665336166313662373462393235323337353331
-#          6163336264333031650a313936373236343735366163373939396565356530376639613030396333
-#          37313439613533383063393433356233626161366334623236303564613437343265
-          
+         
   tasks:
     - name: Export projects
       ansible.controller.export:
@@ -31,7 +9,7 @@
         controller_host: "{{ host }}"
         controller_username: "{{ username }}"
         controller_password: "{{ password }}"
-        validate_certs: false
+        validate_certs: "{{ validate_certs }}"
       
 #    - name: Assign project permissions from Organzaition2 to Team1 
 #      ansible.controller.role:
@@ -45,7 +23,8 @@
 #        controller_oauthtoken: "{{ token }}"
 #        controller_username: "{{ username }}"
 #        controller_password: "{{ password }}"
-#        validate_certs: false
+#        validate_certs: "{{ validate_certs }}"
+
 #    - name: Add host
 #      ansible.controller.host:
 #        name: 1.1.1.1
@@ -54,7 +33,8 @@
 #        controller_host: "{{ host }}"
 #        controller_username: "{{ username }}"
 #        controller_password: "{{ password }}"
-#        validate_certs: false
+#        validate_certs: "{{ validate_certs }}"
+
 #    - name: Create a new token using username/password
 #      ansible.controller.token:
 #        description: testing
@@ -63,11 +43,11 @@
 #        controller_host: "{{ host }}"
 #        controller_username: "{{ username }}"
 #        controller_password: "{{ password }}"
-#        validate_certs: false 
+#        validate_certs: "{{ validate_certs }}" 
         
 #    - name: schedule to rerun the job after 20 minutes
 #      ansible.controller.schedule:
-#        name: "Shared Mailbox-Access Provision -JobId:<https://{{tower_host}}/#/jobs/playbook/{{ awx_job_id }} | {{ awx_job_id }}>"
+#        name: "test schedule"
 #        state: present
 #        unified_job_template: "{{awx_job_template_name}}"
 #        rrule: "DTSTART:{{lookup('pipe', 'date +%Y%m%dT%H%M%SZ')}} RRULE:FREQ=MINUTELY;INTERVAL=20;COUNT=2"
@@ -75,25 +55,24 @@
 #        controller_oauthtoken: "{{ token }}"
 #        controller_username: "{{ username }}"
 #        controller_password: "{{ password }}"
-#        validate_certs: false
-  #      extra_data: {
-  #        "callbackUrl": "{{callbackUrl}}",
-  #        "Accountemail": "{{Accountemail}}",
-  #        "ServiceAccountAD": "{{ServiceAccountAD}}",
-  #        "DomainServer": "{{DomainServer}}",
-  #        "systemName": "{{systemName}}",
-  #        "users": "{{users}}",
-  #        "controller_oauthtoken": "{{tower_oauthtoken}}",
-  #        "controller_host": "{{tower_host}}",
-  #        "domainuser": "{{domainuser}}",
-  #        "sysId": "{{sysId}}",
-  #        "ticketNumber": "{{ticketNumber}}",
-  #        "slackChannel_success": "{{slackChannel_success}}",
-  #        "slackChannel_failure": "{{slackChannel_failure}}",
-  #        "count": "{{count|int +1}}"
-  #      }
+#        validate_certs: "{{ validate_certs }}"
+#        extra_data: {
+#          "callbackUrl": "{{callbackUrl}}",
+#          "Accountemail": "{{Accountemail}}",
+#          "ServiceAccountAD": "{{ServiceAccountAD}}",
+#          "DomainServer": "{{DomainServer}}",
+#          "systemName": "{{systemName}}",
+#          "users": "{{users}}",
+#          "controller_oauthtoken": "{{tower_oauthtoken}}",
+#          "controller_host": "{{tower_host}}",
+#          "domainuser": "{{domainuser}}",
+#          "sysId": "{{sysId}}",
+#          "ticketNumber": "{{ticketNumber}}",
+#          "slackChannel_success": "{{slackChannel_success}}",
+#          "slackChannel_failure": "{{slackChannel_failure}}",
+#          "count": "{{count|int +1}}"
+#        }
 
-# WORKS
 #    - name: Assign project permissions from Organzaition2 to Team1 
 #      ansible.controller.role:
 #        organizations: Organization1
@@ -104,7 +83,7 @@
 #        controller_oauthtoken: "{{ token }}"
 #        controller_username: "{{ username }}"
 #        controller_password: "{{ password }}"
-#        validate_certs: false
+#        validate_certs: "{{ validate_certs }}" 
         
 #    - name: Create temporary inventory file
 #      ansible.controller.inventory:
@@ -115,7 +94,7 @@
 #        controller_oauthtoken: "{{ token }}"
 #        controller_username: "{{ username }}"
 #        controller_password: "{{ password }}"
-#        validate_certs: false
+#        validate_certs: "{{ validate_certs }}" 
         
 #    - name: Delete temporary inventory file
 #      ansible.controller.inventory:
@@ -126,7 +105,7 @@
 #        controller_oauthtoken: "{{ token }}"
 #        controller_username: "{{ username }}"
 #        controller_password: "{{ password }}"
-#        validate_certs: false
+#        validate_certs: "{{ validate_certs }}" 
 
 #    - name: Triggering workflow job template
 #      ansible.controller.workflow_launch:
@@ -134,4 +113,4 @@
 #        controller_host: "{{ controller_host }}"
 #        controller_username: '{{ lookup("env", "CONTROLLER_USERNAME") }}'
 #        controller_password: '{{ lookup("env", "CONTROLLER_PASSWORD") }}'
-#        validate_certs: false
+#        validate_certs: "{{ validate_certs }}" 
